@@ -54,7 +54,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             for row in rows {
                 let pokeId = Int(row["id"]!)!
                 let name = row["identifier_KR"]!
-                let poke = Pokemon(name: name, pokedexId: pokeId)
+                let height = Int(row["height"]!)!
+                let weight = Int(row["weight"]!)!
+                let poke = Pokemon(name: name, pokedexId: pokeId, height: height, weight: weight)
                 pokemon.append(poke)
             }
             
