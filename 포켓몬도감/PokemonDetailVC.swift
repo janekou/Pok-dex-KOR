@@ -26,6 +26,7 @@ class PokemonDetailVC: UIViewController {
         super.viewDidLoad()
 
         nameLbl.text = "#" + String(pokemon.pokedexId) + " " + pokemon.name.capitalized
+        mainImg.image = UIImage(named: "\(pokemon.pokedexId)")
     }
 
     override func didReceiveMemoryWarning() {
