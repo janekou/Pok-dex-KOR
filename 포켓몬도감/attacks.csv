@@ -1,4 +1,4 @@
-_id,_power,_energy,_damage_duration,_damage_start,_damage_end,_typePokemon,_accurany,_critical,_typeAttack
+_id,_power,_energy,_damage_duration,_damage_start,_damage_end,_typePokemon,_accuracy,_critical,_typeAttack
 1,25,5,4000,2800,3400,1,1,0.050000001,special
 2,120,1,5000,4000,4800,1,1,0.050000001,special
 3,45,3,3500,2300,3400,17,1,0.050000001,special
