@@ -22,8 +22,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var defense: UILabel!
     @IBOutlet weak var max_cp: UILabel!
     @IBOutlet weak var stamina: UILabel!
-    @IBOutlet weak var currentEvoImg: UIImageView!
-    @IBOutlet weak var nextEvoImg: UIImageView!
+    @IBOutlet weak var evoImg: UIImageView!
     
     var pokemon: Pokemon!
     
@@ -31,6 +30,13 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(screenEdgeSwiped))
+        edgePan.edges = .left
+        
+        view.addGestureRecognizer(edgePan)
+    
+    
         self.navigationController?.navigationBar.topItem?.title = "#" + String(pokemon.pokedexId) + " " + pokemon.name
         let navigationTitleFont = UIFont(name: "morris9", size: 16)!
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationTitleFont]
@@ -42,6 +48,8 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         defense.text = String(pokemon.defense)
         max_cp.text = String(pokemon.max_cp)
         stamina.text = String(pokemon.stamina)
+        evoImg.image = UIImage(named: "\(pokemon.evolution)")
+
         
         
         //textview.font = UIFont(name: "morris9", size: 13)
@@ -54,11 +62,11 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         //        recognizer.delegate = self
 //        self.view.addGestureRecognizer(recognizer)
     }
-    
-    func swipeGesture() {
-        dismiss(animated: true, completion: nil)
+
+    func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+       dismiss(animated: true, completion: nil)
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

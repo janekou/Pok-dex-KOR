@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F175FCA1E3EFE030038D2E1 /* moves.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3F175FC91E3EFE030038D2E1 /* moves.csv */; };
+		3F1C9ADC1E3F2D8400A559CE /* pokemon_KR4.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3F1C9ADB1E3F2D8400A559CE /* pokemon_KR4.csv */; };
 		3F328CD11E3812C10002186C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F328CD01E3812C10002186C /* AppDelegate.swift */; };
 		3F328CD31E3812C10002186C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F328CD21E3812C10002186C /* ViewController.swift */; };
 		3F328CDB1E3812C10002186C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F328CD91E3812C10002186C /* LaunchScreen.storyboard */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		3F175FC91E3EFE030038D2E1 /* moves.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = moves.csv; sourceTree = "<group>"; };
+		3F1C9ADB1E3F2D8400A559CE /* pokemon_KR4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon_KR4.csv; sourceTree = "<group>"; };
 		3F328CCD1E3812C10002186C /* 포켓몬도감.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "포켓몬도감.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F328CD01E3812C10002186C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F328CD21E3812C10002186C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				3F328CEE1E3844EB0002186C /* Pokemon Solid.ttf */,
 				3F35DF341E394C11006B64E4 /* pokemon_KR.csv */,
 				3F3FD7E11E3EEFE500E9B2DA /* pokemon_KR3.csv */,
+				3F1C9ADB1E3F2D8400A559CE /* pokemon_KR4.csv */,
 				3F328CF31E384B4C0002186C /* bgmusic.mp3 */,
 			);
 			name = Resources;
@@ -217,6 +220,7 @@
 			files = (
 				3F328CF41E384B4C0002186C /* bgmusic.mp3 in Resources */,
 				3F3FD7E21E3EEFE500E9B2DA /* pokemon_KR3.csv in Resources */,
+				3F1C9ADC1E3F2D8400A559CE /* pokemon_KR4.csv in Resources */,
 				3F35DF3B1E3987A1006B64E4 /* morris.ttf in Resources */,
 				3FC148B21E39D2DC001542EE /* lang_shapes.csv in Resources */,
 				3F328CDB1E3812C10002186C /* LaunchScreen.storyboard in Resources */,

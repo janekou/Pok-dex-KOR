@@ -45,7 +45,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func parsePokemonCSV() {
-        let path = Bundle.main.path(forResource: "pokemon_KR3", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "pokemon_KR4", ofType: "csv")!
         
         do {
             let csv = try CSV(contentsOfURL: path)
@@ -60,7 +60,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let attack = Int(row["attack"]!)!
                 let defense = Int(row["defense"]!)!
                 let stamina = Int(row["stamina"]!)!
-                let poke = Pokemon(name: name, pokedexId: pokeId, height: Double(height), weight: Double(weight), max_cp: Int(max_cp), attack: Int(attack), defense: Int(defense), stamina: Int(stamina))
+                let evolution = Int(row["evolution"]!)!
+                
+                let poke = Pokemon(name: name, pokedexId: pokeId, height: Double(height), weight: Double(weight), max_cp: Int(max_cp), attack: Int(attack), defense: Int(defense), stamina: Int(stamina), evolution: evolution)
                 pokemon.append(poke)
             }
             
