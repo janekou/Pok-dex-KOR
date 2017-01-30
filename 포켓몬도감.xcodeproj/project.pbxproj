@@ -16,10 +16,8 @@
 		3F328CE91E382F590002186C /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F328CE81E382F590002186C /* PokeCell.swift */; };
 		3F328CEB1E383C600002186C /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F328CEA1E383C600002186C /* csv.swift */; };
 		3F328CF41E384B4C0002186C /* bgmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F328CF31E384B4C0002186C /* bgmusic.mp3 */; };
-		3F35DF351E394C11006B64E4 /* pokemon_KR.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3F35DF341E394C11006B64E4 /* pokemon_KR.csv */; };
 		3F35DF371E396D66006B64E4 /* chollianh.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F35DF361E396D66006B64E4 /* chollianh.ttf */; };
 		3F35DF3B1E3987A1006B64E4 /* morris.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F35DF3A1E3987A1006B64E4 /* morris.ttf */; };
-		3F3FD7E21E3EEFE500E9B2DA /* pokemon_KR3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3F3FD7E11E3EEFE500E9B2DA /* pokemon_KR3.csv */; };
 		3F404C831E38FF4E00875A43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F404C821E38FF4E00875A43 /* Assets.xcassets */; };
 		3F404C891E39270100875A43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F404C871E39270100875A43 /* Main.storyboard */; };
 		3FA45C341E38520100CB5B23 /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F328CEE1E3844EB0002186C /* Pokemon Solid.ttf */; };
@@ -44,12 +42,10 @@
 		3F328CEA1E383C600002186C /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		3F328CEE1E3844EB0002186C /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
 		3F328CF31E384B4C0002186C /* bgmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgmusic.mp3; sourceTree = "<group>"; };
-		3F35DF341E394C11006B64E4 /* pokemon_KR.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = pokemon_KR.csv; sourceTree = "<group>"; };
 		3F35DF361E396D66006B64E4 /* chollianh.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chollianh.ttf; sourceTree = "<group>"; };
 		3F35DF381E39710E006B64E4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		3F35DF391E39710E006B64E4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		3F35DF3A1E3987A1006B64E4 /* morris.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = morris.ttf; sourceTree = "<group>"; };
-		3F3FD7E11E3EEFE500E9B2DA /* pokemon_KR3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon_KR3.csv; sourceTree = "<group>"; };
 		3F404C821E38FF4E00875A43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F404C851E39215300875A43 /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 		3F404C881E39270100875A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,8 +136,6 @@
 				3F35DF3A1E3987A1006B64E4 /* morris.ttf */,
 				3F35DF361E396D66006B64E4 /* chollianh.ttf */,
 				3F328CEE1E3844EB0002186C /* Pokemon Solid.ttf */,
-				3F35DF341E394C11006B64E4 /* pokemon_KR.csv */,
-				3F3FD7E11E3EEFE500E9B2DA /* pokemon_KR3.csv */,
 				3F1C9ADB1E3F2D8400A559CE /* pokemon_KR4.csv */,
 				3F328CF31E384B4C0002186C /* bgmusic.mp3 */,
 			);
@@ -219,7 +213,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F328CF41E384B4C0002186C /* bgmusic.mp3 in Resources */,
-				3F3FD7E21E3EEFE500E9B2DA /* pokemon_KR3.csv in Resources */,
 				3F1C9ADC1E3F2D8400A559CE /* pokemon_KR4.csv in Resources */,
 				3F35DF3B1E3987A1006B64E4 /* morris.ttf in Resources */,
 				3FC148B21E39D2DC001542EE /* lang_shapes.csv in Resources */,
@@ -230,7 +223,6 @@
 				3FC148B31E39D2DC001542EE /* type_index.csv in Resources */,
 				3FC148B41E39D2DC001542EE /* pokemon.csv in Resources */,
 				3F404C891E39270100875A43 /* Main.storyboard in Resources */,
-				3F35DF351E394C11006B64E4 /* pokemon_KR.csv in Resources */,
 				3F175FCA1E3EFE030038D2E1 /* moves.csv in Resources */,
 				3F35DF371E396D66006B64E4 /* chollianh.ttf in Resources */,
 				3F404C831E38FF4E00875A43 /* Assets.xcassets in Resources */,
