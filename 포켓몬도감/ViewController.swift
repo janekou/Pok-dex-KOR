@@ -14,7 +14,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    
     var pokemon = [Pokemon]()
     var filteredPokemon = [Pokemon]()
     var musicPlayer: AVAudioPlayer!
@@ -28,6 +27,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         searchBar.returnKeyType = UIReturnKeyType.done
         initAudio()
         parsePokemonCSV()
+        
     }
     
     func initAudio() {
@@ -45,7 +45,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func parsePokemonCSV() {
-        let path = Bundle.main.path(forResource: "pokemon_KR", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "pokemon_KR3", ofType: "csv")!
         
         do {
             let csv = try CSV(contentsOfURL: path)
@@ -56,7 +56,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let name = row["identifier_KR"]!
                 let height = Int(row["height"]!)!
                 let weight = Int(row["weight"]!)!
-                let poke = Pokemon(name: name, pokedexId: pokeId, height: height, weight: weight)
+                let max_cp = Int(row["max_cp"]!)!
+                let attack = Int(row["attack"]!)!
+                let defense = Int(row["defense"]!)!
+                let stamina = Int(row["stamina"]!)!
+                let poke = Pokemon(name: name, pokedexId: pokeId, height: Double(height), weight: Double(weight), max_cp: Int(max_cp), attack: Int(attack), defense: Int(defense), stamina: Int(stamina))
                 pokemon.append(poke)
             }
             
@@ -111,8 +115,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if inSearchMode {
             return filteredPokemon.count
         }
-        
-        return pokemon.count
+        return 251
+        //return pokemon.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -153,14 +157,43 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "PokemonDetailVC" {
+//            if let detailsVC = segue.destination as? PokemonDetailVC {
+//                if let poke = sender as? Pokemon {
+//                    detailsVC.pokemon = poke
+//                    
+//                }
+//            }
+//        }
+//    }
+//    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PokemonDetailVC" {
-            if let detailsVC = segue.destination as? PokemonDetailVC {
-                if let poke = sender as? Pokemon {
-                    detailsVC.pokemon = poke
-                    
-                }
+            let navVC = segue.destination as? UINavigationController
+            let detailVC = navVC?.viewControllers.first as! PokemonDetailVC
+            if let poke = sender as? Pokemon{
+            detailVC.pokemon = poke
+            }
             }
         }
     }
-}
+//    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//        let navVC = segue.destination as? UINavigationController
+//        
+//        let tableVC = navVC?.viewControllers.first as! YourTableViewControllerClass
+//        
+//        tableVC.yourTableViewArray = localArrayValue
+//    }
+//    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+//        
+//        if (segue.identifier == "showItemSegue") {
+//            let navController = segue.destinationViewController as UINavigationController
+//            let detailController = navController.topViewController as ShowItemViewController
+//            detailController.currentId = nextId!
+//        }
+//    }
+//}
