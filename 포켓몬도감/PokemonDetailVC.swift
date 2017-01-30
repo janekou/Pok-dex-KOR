@@ -14,8 +14,6 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
     @IBOutlet weak var descriptionTxt: UITextView!
-    @IBOutlet weak var type1: UILabel!
-    @IBOutlet weak var type2: UILabel!
     @IBOutlet weak var height: UILabel!
     @IBOutlet weak var weight: UILabel!
     @IBOutlet weak var attack: UILabel!
@@ -23,6 +21,8 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var max_cp: UILabel!
     @IBOutlet weak var stamina: UILabel!
     @IBOutlet weak var evoImg: UIImageView!
+    @IBOutlet weak var type0: UILabel!
+    @IBOutlet weak var type1: UILabel!
     
     var pokemon: Pokemon!
     
@@ -49,7 +49,8 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         max_cp.text = String(pokemon.max_cp)
         stamina.text = String(pokemon.stamina)
         evoImg.image = UIImage(named: "\(pokemon.evolution)")
-
+        type0.text = String(pokemon.type0)
+        type1.text = String(pokemon.type1)
         
         
         //textview.font = UIFont(name: "morris9", size: 13)
@@ -74,7 +75,6 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     
     
     @IBAction func backBtnPressed(_ sender: Any) {
-        
         dismiss(animated: true, completion: nil)
     }
     

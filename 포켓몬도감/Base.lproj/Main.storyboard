@@ -186,14 +186,14 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="93N-DO-Fl5">
                                                 <rect key="frame" x="77" y="305" width="222" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qO0-ND-6Zb">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="grass" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qO0-ND-6Zb">
                                                         <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
                                                         <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUA-1X-3i2">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="poison" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUA-1X-3i2">
                                                         <rect key="frame" x="116" y="0.0" width="106" height="30"/>
                                                         <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="17"/>
@@ -1225,8 +1225,8 @@
                         <outlet property="max_cp" destination="vBc-ZR-54s" id="YG5-m2-ygK"/>
                         <outlet property="nameLbl" destination="OxJ-Qw-Bde" id="e46-u4-nVW"/>
                         <outlet property="stamina" destination="El0-sM-sSc" id="Wg3-vc-y7D"/>
-                        <outlet property="type1" destination="qO0-ND-6Zb" id="q6c-pB-j5B"/>
-                        <outlet property="type2" destination="nUA-1X-3i2" id="35A-9e-0vh"/>
+                        <outlet property="type0" destination="qO0-ND-6Zb" id="TG0-du-lZ2"/>
+                        <outlet property="type1" destination="nUA-1X-3i2" id="4Km-vO-U91"/>
                         <outlet property="weight" destination="3e1-DN-zfA" id="1cf-6a-WYF"/>
                     </connections>
                 </viewController>

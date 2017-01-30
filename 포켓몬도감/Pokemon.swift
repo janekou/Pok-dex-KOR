@@ -12,7 +12,6 @@ class Pokemon {
     fileprivate var _name: String!
     fileprivate var _pokedexId: Int!
     fileprivate var _description: String!
-    fileprivate var _type: String!
     fileprivate var _height: Double!
     fileprivate var _weight: Double!
     fileprivate var _max_cp: Int!
@@ -20,7 +19,9 @@ class Pokemon {
     fileprivate var _defense: Int!
     fileprivate var _stamina: Int!
     fileprivate var _evolution: Int!
-    
+    fileprivate var _type0: Int!
+    fileprivate var _type1: Int!
+
     
     var name: String {
         return _name
@@ -58,9 +59,15 @@ class Pokemon {
         return _evolution
     }
     
-
+    var type0: Int {
+        return _type0
+    }
     
-    init(name: String, pokedexId: Int, height: Double, weight: Double, max_cp: Int, attack: Int, defense: Int, stamina: Int, evolution: Int) {
+    var type1: Int {
+        return _type1
+    }
+    
+    init(name: String, pokedexId: Int, height: Double, weight: Double, max_cp: Int, attack: Int, defense: Int, stamina: Int, evolution: Int, type0: Int, type1: Int) {
         self._name = name
         self._pokedexId = pokedexId
         self._height = height
@@ -70,5 +77,7 @@ class Pokemon {
         self._defense = defense
         self._stamina = stamina
         self._evolution = evolution
+        self._type0 = type0
+        self._type1 = type1
     }
 }

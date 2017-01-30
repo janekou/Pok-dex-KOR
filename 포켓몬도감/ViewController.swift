@@ -61,8 +61,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let defense = Int(row["defense"]!)!
                 let stamina = Int(row["stamina"]!)!
                 let evolution = Int(row["evolution"]!)!
+                let type0 = Int(row["type0"]!)!
+                let type1 = Int(row["type1"]!)!
                 
-                let poke = Pokemon(name: name, pokedexId: pokeId, height: Double(height), weight: Double(weight), max_cp: Int(max_cp), attack: Int(attack), defense: Int(defense), stamina: Int(stamina), evolution: evolution)
+                let poke = Pokemon(name: name, pokedexId: pokeId, height: Double(height), weight: Double(weight), max_cp: max_cp, attack: attack, defense: Int(defense), stamina: Int(stamina), evolution: evolution, type0: type0, type1: type1)
                 pokemon.append(poke)
             }
             
@@ -70,6 +72,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             print(err.debugDescription)
         }
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
