@@ -9,14 +9,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x1111;&#x1169;&#x110f;&#x1166;&#x11ba;&#x1106;&#x1169;&#x11ab;&#x1103;&#x1169;&#x1100;&#x1161;&#x11b7;/PokemonDetailVC.swift"
-            timestampString = "507443166.058008"
+            filePath = "&#x1111;&#x1169;&#x110f;&#x1166;&#x11ba;&#x1106;&#x1169;&#x11ab;&#x1103;&#x1169;&#x1100;&#x1161;&#x11b7;/ViewController.swift"
+            timestampString = "507534454.432909"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "parsePokemonCSV()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x1111;&#x1169;&#x110f;&#x1166;&#x11ba;&#x1106;&#x1169;&#x11ab;&#x1103;&#x1169;&#x1100;&#x1161;&#x11b7;/ViewController.swift"
+            timestampString = "507534454.432909"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "ParseMoves()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x1111;&#x1169;&#x110f;&#x1166;&#x11ba;&#x1106;&#x1169;&#x11ab;&#x1103;&#x1169;&#x1100;&#x1161;&#x11b7;/Pokemon.swift"
+            timestampString = "507533345.971392"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "Pokemon"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

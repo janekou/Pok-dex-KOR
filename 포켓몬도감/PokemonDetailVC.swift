@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
 
@@ -49,9 +50,18 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         max_cp.text = String(pokemon.max_cp)
         stamina.text = String(pokemon.stamina)
         evoImg.image = UIImage(named: "\(pokemon.evolution)")
-        type0.text = String(pokemon.type0)
-        type1.text = String(pokemon.type1)
+//        type0.text = String(pokemon.type0)
+//        type1.text = String(pokemon.type1)
         
+        //type labels settings
+        type0.textColor = UIColor.white
+        type1.textColor = UIColor.white
+        setTypeLabel(l: type0, n: pokemon.type0)
+        setTypeLabel(l: type1, n: pokemon.type1)
+        type0.layer.masksToBounds = true
+        type1.layer.masksToBounds = true
+        type0.layer.cornerRadius = 8.0
+        type1.layer.cornerRadius = 8.0
         
         //textview.font = UIFont(name: "morris9", size: 13)
         //textview.isSelectable = false
@@ -62,6 +72,94 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
 //        recognizer.direction = UISwipeGestureRecognizerDirection.left
         //        recognizer.delegate = self
 //        self.view.addGestureRecognizer(recognizer)
+    }
+    
+    func setTypeLabel(l: UILabel,n: Int) {
+        
+        switch n {
+        case 0:
+            l.removeFromSuperview()
+            
+        case 1:
+            l.text=String("노말")
+            l.backgroundColor = hexStringToUIColor(hex: "#A8A878")
+        case 2:
+            l.text=String("격투")
+            l.backgroundColor = hexStringToUIColor(hex: "#C03028")
+        case 3:
+            l.text=String("비행")
+            l.backgroundColor = hexStringToUIColor(hex: "#A890F0")
+        case 4:
+            l.text=String("독")
+            l.backgroundColor = hexStringToUIColor(hex: "#A040A0")
+        case 5:
+            l.text=String("땅")
+            l.backgroundColor = hexStringToUIColor(hex: "#896E25")
+        case 6:
+            l.text=String("바위")
+            l.backgroundColor = hexStringToUIColor(hex: "#B8A038")
+        case 7:
+            l.text=String("벌레")
+            l.backgroundColor = hexStringToUIColor(hex: "#92A20F")
+        case 8:
+            l.text=String("고스트")
+            l.backgroundColor = hexStringToUIColor(hex: "#705898")
+        case 9:
+            l.text=String("강철")
+            l.backgroundColor = hexStringToUIColor(hex: "#676793")
+        case 10:
+            l.text=String("불꽃")
+            l.backgroundColor = hexStringToUIColor(hex: "#F08030")
+        case 11:
+            l.text=String("물")
+            l.backgroundColor = hexStringToUIColor(hex: "#6890F0")
+        case 12:
+            l.text=String("풀")
+            l.backgroundColor = hexStringToUIColor(hex: "#78C850")
+        case 13:
+            l.text=String("전기")
+            l.backgroundColor = hexStringToUIColor(hex: "#E0B301")
+        case 14:
+            l.text=String("에스퍼")
+            l.backgroundColor = hexStringToUIColor(hex: "#F85888")
+        case 15:
+            l.text=String("얼음")
+            l.backgroundColor = hexStringToUIColor(hex: "#53E9D9")
+        case 16:
+            l.text=String("드래곤")
+            l.backgroundColor = hexStringToUIColor(hex: "#7038F8")
+        case 17:
+            l.text=String("악")
+            l.backgroundColor = hexStringToUIColor(hex: "#705848")
+        case 18:
+            l.text=String("페어리")
+            l.backgroundColor = hexStringToUIColor(hex: "#FFAEC9")
+        default:
+            break
+        }
+
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
 
     func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {

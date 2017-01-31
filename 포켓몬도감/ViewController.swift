@@ -16,8 +16,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var pokemon = [Pokemon]()
     var filteredPokemon = [Pokemon]()
+    var moves = [Move]()
     var musicPlayer: AVAudioPlayer!
     var inSearchMode = false
+//    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
         initAudio()
+        ParseMoves()
         parsePokemonCSV()
+        
+        //keyboard dismiss
+    }
+    
+    //cancel search by touching other part of the screen
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
         
     }
     
@@ -44,13 +54,37 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    func parsePokemonCSV() {
-        let path = Bundle.main.path(forResource: "pokemon_KR4", ofType: "csv")!
-        
+    func ParseMoves() {
+        let path = Bundle.main.path(forResource: "attacks", ofType: "csv")!
         do {
+            //moveset data
             let csv = try CSV(contentsOfURL: path)
             let rows = csv.rows
+            moves.append(Move(power: 0,cooldown: 0,moveName: "none",moveType: 0,attackType: false))
+            for row in rows {
+                let power = Int(row["_power"]!)!
+                let cooldown = Double(row["_damage_duration"]!)!
+                let moveName = row["move"]!
+                let moveType = Int(row["_typePokemon"]!)!
+                var attackType = false
+                if(row["_typeAttack"] == "basic") {
+                    attackType = true
+                }
+                let m = Move(power: power,cooldown: cooldown,moveName: moveName,moveType: moveType,attackType: attackType)
+                moves.append(m)
+            }
             
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+    }
+    
+    func parsePokemonCSV() {
+        let path = Bundle.main.path(forResource: "pokemon_KR5", ofType: "csv")!
+        do {
+            //pokemon data
+            let csv = try CSV(contentsOfURL: path)
+            let rows = csv.rows
             for row in rows {
                 let pokeId = Int(row["id"]!)!
                 let name = row["identifier_KR"]!
@@ -64,8 +98,27 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let type0 = Int(row["type0"]!)!
                 let type1 = Int(row["type1"]!)!
                 
-                let poke = Pokemon(name: name, pokedexId: pokeId, height: Double(height), weight: Double(weight), max_cp: max_cp, attack: attack, defense: Int(defense), stamina: Int(stamina), evolution: evolution, type0: type0, type1: type1)
+                var quickMoves = Array<Move>()
+                var chargeMoves = Array<Move>()
+                
+                var moveset = Array<Int>()
+                for i in 0...4 {
+                    if Int(row["attack"+String(i)]!) != nil {
+                        moveset.append(Int(row["attack"+String(i)]!)!)
+                    }
+                }
+                for i in moveset {
+                    if(moves[i].attackType) {
+                        quickMoves.append(moves[i])
+                    } else {
+                        chargeMoves.append(moves[i])
+                    }
+                }
+                
+                
+                let poke = Pokemon(name: name, pokedexId: pokeId, height: Double(height), weight: Double(weight), max_cp: max_cp, attack: attack, defense: Int(defense), stamina: Int(stamina), evolution: evolution, type0: type0, type1: type1, quickMoves: quickMoves,chargeMoves: chargeMoves)
                 pokemon.append(poke)
+                
             }
             
         } catch let err as NSError {
@@ -108,8 +161,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             poke = pokemon[indexPath.row]
         }
         
-        print(poke.name)
-    
         performSegue(withIdentifier: "PokemonDetailVC", sender: poke)
         
     }
@@ -144,9 +195,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    func isStringAnInt(string: String) -> Bool {
+        return Int(string) != nil
+    }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
+        
     }
+    
+    
+//    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+//    view.addGestureRecognizer(tap)
+//    view.removeGestureRecognizer(tap)
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == nil || searchBar.text == "" {
@@ -155,10 +216,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             collection.reloadData()
         } else {
             inSearchMode = true
-            let lower = searchBar.text!.lowercased()
+            if(isStringAnInt(string: searchBar.text!)) {
+                let num = Int(searchBar.text!)
+                
+                filteredPokemon = pokemon.filter({$0.pokedexId == num})
+                collection.reloadData()
+            } else {
+                let lower = searchBar.text!.lowercased()
             
-            filteredPokemon = pokemon.filter({$0.name.range(of: lower) != nil})
-            collection.reloadData()
+                filteredPokemon = pokemon.filter({$0.name.range(of: lower) != nil})
+                collection.reloadData()
+            }
         }
     }
     

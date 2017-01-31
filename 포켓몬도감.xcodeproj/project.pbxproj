@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0DCC9F1E40489F00345C60 /* pokemon_KR5.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3F0DCC9E1E40489F00345C60 /* pokemon_KR5.csv */; };
+		3F0DCCA11E404E5F00345C60 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DCCA01E404E5F00345C60 /* Move.swift */; };
 		3F175FCA1E3EFE030038D2E1 /* moves.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3F175FC91E3EFE030038D2E1 /* moves.csv */; };
 		3F1C9ADC1E3F2D8400A559CE /* pokemon_KR4.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3F1C9ADB1E3F2D8400A559CE /* pokemon_KR4.csv */; };
 		3F328CD11E3812C10002186C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F328CD01E3812C10002186C /* AppDelegate.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F0DCC9E1E40489F00345C60 /* pokemon_KR5.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon_KR5.csv; sourceTree = "<group>"; };
+		3F0DCCA01E404E5F00345C60 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		3F175FC91E3EFE030038D2E1 /* moves.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = moves.csv; sourceTree = "<group>"; };
 		3F1C9ADB1E3F2D8400A559CE /* pokemon_KR4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon_KR4.csv; sourceTree = "<group>"; };
 		3F328CCD1E3812C10002186C /* 포켓몬도감.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "포켓몬도감.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				3F328CE51E381B2D0002186C /* Pokemon.swift */,
+				3F0DCCA01E404E5F00345C60 /* Move.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 				3FC148AC1E39D2DC001542EE /* type_index.csv */,
 				3FC148AD1E39D2DC001542EE /* pokemon.csv */,
 				3FC148AE1E39D2DC001542EE /* type_ref.csv */,
+				3F0DCC9E1E40489F00345C60 /* pokemon_KR5.csv */,
 				3F175FC91E3EFE030038D2E1 /* moves.csv */,
 				3F35DF3A1E3987A1006B64E4 /* morris.ttf */,
 				3F35DF361E396D66006B64E4 /* chollianh.ttf */,
@@ -213,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F328CF41E384B4C0002186C /* bgmusic.mp3 in Resources */,
+				3F0DCC9F1E40489F00345C60 /* pokemon_KR5.csv in Resources */,
 				3F1C9ADC1E3F2D8400A559CE /* pokemon_KR4.csv in Resources */,
 				3F35DF3B1E3987A1006B64E4 /* morris.ttf in Resources */,
 				3FC148B21E39D2DC001542EE /* lang_shapes.csv in Resources */,
@@ -236,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F0DCCA11E404E5F00345C60 /* Move.swift in Sources */,
 				3F328CE91E382F590002186C /* PokeCell.swift in Sources */,
 				3F328CE61E381B2D0002186C /* Pokemon.swift in Sources */,
 				3F328CD31E3812C10002186C /* ViewController.swift in Sources */,
@@ -384,6 +392,7 @@
 				DEVELOPMENT_TEAM = TGNC9R7XTB;
 				INFOPLIST_FILE = "포켓몬도감/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jane.-------------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
