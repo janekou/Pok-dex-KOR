@@ -1229,6 +1229,16 @@
                     <size key="freeformSize" width="375" height="1460"/>
                     <connections>
                         <outlet property="attack" destination="mdy-HI-TC6" id="PN3-iT-PI6"/>
+                        <outlet property="bmove0" destination="L13-HE-oEq" id="LTD-aP-HFh"/>
+                        <outlet property="bmove0_cd" destination="CXo-bq-8eK" id="PZv-wU-cW8"/>
+                        <outlet property="bmove0_dmg" destination="3ZI-iC-Wrm" id="cdh-gf-NRb"/>
+                        <outlet property="bmove0_dps" destination="3Gg-TQ-JLX" id="Gwz-v1-aGb"/>
+                        <outlet property="bmove0_type" destination="I8a-Xm-yQ5" id="JtS-Oe-z6U"/>
+                        <outlet property="bmove1" destination="542-EB-cap" id="9Z8-7g-6Vr"/>
+                        <outlet property="bmove1_cd" destination="xRn-cZ-vSc" id="Ilw-ck-kUH"/>
+                        <outlet property="bmove1_dmg" destination="5nI-Ph-IsJ" id="lqF-Rj-a8r"/>
+                        <outlet property="bmove1_dps" destination="i1e-3a-oAW" id="rQH-zR-g80"/>
+                        <outlet property="bmove1_type" destination="Dpz-PX-8nV" id="B77-3y-e4F"/>
                         <outlet property="defense" destination="KfM-Qv-5HD" id="VgQ-ZM-GnL"/>
                         <outlet property="descriptionTxt" destination="qnd-bU-wEM" id="3r5-4J-QxN"/>
                         <outlet property="evoImg" destination="KMA-Vm-Fzh" id="5eP-F2-qUP"/>
@@ -1236,6 +1246,21 @@
                         <outlet property="mainImg" destination="SVt-J5-WYW" id="FQj-7e-zDy"/>
                         <outlet property="max_cp" destination="vBc-ZR-54s" id="YG5-m2-ygK"/>
                         <outlet property="nameLbl" destination="OxJ-Qw-Bde" id="e46-u4-nVW"/>
+                        <outlet property="smove0" destination="To1-LW-jCz" id="dJW-5v-CzN"/>
+                        <outlet property="smove0_cd" destination="6hu-Jj-ayq" id="YGC-ye-6lO"/>
+                        <outlet property="smove0_dmg" destination="yea-qb-8dL" id="uTI-8E-4R8"/>
+                        <outlet property="smove0_dps" destination="AcS-g1-lOQ" id="n0I-uF-w64"/>
+                        <outlet property="smove0_type" destination="3pg-nU-9j8" id="Jbw-Od-87M"/>
+                        <outlet property="smove1" destination="A9O-gG-IYg" id="MHL-4a-6O1"/>
+                        <outlet property="smove1_cd" destination="zBa-oS-0hB" id="EYl-Vc-j21"/>
+                        <outlet property="smove1_dmg" destination="ox6-mx-9M6" id="RDw-LR-XXK"/>
+                        <outlet property="smove1_dps" destination="Jid-am-cRT" id="cnQ-FK-VCm"/>
+                        <outlet property="smove1_type" destination="Ayy-jm-RHB" id="As7-xP-ZHT"/>
+                        <outlet property="smove2" destination="Kkf-bi-afP" id="uWh-2t-sFU"/>
+                        <outlet property="smove2_cd" destination="7gI-Rj-AZA" id="mr3-7c-hoD"/>
+                        <outlet property="smove2_dmg" destination="dCo-RE-Kwh" id="Rcz-Rf-Ghw"/>
+                        <outlet property="smove2_dps" destination="JIQ-9h-nJV" id="P9N-MU-mki"/>
+                        <outlet property="smove2_type" destination="wqh-Ds-FKT" id="aj1-ku-yU5"/>
                         <outlet property="stamina" destination="El0-sM-sSc" id="Wg3-vc-y7D"/>
                         <outlet property="type0" destination="qO0-ND-6Zb" id="TG0-du-lZ2"/>
                         <outlet property="type1" destination="nUA-1X-3i2" id="4Km-vO-U91"/>

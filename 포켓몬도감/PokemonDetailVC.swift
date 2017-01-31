@@ -24,6 +24,34 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var evoImg: UIImageView!
     @IBOutlet weak var type0: UILabel!
     @IBOutlet weak var type1: UILabel!
+    @IBOutlet weak var bmove0: UILabel!
+    @IBOutlet weak var bmove1: UILabel!
+    @IBOutlet weak var smove0: UILabel!
+    @IBOutlet weak var smove1: UILabel!
+    @IBOutlet weak var smove2: UILabel!
+    @IBOutlet weak var bmove0_dmg: UILabel!
+    @IBOutlet weak var bmove1_dmg: UILabel!
+    @IBOutlet weak var smove0_dmg: UILabel!
+    @IBOutlet weak var smove1_dmg: UILabel!
+    @IBOutlet weak var smove2_dmg: UILabel!
+    @IBOutlet weak var bmove0_cd: UILabel!
+    @IBOutlet weak var bmove1_cd: UILabel!
+    @IBOutlet weak var smove0_cd: UILabel!
+    @IBOutlet weak var smove1_cd: UILabel!
+    @IBOutlet weak var smove2_cd: UILabel!
+    @IBOutlet weak var bmove0_dps: UILabel!
+    @IBOutlet weak var bmove1_dps: UILabel!
+    @IBOutlet weak var smove0_dps: UILabel!
+    @IBOutlet weak var smove1_dps: UILabel!
+    @IBOutlet weak var smove2_dps: UILabel!
+    @IBOutlet weak var bmove0_type: UILabel!
+    @IBOutlet weak var bmove1_type: UILabel!
+    @IBOutlet weak var smove0_type: UILabel!
+    @IBOutlet weak var smove1_type: UILabel!
+    @IBOutlet weak var smove2_type: UILabel!
+    
+    
+    
     
     var pokemon: Pokemon!
     
@@ -39,7 +67,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     
     
         self.navigationController?.navigationBar.topItem?.title = "#" + String(pokemon.pokedexId) + " " + pokemon.name
-        let navigationTitleFont = UIFont(name: "morris9", size: 16)!
+        let navigationTitleFont = UIFont(name: "morris9", size: 18)!
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationTitleFont]
         nameLbl.text = "#" + String(pokemon.pokedexId) + " " + pokemon.name
         mainImg.image = UIImage(named: "\(pokemon.pokedexId)")
@@ -62,6 +90,10 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         type1.layer.masksToBounds = true
         type0.layer.cornerRadius = 8.0
         type1.layer.cornerRadius = 8.0
+        
+        for m in pokemon.quickMoves {
+            
+        }
         
         //textview.font = UIFont(name: "morris9", size: 13)
         //textview.isSelectable = false
