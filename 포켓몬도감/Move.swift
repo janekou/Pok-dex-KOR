@@ -22,7 +22,10 @@ class Move {
         return String(format: "%.1f", _cooldown/1000)
     }
     var dps: String {
-        return String(format: "%.1f", Double(_power)/_cooldown)
+        return String(format: "%.1f", Double(_power)/(_cooldown/1000))
+    }
+    var moveName: String {
+        return _moveName
     }
     var moveType: Int {
         return _moveType

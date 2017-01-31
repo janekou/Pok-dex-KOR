@@ -23,7 +23,7 @@ class Pokemon {
     fileprivate var _type1: Int!
     fileprivate var _quickMoves: Array<Move>!
     fileprivate var _chargeMoves: Array<Move>!
-
+    
     
     var name: String {
         return _name

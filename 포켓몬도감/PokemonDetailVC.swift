@@ -10,8 +10,8 @@ import UIKit
 import QuartzCore
 
 class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
-
-    // 
+    
+    //
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
     @IBOutlet weak var descriptionTxt: UITextView!
@@ -50,8 +50,15 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var smove1_type: UILabel!
     @IBOutlet weak var smove2_type: UILabel!
     
-    
-    
+    @IBOutlet weak var bmove10: UILabel!
+    @IBOutlet weak var bmove11: UILabel!
+    @IBOutlet weak var bmove12: UILabel!
+    @IBOutlet weak var smove10: UILabel!
+    @IBOutlet weak var smove11: UILabel!
+    @IBOutlet weak var smove12: UILabel!
+    @IBOutlet weak var smove20: UILabel!
+    @IBOutlet weak var smove21: UILabel!
+    @IBOutlet weak var smove22: UILabel!
     
     var pokemon: Pokemon!
     
@@ -64,8 +71,8 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         edgePan.edges = .left
         
         view.addGestureRecognizer(edgePan)
-    
-    
+        
+        
         self.navigationController?.navigationBar.topItem?.title = "#" + String(pokemon.pokedexId) + " " + pokemon.name
         let navigationTitleFont = UIFont(name: "morris9", size: 18)!
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationTitleFont]
@@ -78,36 +85,130 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         max_cp.text = String(pokemon.max_cp)
         stamina.text = String(pokemon.stamina)
         evoImg.image = UIImage(named: "\(pokemon.evolution)")
-//        type0.text = String(pokemon.type0)
-//        type1.text = String(pokemon.type1)
+        //        type0.text = String(pokemon.type0)
+        //        type1.text = String(pokemon.type1)
         
         //type labels settings
-        type0.textColor = UIColor.white
-        type1.textColor = UIColor.white
         setTypeLabel(l: type0, n: pokemon.type0)
         setTypeLabel(l: type1, n: pokemon.type1)
-        type0.layer.masksToBounds = true
-        type1.layer.masksToBounds = true
-        type0.layer.cornerRadius = 8.0
-        type1.layer.cornerRadius = 8.0
         
-        for m in pokemon.quickMoves {
-            
+        
+        if(pokemon.quickMoves.count==1) {
+            setMoveLabelB0(m: pokemon.quickMoves[0])
+            removeLabelB1()
+        } else {
+            setMoveLabelB0(m: pokemon.quickMoves[0])
+            setMoveLabelB1(m: pokemon.quickMoves[1])
+        }
+        
+        switch pokemon.chargeMoves.count {
+        case 1:
+            setMoveLabelS0(m: pokemon.chargeMoves[0])
+            removeLabelS1()
+            removeLabelS2()
+        case 2:
+            setMoveLabelS0(m: pokemon.chargeMoves[0])
+            setMoveLabelS1(m: pokemon.chargeMoves[1])
+            removeLabelS2()
+        case 3:
+            setMoveLabelS0(m: pokemon.chargeMoves[0])
+            setMoveLabelS1(m: pokemon.chargeMoves[1])
+            setMoveLabelS2(m: pokemon.chargeMoves[2])
+        default:
+            break
         }
         
         //textview.font = UIFont(name: "morris9", size: 13)
         //textview.isSelectable = false
-//        self.navigationController!.interactivePopGestureRecognizer?.delegate = self
-//        self.navigationController!.interactivePopGestureRecognizer?.isEnabled = true
-//        self.textview.delegate = self
-//        let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self.view, action: #selector (self.swipeGesture))
-//        recognizer.direction = UISwipeGestureRecognizerDirection.left
+        //        self.navigationController!.interactivePopGestureRecognizer?.delegate = self
+        //        self.navigationController!.interactivePopGestureRecognizer?.isEnabled = true
+        //        self.textview.delegate = self
+        //        let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self.view, action: #selector (self.swipeGesture))
+        //        recognizer.direction = UISwipeGestureRecognizerDirection.left
         //        recognizer.delegate = self
-//        self.view.addGestureRecognizer(recognizer)
+        //        self.view.addGestureRecognizer(recognizer)
     }
     
-    func setTypeLabel(l: UILabel,n: Int) {
+    func setMoveLabelB0(m: Move) {
+        bmove0.text = m.moveName
+        bmove0_dmg.text = m.power
+        bmove0_cd.text = m.coolDown
+        bmove0_dps.text = m.dps
+        setTypeLabel(l: bmove0_type, n: m.moveType)
         
+    }
+    
+    func setMoveLabelB1(m: Move) {
+        bmove1.text = m.moveName
+        bmove1_dmg.text = m.power
+        bmove1_cd.text = m.coolDown
+        bmove1_dps.text = m.dps
+        setTypeLabel(l: bmove1_type, n: m.moveType)
+    }
+    
+    func removeLabelB1() {
+        bmove10.removeFromSuperview()
+        bmove11.removeFromSuperview()
+        bmove12.removeFromSuperview()
+        bmove1.removeFromSuperview()
+        bmove1_dmg.removeFromSuperview()
+        bmove1_cd.removeFromSuperview()
+        bmove1_dps.removeFromSuperview()
+        bmove1_type.removeFromSuperview()
+    }
+    
+    func setMoveLabelS0(m: Move) {
+        smove0.text = m.moveName
+        smove0_dmg.text = m.power
+        smove0_cd.text = m.coolDown
+        smove0_dps.text = m.dps
+        setTypeLabel(l: smove0_type, n: m.moveType)
+    }
+    
+    func setMoveLabelS1(m: Move) {
+        smove1.text = m.moveName
+        smove1_dmg.text = m.power
+        smove1_cd.text = m.coolDown
+        smove1_dps.text = m.dps
+        setTypeLabel(l: smove1_type, n: m.moveType)
+    }
+    
+    func setMoveLabelS2(m: Move) {
+        smove2.text = m.moveName
+        smove2_dmg.text = m.power
+        smove2_cd.text = m.coolDown
+        smove2_dps.text = m.dps
+        setTypeLabel(l: smove2_type, n: m.moveType)
+    }
+    
+    func removeLabelS1() {
+        smove10.removeFromSuperview()
+        smove11.removeFromSuperview()
+        smove12.removeFromSuperview()
+        smove1.removeFromSuperview()
+        smove1_dmg.removeFromSuperview()
+        smove1_cd.removeFromSuperview()
+        smove1_dps.removeFromSuperview()
+        smove1_type.removeFromSuperview()
+    }
+    
+    func removeLabelS2() {
+        smove20.removeFromSuperview()
+        smove21.removeFromSuperview()
+        smove22.removeFromSuperview()
+        smove2.removeFromSuperview()
+        smove2_dmg.removeFromSuperview()
+        smove2_cd.removeFromSuperview()
+        smove2_dps.removeFromSuperview()
+        smove2_type.removeFromSuperview()
+    }
+    
+    
+    
+    func setTypeLabel(l: UILabel,n: Int) {
+        l.textColor = UIColor.white
+        l.layer.masksToBounds = true
+        l.layer.cornerRadius = 8.0
         switch n {
         case 0:
             l.removeFromSuperview()
@@ -169,7 +270,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         default:
             break
         }
-
+        
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
@@ -193,11 +294,11 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
             alpha: CGFloat(1.0)
         )
     }
-
+    
     func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
-       dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -208,15 +309,15 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
