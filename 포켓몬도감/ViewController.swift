@@ -80,7 +80,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func parsePokemonCSV() {
-        let path = Bundle.main.path(forResource: "pokemon_KR5", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "pokemon_KR7", ofType: "csv")!
         do {
             //pokemon data
             let csv = try CSV(contentsOfURL: path)
@@ -97,7 +97,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let evolution = Int(row["evolution"]!)!
                 let type0 = Int(row["type0"]!)!
                 let type1 = Int(row["type1"]!)!
-                
+                let desc = row["desc"]!
+                var candy = 0
+                if(row["candy"] != "") {
+                    candy = Int(row["candy"]!)!
+                }
                 var quickMoves = Array<Move>()
                 var chargeMoves = Array<Move>()
                 
@@ -116,7 +120,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
                 
                 
-                let poke = Pokemon(name: name, pokedexId: pokeId, height: Double(height), weight: Double(weight), max_cp: max_cp, attack: attack, defense: Int(defense), stamina: Int(stamina), evolution: evolution, type0: type0, type1: type1, quickMoves: quickMoves,chargeMoves: chargeMoves)
+                let poke = Pokemon(name: name, pokedexId: pokeId, height: Double(height), weight: Double(weight), max_cp: max_cp, attack: attack, defense: Int(defense), stamina: Int(stamina), evolution: evolution, type0: type0, type1: type1, quickMoves: quickMoves,chargeMoves: chargeMoves, desc: desc, candy: candy)
                 pokemon.append(poke)
                 
             }

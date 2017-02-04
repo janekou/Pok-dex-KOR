@@ -14,7 +14,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     //
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
-    @IBOutlet weak var descriptionTxt: UITextView!
+    @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var height: UILabel!
     @IBOutlet weak var weight: UILabel!
     @IBOutlet weak var attack: UILabel!
@@ -59,6 +59,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var smove20: UILabel!
     @IBOutlet weak var smove21: UILabel!
     @IBOutlet weak var smove22: UILabel!
+    @IBOutlet weak var candy: UILabel!
     
     var pokemon: Pokemon!
     
@@ -74,8 +75,8 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         
         
         self.navigationController?.navigationBar.topItem?.title = "#" + String(pokemon.pokedexId) + " " + pokemon.name
-        let navigationTitleFont = UIFont(name: "morris9", size: 18)!
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: navigationTitleFont]
+        let navigationTitleFont = UIFont(name: "GodoM", size: 18)!
+        self.navigationController?.navigationBar.titleTextAttributes =   [NSFontAttributeName: navigationTitleFont, NSForegroundColorAttributeName: UIColor.white]
         nameLbl.text = "#" + String(pokemon.pokedexId) + " " + pokemon.name
         mainImg.image = UIImage(named: "\(pokemon.pokedexId)")
         height.text = String(format: "%.2f", pokemon.height/10.0) + "m"
@@ -85,13 +86,20 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         max_cp.text = String(pokemon.max_cp)
         stamina.text = String(pokemon.stamina)
         evoImg.image = UIImage(named: "\(pokemon.evolution)")
+        if(pokemon.candy > 0) {
+            candy.text = "필요한 캔디 수  " + String(pokemon.candy)
+        } else {
+//            evoImg.image = UIImage(named: "!")
+            candy.text = "더 이상 진화하지 않는다."
+//            candy.removeFromSuperview()
+        }
         //        type0.text = String(pokemon.type0)
         //        type1.text = String(pokemon.type1)
         
         //type labels settings
         setTypeLabel(l: type0, n: pokemon.type0)
         setTypeLabel(l: type1, n: pokemon.type1)
-        
+        desc.text = pokemon.desc
         
         if(pokemon.quickMoves.count==1) {
             setMoveLabelB0(m: pokemon.quickMoves[0])
@@ -117,6 +125,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         default:
             break
         }
+        
         
         //textview.font = UIFont(name: "morris9", size: 13)
         //textview.isSelectable = false

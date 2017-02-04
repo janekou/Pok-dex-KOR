@@ -11,7 +11,7 @@ import Foundation
 class Pokemon {
     fileprivate var _name: String!
     fileprivate var _pokedexId: Int!
-    fileprivate var _description: String!
+    fileprivate var _desc: String!
     fileprivate var _height: Double!
     fileprivate var _weight: Double!
     fileprivate var _max_cp: Int!
@@ -23,6 +23,7 @@ class Pokemon {
     fileprivate var _type1: Int!
     fileprivate var _quickMoves: Array<Move>!
     fileprivate var _chargeMoves: Array<Move>!
+    fileprivate var _candy: Int
     
     
     var name: String {
@@ -77,8 +78,16 @@ class Pokemon {
         return _chargeMoves
     }
     
+    var desc: String {
+        return _desc
+    }
     
-    init(name: String, pokedexId: Int, height: Double, weight: Double, max_cp: Int, attack: Int, defense: Int, stamina: Int, evolution: Int, type0: Int, type1: Int, quickMoves: Array<Move>, chargeMoves: Array<Move>) {
+    var candy: Int {
+        return _candy
+    }
+    
+    
+    init(name: String, pokedexId: Int, height: Double, weight: Double, max_cp: Int, attack: Int, defense: Int, stamina: Int, evolution: Int, type0: Int, type1: Int, quickMoves: Array<Move>, chargeMoves: Array<Move>, desc: String, candy: Int) {
         self._name = name
         self._pokedexId = pokedexId
         self._height = height
@@ -92,5 +101,7 @@ class Pokemon {
         self._type1 = type1
         self._quickMoves = quickMoves
         self._chargeMoves = chargeMoves
+        self._desc = desc
+        self._candy = candy
     }
 }
