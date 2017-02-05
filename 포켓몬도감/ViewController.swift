@@ -28,7 +28,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
         initAudio()
-        ParseMoves()
+        parseMoves()
         parsePokemonCSV()
         
         //keyboard dismiss
@@ -54,7 +54,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    func ParseMoves() {
+    func parseMoves() {
         let path = Bundle.main.path(forResource: "attacks", ofType: "csv")!
         do {
             //moveset data
@@ -80,7 +80,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func parsePokemonCSV() {
-        let path = Bundle.main.path(forResource: "pokemon_KR7", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "pokemon_KR8", ofType: "csv")!
         do {
             //pokemon data
             let csv = try CSV(contentsOfURL: path)
@@ -94,10 +94,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let attack = Int(row["attack"]!)!
                 let defense = Int(row["defense"]!)!
                 let stamina = Int(row["stamina"]!)!
-                let evolution = Int(row["evolution"]!)!
                 let type0 = Int(row["type0"]!)!
                 let type1 = Int(row["type1"]!)!
                 let desc = row["desc"]!
+                let evolution = Int(row["evolution"]!)!
+                var evo = [Int]()
+                if(evolution > 0) {
+                    print (evolution)
+                    for i in 0 ..< evolution {
+                        let index = "evo"+String(i+1)
+                        print (index)
+                        print (name)
+                        evo.append(Int(row[index]!)!)
+                    }
+                }
                 var candy = 0
                 if(row["candy"] != "") {
                     candy = Int(row["candy"]!)!
@@ -120,7 +130,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
                 
                 
-                let poke = Pokemon(name: name, pokedexId: pokeId, height: Double(height), weight: Double(weight), max_cp: max_cp, attack: attack, defense: Int(defense), stamina: Int(stamina), evolution: evolution, type0: type0, type1: type1, quickMoves: quickMoves,chargeMoves: chargeMoves, desc: desc, candy: candy)
+                let poke = Pokemon(name: name, pokedexId: pokeId, height: Double(height), weight: Double(weight), max_cp: max_cp, attack: attack, defense: Int(defense), stamina: Int(stamina), evolution: evo, type0: type0, type1: type1, quickMoves: quickMoves,chargeMoves: chargeMoves, desc: desc, candy: candy)
                 pokemon.append(poke)
                 
             }

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1316,7 +1316,13 @@
                     <size key="freeformSize" width="375" height="1800"/>
                     <connections>
                         <outlet property="attack" destination="mdy-HI-TC6" id="PN3-iT-PI6"/>
+                        <outlet property="baseStack0" destination="GOI-L1-ziL" id="dfL-bv-obh"/>
+                        <outlet property="baseStack1" destination="bDX-El-4lP" id="DS3-39-TzY"/>
+                        <outlet property="bmove" destination="eqP-sF-O76" id="kbF-AJ-LeR"/>
                         <outlet property="bmove0" destination="L13-HE-oEq" id="LTD-aP-HFh"/>
+                        <outlet property="bmove00" destination="Yhf-Un-hRP" id="yQr-JO-b8E"/>
+                        <outlet property="bmove01" destination="d9R-Hi-45b" id="NUy-YS-VUA"/>
+                        <outlet property="bmove02" destination="c8C-w8-TcC" id="lyh-Vg-Zdi"/>
                         <outlet property="bmove0_cd" destination="CXo-bq-8eK" id="PZv-wU-cW8"/>
                         <outlet property="bmove0_dmg" destination="3ZI-iC-Wrm" id="cdh-gf-NRb"/>
                         <outlet property="bmove0_dps" destination="3Gg-TQ-JLX" id="Gwz-v1-aGb"/>
@@ -1332,12 +1338,22 @@
                         <outlet property="candy" destination="mfh-Pn-kSR" id="8Hi-g2-ZMf"/>
                         <outlet property="defense" destination="KfM-Qv-5HD" id="VgQ-ZM-GnL"/>
                         <outlet property="desc" destination="hmE-DE-hee" id="NHU-pS-erB"/>
-                        <outlet property="evoImg" destination="KMA-Vm-Fzh" id="5eP-F2-qUP"/>
+                        <outlet property="evoImg1" destination="ojW-M1-1j8" id="ULf-pK-Zkh"/>
+                        <outlet property="evoImg2" destination="KMA-Vm-Fzh" id="HNg-gW-yJT"/>
+                        <outlet property="evoImg3" destination="aWP-nE-6wC" id="mAn-Od-5dz"/>
+                        <outlet property="evoImg4" destination="wqp-Bs-nBq" id="XBm-pg-nUr"/>
+                        <outlet property="evoImg5" destination="qXL-0c-weh" id="e3g-IB-pMV"/>
+                        <outlet property="evoStack1" destination="eif-M2-5wD" id="sgf-w5-7N2"/>
+                        <outlet property="evoStack2" destination="ymy-MN-RFE" id="eEv-mS-EAb"/>
                         <outlet property="height" destination="FPN-vi-IOC" id="Fqq-pG-ZA2"/>
                         <outlet property="mainImg" destination="SVt-J5-WYW" id="FQj-7e-zDy"/>
                         <outlet property="max_cp" destination="vBc-ZR-54s" id="YG5-m2-ygK"/>
                         <outlet property="nameLbl" destination="OxJ-Qw-Bde" id="e46-u4-nVW"/>
+                        <outlet property="smove" destination="8x1-N3-jfK" id="ETB-ni-d0c"/>
                         <outlet property="smove0" destination="To1-LW-jCz" id="dJW-5v-CzN"/>
+                        <outlet property="smove00" destination="S2h-4e-aQS" id="GOq-ch-HUr"/>
+                        <outlet property="smove01" destination="qze-nP-3iW" id="N2f-gv-xxU"/>
+                        <outlet property="smove02" destination="w9f-Dx-jsu" id="Wr7-7S-tGX"/>
                         <outlet property="smove0_cd" destination="6hu-Jj-ayq" id="YGC-ye-6lO"/>
                         <outlet property="smove0_dmg" destination="yea-qb-8dL" id="uTI-8E-4R8"/>
                         <outlet property="smove0_dps" destination="AcS-g1-lOQ" id="n0I-uF-w64"/>
@@ -1358,6 +1374,9 @@
                         <outlet property="smove2_dmg" destination="dCo-RE-Kwh" id="Rcz-Rf-Ghw"/>
                         <outlet property="smove2_dps" destination="JIQ-9h-nJV" id="P9N-MU-mki"/>
                         <outlet property="smove2_type" destination="wqh-Ds-FKT" id="aj1-ku-yU5"/>
+                        <outlet property="specialStack0" destination="ZNq-iP-347" id="5Ku-IX-DPe"/>
+                        <outlet property="specialStack1" destination="JLd-4y-jDb" id="IvL-qR-E0K"/>
+                        <outlet property="specialStack2" destination="I6q-18-kf7" id="Ggp-0Y-Upl"/>
                         <outlet property="stamina" destination="El0-sM-sSc" id="Wg3-vc-y7D"/>
                         <outlet property="type0" destination="qO0-ND-6Zb" id="TG0-du-lZ2"/>
                         <outlet property="type1" destination="nUA-1X-3i2" id="4Km-vO-U91"/>

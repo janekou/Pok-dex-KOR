@@ -31,6 +31,7 @@
 		3FC148B51E39D2DC001542EE /* type_ref.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3FC148AE1E39D2DC001542EE /* type_ref.csv */; };
 		3FC148B81E3B4B42001542EE /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F404C851E39215300875A43 /* PokemonDetailVC.swift */; };
 		3FE9223B1E41922A0001506F /* pokemon_KR6.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3FE9223A1E41922A0001506F /* pokemon_KR6.csv */; };
+		B48702C91E46F562002D0FA6 /* pokemon_KR8.csv in Resources */ = {isa = PBXBuildFile; fileRef = B48702C81E46F562002D0FA6 /* pokemon_KR8.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		3FC148AD1E39D2DC001542EE /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		3FC148AE1E39D2DC001542EE /* type_ref.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = type_ref.csv; sourceTree = "<group>"; };
 		3FE9223A1E41922A0001506F /* pokemon_KR6.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon_KR6.csv; sourceTree = "<group>"; };
+		B48702C81E46F562002D0FA6 /* pokemon_KR8.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon_KR8.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				3FC094851E416DE700C316BA /* GodoM.ttf */,
 				3F1B34DF1E41A79000766F2B /* GodoB.ttf */,
 				3F328CEE1E3844EB0002186C /* Pokemon Solid.ttf */,
+				B48702C81E46F562002D0FA6 /* pokemon_KR8.csv */,
 				3F1C9ADB1E3F2D8400A559CE /* pokemon_KR4.csv */,
 				3F0DCC9E1E40489F00345C60 /* pokemon_KR5.csv */,
 				3FE9223A1E41922A0001506F /* pokemon_KR6.csv */,
@@ -240,6 +243,7 @@
 				3FC094861E416DE700C316BA /* GodoM.ttf in Resources */,
 				3F404C891E39270100875A43 /* Main.storyboard in Resources */,
 				3F175FCA1E3EFE030038D2E1 /* moves.csv in Resources */,
+				B48702C91E46F562002D0FA6 /* pokemon_KR8.csv in Resources */,
 				3F404C831E38FF4E00875A43 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

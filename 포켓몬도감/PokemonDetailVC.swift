@@ -21,9 +21,19 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var defense: UILabel!
     @IBOutlet weak var max_cp: UILabel!
     @IBOutlet weak var stamina: UILabel!
-    @IBOutlet weak var evoImg: UIImageView!
+    @IBOutlet weak var evoImg1: UIImageView!
+    @IBOutlet weak var evoImg2: UIImageView!
+    @IBOutlet weak var evoImg3: UIImageView!
+    @IBOutlet weak var evoImg4: UIImageView!
+    @IBOutlet weak var evoImg5: UIImageView!
+    @IBOutlet weak var evoStack1: UIStackView!
+    @IBOutlet weak var evoStack2: UIStackView!
+    
+    
     @IBOutlet weak var type0: UILabel!
     @IBOutlet weak var type1: UILabel!
+    @IBOutlet weak var bmove: UILabel!
+    @IBOutlet weak var smove: UILabel!
     @IBOutlet weak var bmove0: UILabel!
     @IBOutlet weak var bmove1: UILabel!
     @IBOutlet weak var smove0: UILabel!
@@ -50,15 +60,31 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var smove1_type: UILabel!
     @IBOutlet weak var smove2_type: UILabel!
     
+    @IBOutlet weak var bmove00: UILabel!
+    @IBOutlet weak var bmove01: UILabel!
+    @IBOutlet weak var bmove02: UILabel!
     @IBOutlet weak var bmove10: UILabel!
     @IBOutlet weak var bmove11: UILabel!
     @IBOutlet weak var bmove12: UILabel!
+    
+    @IBOutlet weak var baseStack0: UIStackView!
+    @IBOutlet weak var baseStack1: UIStackView!
+    
+    @IBOutlet weak var smove00: UILabel!
+    @IBOutlet weak var smove01: UILabel!
+    @IBOutlet weak var smove02: UILabel!
     @IBOutlet weak var smove10: UILabel!
     @IBOutlet weak var smove11: UILabel!
     @IBOutlet weak var smove12: UILabel!
     @IBOutlet weak var smove20: UILabel!
     @IBOutlet weak var smove21: UILabel!
     @IBOutlet weak var smove22: UILabel!
+    
+    @IBOutlet weak var specialStack0: UIStackView!
+    @IBOutlet weak var specialStack1: UIStackView!
+    @IBOutlet weak var specialStack2: UIStackView!
+    
+    
     @IBOutlet weak var candy: UILabel!
     
     var pokemon: Pokemon!
@@ -85,17 +111,12 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         defense.text = String(pokemon.defense)
         max_cp.text = String(pokemon.max_cp)
         stamina.text = String(pokemon.stamina)
-        evoImg.image = UIImage(named: "\(pokemon.evolution)")
+        setEvo(e: pokemon.evolution)
         if(pokemon.candy > 0) {
             candy.text = "필요한 캔디 수  " + String(pokemon.candy)
         } else {
-//            evoImg.image = UIImage(named: "!")
             candy.text = "더 이상 진화하지 않는다."
-//            candy.removeFromSuperview()
         }
-        //        type0.text = String(pokemon.type0)
-        //        type1.text = String(pokemon.type1)
-        
         //type labels settings
         setTypeLabel(l: type0, n: pokemon.type0)
         setTypeLabel(l: type1, n: pokemon.type1)
@@ -103,21 +124,28 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         
         if(pokemon.quickMoves.count==1) {
             setMoveLabelB0(m: pokemon.quickMoves[0])
-            removeLabelB1()
-        } else {
+            baseStack1.removeFromSuperview()
+        } else if(pokemon.quickMoves.count>1) {
             setMoveLabelB0(m: pokemon.quickMoves[0])
             setMoveLabelB1(m: pokemon.quickMoves[1])
+        } else {
+            baseStack1.removeFromSuperview()
+            baseStack0.removeFromSuperview()
         }
         
         switch pokemon.chargeMoves.count {
+        case 0:
+            specialStack0.removeFromSuperview()
+            specialStack1.removeFromSuperview()
+            specialStack2.removeFromSuperview()
         case 1:
             setMoveLabelS0(m: pokemon.chargeMoves[0])
-            removeLabelS1()
-            removeLabelS2()
+            specialStack1.removeFromSuperview()
+            specialStack2.removeFromSuperview()
         case 2:
             setMoveLabelS0(m: pokemon.chargeMoves[0])
             setMoveLabelS1(m: pokemon.chargeMoves[1])
-            removeLabelS2()
+            specialStack2.removeFromSuperview()
         case 3:
             setMoveLabelS0(m: pokemon.chargeMoves[0])
             setMoveLabelS1(m: pokemon.chargeMoves[1])
@@ -138,6 +166,40 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         //        self.view.addGestureRecognizer(recognizer)
     }
     
+    func setEvo(e: Array<Int>) {
+        switch e.count {
+        case 0:
+            evoStack1.removeFromSuperview()
+            evoStack2.removeFromSuperview()
+        case 1:
+            //1 change 1, remove 3,4,5
+            evoImg1.image = UIImage(named: String(e[0]))
+            evoImg2.removeFromSuperview()
+            evoImg3.removeFromSuperview()
+            evoStack2.removeFromSuperview()
+        case 2:
+            //2 remove 1,2,3
+            evoImg4.image = UIImage(named: String(e[0]))
+            evoImg5.image = UIImage(named: String(e[1]))
+            evoStack1.removeFromSuperview()
+        case 3:
+            //3 remove 4,5
+            evoImg1.image = UIImage(named: String(e[0]))
+            evoImg2.image = UIImage(named: String(e[1]))
+            evoImg3.image = UIImage(named: String(e[2]))
+            evoStack1.removeFromSuperview()
+        case 5:
+            evoImg1.image = UIImage(named: String(e[0]))
+            evoImg2.image = UIImage(named: String(e[1]))
+            evoImg3.image = UIImage(named: String(e[2]))
+            evoImg4.image = UIImage(named: String(e[3]))
+            evoImg5.image = UIImage(named: String(e[4]))
+        default:
+            break
+        }
+        
+    }
+    
     func setMoveLabelB0(m: Move) {
         bmove0.text = m.moveName
         bmove0_dmg.text = m.power
@@ -153,17 +215,6 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         bmove1_cd.text = m.coolDown
         bmove1_dps.text = m.dps
         setTypeLabel(l: bmove1_type, n: m.moveType)
-    }
-    
-    func removeLabelB1() {
-        bmove10.removeFromSuperview()
-        bmove11.removeFromSuperview()
-        bmove12.removeFromSuperview()
-        bmove1.removeFromSuperview()
-        bmove1_dmg.removeFromSuperview()
-        bmove1_cd.removeFromSuperview()
-        bmove1_dps.removeFromSuperview()
-        bmove1_type.removeFromSuperview()
     }
     
     func setMoveLabelS0(m: Move) {
@@ -189,29 +240,6 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         smove2_dps.text = m.dps
         setTypeLabel(l: smove2_type, n: m.moveType)
     }
-    
-    func removeLabelS1() {
-        smove10.removeFromSuperview()
-        smove11.removeFromSuperview()
-        smove12.removeFromSuperview()
-        smove1.removeFromSuperview()
-        smove1_dmg.removeFromSuperview()
-        smove1_cd.removeFromSuperview()
-        smove1_dps.removeFromSuperview()
-        smove1_type.removeFromSuperview()
-    }
-    
-    func removeLabelS2() {
-        smove20.removeFromSuperview()
-        smove21.removeFromSuperview()
-        smove22.removeFromSuperview()
-        smove2.removeFromSuperview()
-        smove2_dmg.removeFromSuperview()
-        smove2_cd.removeFromSuperview()
-        smove2_dps.removeFromSuperview()
-        smove2_type.removeFromSuperview()
-    }
-    
     
     
     func setTypeLabel(l: UILabel,n: Int) {
