@@ -26,6 +26,11 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var evoImg3: UIImageView!
     @IBOutlet weak var evoImg4: UIImageView!
     @IBOutlet weak var evoImg5: UIImageView!
+    @IBOutlet weak var evoLbl1: UILabel!
+    @IBOutlet weak var evoLbl2: UILabel!
+    @IBOutlet weak var evoLbl3: UILabel!
+    @IBOutlet weak var evoLbl4: UILabel!
+    @IBOutlet weak var evoLbl5: UILabel!
     @IBOutlet weak var evoStack1: UIStackView!
     @IBOutlet weak var evoStack2: UIStackView!
     
@@ -174,26 +179,40 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         case 1:
             //1 change 1, remove 3,4,5
             evoImg1.image = UIImage(named: String(e[0]))
+            evoLbl1.text = String(pokemon.name)
             evoImg2.removeFromSuperview()
+            evoLbl2.removeFromSuperview()
             evoImg3.removeFromSuperview()
+            evoLbl3.removeFromSuperview()
             evoStack2.removeFromSuperview()
         case 2:
             //2 remove 1,2,3
             evoImg4.image = UIImage(named: String(e[0]))
+            evoLbl4.text = String(pokemon.name)
             evoImg5.image = UIImage(named: String(e[1]))
+            evoLbl5.text = String(pokemon.name)
+
             evoStack1.removeFromSuperview()
         case 3:
             //3 remove 4,5
             evoImg1.image = UIImage(named: String(e[0]))
+            evoLbl1.text = String(pokemon.name)
             evoImg2.image = UIImage(named: String(e[1]))
+            evoLbl2.text = String(pokemon.name)
             evoImg3.image = UIImage(named: String(e[2]))
+            evoLbl3.text = String(pokemon.name)
             evoStack1.removeFromSuperview()
         case 5:
             evoImg1.image = UIImage(named: String(e[0]))
+            evoLbl1.text = String(pokemon.name)
             evoImg2.image = UIImage(named: String(e[1]))
+            evoLbl2.text = String(pokemon.name)
             evoImg3.image = UIImage(named: String(e[2]))
+            evoLbl3.text = String(pokemon.name)
             evoImg4.image = UIImage(named: String(e[3]))
+            evoLbl4.text = String(pokemon.name)
             evoImg5.image = UIImage(named: String(e[4]))
+            evoLbl5.text = String(pokemon.name)
         default:
             break
         }
