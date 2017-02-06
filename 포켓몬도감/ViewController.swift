@@ -100,11 +100,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let evolution = Int(row["evolution"]!)!
                 var evo = [Int]()
                 if(evolution > 0) {
-                    print (evolution)
+//                    print (evolution)
                     for i in 0 ..< evolution {
                         let index = "evo"+String(i+1)
-                        print (index)
-                        print (name)
+//                        print (index)
+//                        print (name)
                         evo.append(Int(row[index]!)!)
                     }
                 }
