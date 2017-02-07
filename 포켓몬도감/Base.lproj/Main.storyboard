@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KOR-7f-GRQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,9 +13,6 @@
         <array key="GodoM.ttf">
             <string>GodoM</string>
         </array>
-        <array key="Pokemon Solid.ttf">
-            <string>PokemonSolidNormal</string>
-        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -27,48 +24,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="dGS-ce-O9e">
-                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="559"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKR-hQ-rto">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PoKéDeX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp4-nO-9an">
-                                        <rect key="frame" x="83" y="27" width="208" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="SE5-jp-sGh"/>
-                                            <constraint firstAttribute="width" constant="208" id="lDd-tq-OGJ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="23"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zD-XL-B38" userLabel="Audio Button">
-                                        <rect key="frame" x="343" y="31" width="22" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="22" id="DJf-vL-eyE"/>
-                                            <constraint firstAttribute="width" constant="22" id="OvI-ye-YYJ"/>
-                                        </constraints>
-                                        <state key="normal" image="music"/>
-                                        <connections>
-                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cu0-8m-AHM"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.28880403701387736" blue="0.24712686514997884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="8zD-XL-B38" firstAttribute="centerY" secondItem="Hp4-nO-9an" secondAttribute="centerY" id="5wP-yj-jrt"/>
-                                    <constraint firstAttribute="height" constant="64" id="Ijc-KR-dya"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hp4-nO-9an" secondAttribute="bottom" constant="6" id="bL6-db-eHx"/>
-                                    <constraint firstAttribute="trailing" secondItem="8zD-XL-B38" secondAttribute="trailing" constant="10" id="oYS-5y-4Ii"/>
-                                    <constraint firstItem="Hp4-nO-9an" firstAttribute="centerX" secondItem="vKR-hQ-rto" secondAttribute="centerX" id="smG-lw-pMf"/>
-                                </constraints>
-                            </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="heM-Cw-saB">
-                                <rect key="frame" x="16" y="118" width="343" height="549"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="heM-Cw-saB">
+                                <rect key="frame" x="16" y="-587" width="343" height="1190"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WOq-7u-Oru">
                                     <size key="itemSize" width="110" height="110"/>
@@ -117,7 +80,7 @@
                                 </cells>
                             </collectionView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="포켓몬 이름 또는 번호" translatesAutoresizingMaskIntoConstraints="NO" id="JXk-MK-mIl">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="MYv-wh-hYZ"/>
                                 </constraints>
@@ -126,32 +89,46 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vKR-hQ-rto" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3xW-CD-ll4"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dGS-ce-O9e" secondAttribute="bottom" id="4Bz-H8-AD6"/>
                             <constraint firstItem="dGS-ce-O9e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6XC-ed-55C"/>
                             <constraint firstItem="heM-Cw-saB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7MH-Dn-sHl"/>
                             <constraint firstAttribute="trailing" secondItem="dGS-ce-O9e" secondAttribute="trailing" id="DgX-Ou-Qkr"/>
-                            <constraint firstItem="vKR-hQ-rto" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fj9-3I-c81"/>
                             <constraint firstItem="JXk-MK-mIl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ip7-EN-Qsf"/>
                             <constraint firstItem="dGS-ce-O9e" firstAttribute="top" secondItem="JXk-MK-mIl" secondAttribute="bottom" id="JBu-yo-GuK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="heM-Cw-saB" secondAttribute="bottom" id="VIw-I6-srC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dGS-ce-O9e" secondAttribute="bottom" id="WoQ-nR-SIM"/>
                             <constraint firstItem="JXk-MK-mIl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wuo-Zu-9HQ"/>
+                            <constraint firstItem="JXk-MK-mIl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="caN-un-DIe"/>
                             <constraint firstAttribute="trailing" secondItem="JXk-MK-mIl" secondAttribute="trailing" id="e57-UN-4EY"/>
-                            <constraint firstAttribute="trailing" secondItem="vKR-hQ-rto" secondAttribute="trailing" id="fr7-yq-dyv"/>
-                            <constraint firstItem="JXk-MK-mIl" firstAttribute="top" secondItem="vKR-hQ-rto" secondAttribute="bottom" id="gyf-T8-dsa"/>
                             <constraint firstItem="heM-Cw-saB" firstAttribute="top" secondItem="JXk-MK-mIl" secondAttribute="bottom" constant="10" id="pMk-0v-JAe"/>
                             <constraint firstItem="heM-Cw-saB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qD9-Vf-C1G"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="heM-Cw-saB" secondAttribute="bottom" id="t6f-59-nj4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="e9U-Rq-9aW">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="uOP-Br-ILo"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="sWX-z2-9ay">
+                            <button key="customView" opaque="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8zD-XL-B38" userLabel="Audio Button">
+                                <rect key="frame" x="337" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="DJf-vL-eyE"/>
+                                    <constraint firstAttribute="width" constant="22" id="OvI-ye-YYJ"/>
+                                </constraints>
+                                <state key="normal" image="music"/>
+                                <connections>
+                                    <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cu0-8m-AHM"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collection" destination="heM-Cw-saB" id="0Jg-ag-xIv"/>
                         <outlet property="searchBar" destination="JXk-MK-mIl" id="5bH-vH-otj"/>
-                        <segue destination="KOR-7f-GRQ" kind="presentation" identifier="PokemonDetailVC" modalTransitionStyle="flipHorizontal" id="cvf-Rq-l0F"/>
+                        <segue destination="R4l-FW-fJV" kind="show" identifier="PokemonDetailVC" id="a3D-fk-DF5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="475"/>
+            <point key="canvasLocation" x="-258" y="1033"/>
         </scene>
         <!--Pokemon DetailVC-->
         <scene sceneID="tWk-Pi-oFe">
@@ -371,7 +348,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약한 타입" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXg-bU-KPT">
-                                                <rect key="frame" x="152" y="632" width="71" height="20.5"/>
+                                                <rect key="frame" x="152.5" y="632" width="71" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -689,7 +666,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일반 기술" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqP-sF-O76">
-                                                <rect key="frame" x="153" y="1001" width="70" height="20.5"/>
+                                                <rect key="frame" x="152.5" y="1001" width="70" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1146,7 +1123,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8eU-Wt-oOp">
-                                                <rect key="frame" x="20" y="1437" width="335" height="240"/>
+                                                <rect key="frame" x="19.5" y="1437" width="335" height="240"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eif-M2-5wD">
                                                         <rect key="frame" x="9.5" y="0.0" width="316" height="116"/>
@@ -1334,33 +1311,27 @@
                                     <constraint firstAttribute="bottom" secondItem="e2x-GQ-02g" secondAttribute="bottom" constant="81" id="g6k-gm-K3L"/>
                                     <constraint firstItem="e2x-GQ-02g" firstAttribute="top" secondItem="oq3-TC-lbs" secondAttribute="top" constant="-95" id="jcM-fK-BrJ"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="0UF-92-vqg" appends="YES" id="ovG-YG-I9M"/>
-                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <rect key="contentStretch" x="0.10000000000000001" y="0.0" width="1" height="1"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="oq3-TC-lbs" firstAttribute="top" secondItem="cod-Ua-aYL" secondAttribute="bottom" constant="-20" id="IUM-PE-hrx"/>
                             <constraint firstItem="e2x-GQ-02g" firstAttribute="width" secondItem="yv4-Ua-bqb" secondAttribute="width" id="KxW-Ih-Cre"/>
                             <constraint firstItem="e2x-GQ-02g" firstAttribute="centerX" secondItem="yv4-Ua-bqb" secondAttribute="centerX" id="Tab-l4-Vrk"/>
                             <constraint firstItem="oq3-TC-lbs" firstAttribute="leading" secondItem="yv4-Ua-bqb" secondAttribute="leading" id="WXs-ar-t1d"/>
                             <constraint firstAttribute="trailing" secondItem="oq3-TC-lbs" secondAttribute="trailing" id="Zi7-vL-Ec8"/>
-                            <constraint firstItem="oq3-TC-lbs" firstAttribute="top" secondItem="cod-Ua-aYL" secondAttribute="bottom" constant="-20" id="aU1-wX-hzB"/>
                             <constraint firstAttribute="bottom" secondItem="oq3-TC-lbs" secondAttribute="bottom" id="uH2-UU-TXy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sax-xi-Fnk">
-                        <barButtonItem key="leftBarButtonItem" id="yda-Gy-KJI">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="yda-Gy-KJI">
                             <button key="customView" opaque="NO" contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XaF-dM-vJA" userLabel="Back Button">
                                 <rect key="frame" x="16" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="22"/>
                                 <state key="normal" title="〈"/>
-                                <connections>
-                                    <action selector="backBtnPressed:" destination="R4l-FW-fJV" eventType="touchUpInside" id="M31-qS-hJ7"/>
-                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -1390,6 +1361,7 @@
                         <outlet property="candy" destination="mfh-Pn-kSR" id="8Hi-g2-ZMf"/>
                         <outlet property="defense" destination="KfM-Qv-5HD" id="VgQ-ZM-GnL"/>
                         <outlet property="desc" destination="hmE-DE-hee" id="NHU-pS-erB"/>
+                        <outlet property="edgeGestureRecognizer" destination="ttK-rQ-ndm" id="RVx-dV-6Yd"/>
                         <outlet property="evoImg1" destination="ojW-M1-1j8" id="ULf-pK-Zkh"/>
                         <outlet property="evoImg2" destination="KMA-Vm-Fzh" id="HNg-gW-yJT"/>
                         <outlet property="evoImg3" destination="aWP-nE-6wC" id="mAn-Od-5dz"/>
@@ -1441,7 +1413,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdJ-l2-KlB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="0UF-92-vqg"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="ttK-rQ-ndm"/>
             </objects>
             <point key="canvasLocation" x="905" y="1370"/>
         </scene>
@@ -1450,7 +1422,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KOR-7f-GRQ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="wQe-t6-adf">
+                    <navigationItem key="navigationItem" id="JyO-j8-xtz"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="wQe-t6-adf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.28880403700000001" blue="0.24712686510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1460,12 +1433,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="R4l-FW-fJV" kind="relationship" relationship="rootViewController" id="kQL-Lq-cGv"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="a16-ak-t6M"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LHh-RR-WPK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="1371"/>
+            <point key="canvasLocation" x="-1166" y="1034"/>
         </scene>
     </scenes>
     <resources>

@@ -11,7 +11,8 @@ import QuartzCore
 
 class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     
-    //
+    @IBOutlet weak var edgeGestureRecognizer: UIScreenEdgePanGestureRecognizer!
+    
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
     @IBOutlet weak var desc: UILabel!
@@ -89,21 +90,18 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var specialStack1: UIStackView!
     @IBOutlet weak var specialStack2: UIStackView!
     
-    
     @IBOutlet weak var candy: UILabel!
     
-    var pokemon: Pokemon!
     
-    @IBOutlet weak var textview: UIScrollView!
+    var pokemon: Pokemon!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(screenEdgeSwiped))
-        edgePan.edges = .left
-        
-        view.addGestureRecognizer(edgePan)
-        
+        let edgeGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(self.userSwipedFromEdge))
+        edgeGestureRecognizer.edges = .left;
+        edgeGestureRecognizer.delegate = self
+        self.view.addGestureRecognizer(edgeGestureRecognizer)
         
         self.navigationController?.navigationBar.topItem?.title = "#" + String(pokemon.pokedexId) + " " + pokemon.name
         let navigationTitleFont = UIFont(name: "GodoM", size: 18)!
@@ -169,6 +167,16 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         //        recognizer.direction = UISwipeGestureRecognizerDirection.left
         //        recognizer.delegate = self
         //        self.view.addGestureRecognizer(recognizer)
+    }
+    
+    func userSwipedFromEdge(sender: UIScreenEdgePanGestureRecognizer) {
+        if sender.edges == UIRectEdge.left {
+            _ = navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
     
     func setEvo(e: Array<Int>) {
@@ -350,20 +358,16 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
             alpha: CGFloat(1.0)
         )
     }
-    
-    func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
-        dismiss(animated: true, completion: nil)
-    }
+//    
+//    func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+//        dismiss(animated: true, completion: nil)
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
-    @IBAction func backBtnPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
     
     
     /*

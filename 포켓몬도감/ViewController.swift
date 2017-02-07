@@ -19,7 +19,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var moves = [Move]()
     var musicPlayer: AVAudioPlayer!
     var inSearchMode = false
-//    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +30,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         parseMoves()
         parsePokemonCSV()
         
-        //keyboard dismiss
+        self.navigationController?.navigationBar.topItem?.title = "PoKéDeX"
+//        let navigationTitleFont = UIFont(name: "Pokemon Solid", size: 23)!
+//        self.navigationController?.navigationBar.titleTextAttributes =   [NSFontAttributeName: navigationTitleFont, NSForegroundColorAttributeName: UIColor.white]
     }
     
     //cancel search by touching other part of the screen
@@ -254,18 +255,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //            }
 //        }
 //    }
-//    
+    
+    
+    //pass data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "PokemonDetailVC" {
-            let navVC = segue.destination as? UINavigationController
-            let detailVC = navVC?.viewControllers.first as! PokemonDetailVC
-            if let poke = sender as? Pokemon{
+        if segue.identifier == "PokemonDetailVC",
+            let detailVC = segue.destination as? PokemonDetailVC,
+            let poke = sender as? Pokemon{
             detailVC.pokemon = poke
             }
             }
         }
-    }
-//    
+
+
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        
 //        let navVC = segue.destination as? UINavigationController
