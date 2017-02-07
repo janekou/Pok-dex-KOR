@@ -19,10 +19,10 @@
 		3F328CE61E381B2D0002186C /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F328CE51E381B2D0002186C /* Pokemon.swift */; };
 		3F328CE91E382F590002186C /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F328CE81E382F590002186C /* PokeCell.swift */; };
 		3F328CEB1E383C600002186C /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F328CEA1E383C600002186C /* csv.swift */; };
-		3F404C831E38FF4E00875A43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F404C821E38FF4E00875A43 /* Assets.xcassets */; };
 		3F404C891E39270100875A43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F404C871E39270100875A43 /* Main.storyboard */; };
 		3FA45C341E38520100CB5B23 /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F328CEE1E3844EB0002186C /* Pokemon Solid.ttf */; };
 		3FAA72371E48F96500F939E7 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA72361E48F96500F939E7 /* Interactor.swift */; };
+		3FAA72451E4A67A600F939E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA72441E4A67A600F939E7 /* Assets.xcassets */; };
 		3FC094861E416DE700C316BA /* GodoM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC094851E416DE700C316BA /* GodoM.ttf */; };
 		3FC148AF1E39D2DC001542EE /* attacks.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3FC148A81E39D2DC001542EE /* attacks.csv */; };
 		3FC148B21E39D2DC001542EE /* lang_shapes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3FC148AB1E39D2DC001542EE /* lang_shapes.csv */; };
@@ -52,10 +52,10 @@
 		3F328CEE1E3844EB0002186C /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
 		3F35DF381E39710E006B64E4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		3F35DF391E39710E006B64E4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		3F404C821E38FF4E00875A43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F404C851E39215300875A43 /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 		3F404C881E39270100875A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FAA72361E48F96500F939E7 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		3FAA72441E4A67A600F939E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "포켓몬도감/Assets.xcassets"; sourceTree = "<group>"; };
 		3FC094851E416DE700C316BA /* GodoM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GodoM.ttf; sourceTree = "<group>"; };
 		3FC148A81E39D2DC001542EE /* attacks.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = attacks.csv; sourceTree = "<group>"; };
 		3FC148AB1E39D2DC001542EE /* lang_shapes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lang_shapes.csv; sourceTree = "<group>"; };
@@ -103,8 +103,8 @@
 				3F328CED1E383C940002186C /* Resources */,
 				3F328CD01E3812C10002186C /* AppDelegate.swift */,
 				3F404C871E39270100875A43 /* Main.storyboard */,
-				3F404C821E38FF4E00875A43 /* Assets.xcassets */,
 				3F328CD91E3812C10002186C /* LaunchScreen.storyboard */,
+				3FAA72441E4A67A600F939E7 /* Assets.xcassets */,
 				3F328CDC1E3812C10002186C /* Info.plist */,
 			);
 			path = "포켓몬도감";
@@ -233,6 +233,7 @@
 				3F328CDB1E3812C10002186C /* LaunchScreen.storyboard in Resources */,
 				3F1B34E01E41A79500766F2B /* GodoB.ttf in Resources */,
 				3F1B34DE1E41A73300766F2B /* pokemon_KR7.csv in Resources */,
+				3FAA72451E4A67A600F939E7 /* Assets.xcassets in Resources */,
 				3FA45C341E38520100CB5B23 /* Pokemon Solid.ttf in Resources */,
 				3FC148B51E39D2DC001542EE /* type_ref.csv in Resources */,
 				3FC148AF1E39D2DC001542EE /* attacks.csv in Resources */,
@@ -243,7 +244,6 @@
 				3F404C891E39270100875A43 /* Main.storyboard in Resources */,
 				3F175FCA1E3EFE030038D2E1 /* moves.csv in Resources */,
 				B48702C91E46F562002D0FA6 /* pokemon_KR8.csv in Resources */,
-				3F404C831E38FF4E00875A43 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
