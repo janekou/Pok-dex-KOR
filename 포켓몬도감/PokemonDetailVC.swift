@@ -103,9 +103,14 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         edgeGestureRecognizer.delegate = self
         self.view.addGestureRecognizer(edgeGestureRecognizer)
         
-        self.navigationController?.navigationBar.topItem?.title = "#" + String(pokemon.pokedexId) + " " + pokemon.name
-        let navigationTitleFont = UIFont(name: "GodoM", size: 18)!
-        self.navigationController?.navigationBar.titleTextAttributes =   [NSFontAttributeName: navigationTitleFont, NSForegroundColorAttributeName: UIColor.white]
+        self.navigationItem.hidesBackButton = true
+        let backButton = UIBarButtonItem(image: UIImage(named: "back"), style: .plain, target: self, action: #selector(self.back))
+        self.navigationItem.leftBarButtonItem = backButton
+        
+        self.title = "#" + String(pokemon.pokedexId) + " " + pokemon.name
+        self.navigationController?.navigationBar.titleTextAttributes =   [NSFontAttributeName: UIFont(name: "GodoM", size: 18)!, NSForegroundColorAttributeName: UIColor.white]
+        
+        
         nameLbl.text = "#" + String(pokemon.pokedexId) + " " + pokemon.name
         mainImg.image = UIImage(named: "\(pokemon.pokedexId)")
         height.text = String(format: "%.2f", pokemon.height/10.0) + "m"
@@ -156,24 +161,19 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         default:
             break
         }
-        
-        
-        //textview.font = UIFont(name: "morris9", size: 13)
-        //textview.isSelectable = false
-        //        self.navigationController!.interactivePopGestureRecognizer?.delegate = self
-        //        self.navigationController!.interactivePopGestureRecognizer?.isEnabled = true
-        //        self.textview.delegate = self
-        //        let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self.view, action: #selector (self.swipeGesture))
-        //        recognizer.direction = UISwipeGestureRecognizerDirection.left
-        //        recognizer.delegate = self
-        //        self.view.addGestureRecognizer(recognizer)
+
     }
     
     func userSwipedFromEdge(sender: UIScreenEdgePanGestureRecognizer) {
-        if sender.edges == UIRectEdge.left {
+//        if sender.edges == UIRectEdge.left {
             _ = navigationController?.popViewController(animated: true)
-        }
+//        }
     }
+    
+    func back(sender: UIBarButtonItem) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true

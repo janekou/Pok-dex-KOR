@@ -17,7 +17,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var pokemon = [Pokemon]()
     var filteredPokemon = [Pokemon]()
     var moves = [Move]()
-    var musicPlayer: AVAudioPlayer!
     var inSearchMode = false
     
     override func viewDidLoad() {
@@ -26,11 +25,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.dataSource = self
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
-        initAudio()
         parseMoves()
         parsePokemonCSV()
         
-        self.navigationController?.navigationBar.topItem?.title = "PoKéDeX"
+        
+        self.title = "PoKéDeX"
+//        self.navigationController?.navigationBar.titleTextAttributes =   [NSFontAttributeName: UIFont(name: "Pokemon Solid", size: 23)!, NSForegroundColorAttributeName: UIColor.white]
 //        let navigationTitleFont = UIFont(name: "Pokemon Solid", size: 23)!
 //        self.navigationController?.navigationBar.titleTextAttributes =   [NSFontAttributeName: navigationTitleFont, NSForegroundColorAttributeName: UIColor.white]
     }
@@ -38,22 +38,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     //cancel search by touching other part of the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-        
     }
     
-    func initAudio() {
-        let path = Bundle.main.path(forResource: "bgmusic", ofType: "mp3")!
-        let url = URL(fileURLWithPath: path)
-        
-        do {
-            musicPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: nil)
-            musicPlayer.prepareToPlay()
-            musicPlayer.numberOfLoops = -1
-            musicPlayer.stop()
-        } catch let err as NSError {
-            print(err.debugDescription)
-        }
-    }
     
     func parseMoves() {
         let path = Bundle.main.path(forResource: "attacks", ofType: "csv")!
@@ -198,18 +184,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         return CGSize(width: 105, height: 105)
     }
-    
-    @IBAction func musicBtnPressed(_ sender: UIButton!) {
         
-        if musicPlayer.isPlaying {
-            musicPlayer.stop()
-            sender.alpha = 0.2
-        } else {
-            musicPlayer.play()
-            sender.alpha = 1.0
-        }
-    }
-    
     func isStringAnInt(string: String) -> Bool {
         return Int(string) != nil
     }
