@@ -11,9 +11,6 @@ import QuartzCore
 
 class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     
-    @IBAction func backButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     @IBOutlet weak var edgeGestureRecognizer: UIScreenEdgePanGestureRecognizer!
     
     @IBOutlet weak var nameLbl: UILabel!
