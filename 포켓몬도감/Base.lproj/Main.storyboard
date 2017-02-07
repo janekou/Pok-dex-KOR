@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="559"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="heM-Cw-saB">
-                                <rect key="frame" x="16" y="54" width="343" height="549"/>
+                                <rect key="frame" x="16" y="54" width="343" height="539"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WOq-7u-Oru">
                                     <size key="itemSize" width="110" height="110"/>
@@ -94,7 +94,7 @@
                             <constraint firstAttribute="trailing" secondItem="dGS-ce-O9e" secondAttribute="trailing" id="DgX-Ou-Qkr"/>
                             <constraint firstItem="JXk-MK-mIl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ip7-EN-Qsf"/>
                             <constraint firstItem="dGS-ce-O9e" firstAttribute="top" secondItem="JXk-MK-mIl" secondAttribute="bottom" id="JBu-yo-GuK"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="heM-Cw-saB" secondAttribute="bottom" id="VIw-I6-srC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="heM-Cw-saB" secondAttribute="bottom" constant="10" id="VIw-I6-srC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dGS-ce-O9e" secondAttribute="bottom" id="WoQ-nR-SIM"/>
                             <constraint firstItem="JXk-MK-mIl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wuo-Zu-9HQ"/>
                             <constraint firstItem="JXk-MK-mIl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="caN-un-DIe"/>
@@ -237,7 +237,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기본 능력치" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oC6-RF-xzW">
-                                                <rect key="frame" x="145" y="512" width="86" height="20"/>
+                                                <rect key="frame" x="144.5" y="512" width="86" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="fBV-Sf-0cv"/>
                                                 </constraints>
@@ -654,7 +654,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일반 기술" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqP-sF-O76">
-                                                <rect key="frame" x="152.5" y="1001" width="70" height="20.5"/>
+                                                <rect key="frame" x="153" y="1001" width="70" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -838,7 +838,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="특수 기술" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8x1-N3-jfK">
-                                                <rect key="frame" x="152.5" y="1172.5" width="70.5" height="20.5"/>
+                                                <rect key="frame" x="153" y="1172.5" width="70.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1105,13 +1105,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진화" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20v-KT-75P">
-                                                <rect key="frame" x="171.5" y="1401.5" width="32.5" height="20.5"/>
+                                                <rect key="frame" x="172" y="1401.5" width="32.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8eU-Wt-oOp">
-                                                <rect key="frame" x="19.5" y="1437" width="335" height="240"/>
+                                                <rect key="frame" x="20" y="1437" width="335" height="240"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eif-M2-5wD">
                                                         <rect key="frame" x="9.5" y="0.0" width="316" height="116"/>
@@ -1216,7 +1216,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="필요한 캔디수  25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfh-Pn-kSR">
-                                                <rect key="frame" x="124" y="1692" width="127.5" height="19.5"/>
+                                                <rect key="frame" x="124.5" y="1692" width="127.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1315,12 +1315,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="sax-xi-Fnk">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="yda-Gy-KJI">
-                            <button key="customView" opaque="NO" contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XaF-dM-vJA" userLabel="Back Button">
-                                <rect key="frame" x="16" y="11" width="50" height="22"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XaF-dM-vJA" userLabel="Back Button">
+                                <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="〈">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backButton:" destination="R4l-FW-fJV" id="huL-fd-8HJ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

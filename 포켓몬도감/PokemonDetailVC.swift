@@ -11,6 +11,9 @@ import QuartzCore
 
 class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBOutlet weak var edgeGestureRecognizer: UIScreenEdgePanGestureRecognizer!
     
     @IBOutlet weak var nameLbl: UILabel!
@@ -34,7 +37,6 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var evoLbl5: UILabel!
     @IBOutlet weak var evoStack1: UIStackView!
     @IBOutlet weak var evoStack2: UIStackView!
-    
     
     @IBOutlet weak var type0: UILabel!
     @IBOutlet weak var type1: UILabel!
@@ -103,9 +105,9 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         edgeGestureRecognizer.delegate = self
         self.view.addGestureRecognizer(edgeGestureRecognizer)
         
-        self.navigationItem.hidesBackButton = true
-        let backButton = UIBarButtonItem(image: UIImage(named: "back"), style: .plain, target: self, action: #selector(self.back))
-        self.navigationItem.leftBarButtonItem = backButton
+//        self.navigationItem.hidesBackButton = true
+//        let backButton = UIBarButtonItem(title: "〈", style: .plain, target: self, action: #selector(self.back))
+//        self.navigationItem.leftBarButtonItem = backButton
         
         self.title = "#" + String(pokemon.pokedexId) + " " + pokemon.name
         self.navigationController?.navigationBar.titleTextAttributes =   [NSFontAttributeName: UIFont(name: "GodoM", size: 18)!, NSForegroundColorAttributeName: UIColor.white]
@@ -170,9 +172,9 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
 //        }
     }
     
-    func back(sender: UIBarButtonItem) {
-        _ = navigationController?.popViewController(animated: true)
-    }
+//    func back(sender: UIBarButtonItem) {
+//        _ = navigationController?.popViewController(animated: true)
+//    }
     
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
