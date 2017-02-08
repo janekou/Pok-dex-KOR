@@ -17,6 +17,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var pokemon = [Pokemon]()
     var filteredPokemon = [Pokemon]()
     var moves = [Move]()
+    var typeRef = [Array<Double>]()
     var inSearchMode = false
     
     override func viewDidLoad() {
@@ -25,9 +26,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.dataSource = self
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
+        parseType()
         parseMoves()
         parsePokemonCSV()
-        
         
 //        self.title = "PoKéDeX"
 //        self.navigationController?.navigationBar.titleTextAttributes =   [NSFontAttributeName: UIFont(name: "Pokemon Solid", size: 23)!, NSForegroundColorAttributeName: UIColor.white]
@@ -40,6 +41,31 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.view.endEditing(true)
     }
     
+    func parseType() {
+        let path = Bundle.main.path(forResource: "type_ref", ofType: "csv")!
+        do {
+            //moveset data
+            let csv = try CSV(contentsOfURL: path)
+            let rows = csv.rows
+            var t = Array<Double>()
+            for _ in 1...18 {
+                t.append(1)
+            }
+            typeRef.append(t)
+            for row in rows {
+                t = Array<Double>()
+                for i in 1...18 {
+                    print(i)
+                    print(row[String(i)]!)
+                    t.append(Double(row[String(i)]!)!)
+                }
+                typeRef.append(t)
+            }
+            
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+    }
     
     func parseMoves() {
         let path = Bundle.main.path(forResource: "attacks", ofType: "csv")!
@@ -238,8 +264,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let detailVC = segue.destination as? PokemonDetailVC,
             let poke = sender as? Pokemon{
             detailVC.pokemon = poke
+            detailVC.typeRef = typeRef
             }
             }
+    
         }
 
 

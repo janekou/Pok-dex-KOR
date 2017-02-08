@@ -93,6 +93,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     
     
     var pokemon: Pokemon!
+    var typeRef: [Array<Double>]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,6 +111,13 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         self.navigationController?.navigationBar.titleTextAttributes =   [NSFontAttributeName: UIFont(name: "GodoM", size: 18)!, NSForegroundColorAttributeName: UIColor.white]
         
         
+        var typeArr1 = typeRef[pokemon.type0]
+        let typeArr2 = typeRef[pokemon.type1]
+        
+        for i in 0...typeArr1.count-1 {
+            typeArr1[i] *= typeArr2[i]
+        }
+        
         nameLbl.text = "#" + String(pokemon.pokedexId) + " " + pokemon.name
         mainImg.image = UIImage(named: "\(pokemon.pokedexId)")
         height.text = String(format: "%.2f", pokemon.height/10.0) + "m"
@@ -118,6 +126,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         defense.text = String(pokemon.defense)
         max_cp.text = String(pokemon.max_cp)
         stamina.text = String(pokemon.stamina)
+        
         setEvo(e: pokemon.evolution)
         if(pokemon.candy > 0) {
             candy.text = "필요한 캔디 수  " + String(pokemon.candy)
