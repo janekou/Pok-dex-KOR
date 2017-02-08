@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Upm-nj-2Tp">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Upm-nj-2Tp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -139,7 +139,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q9z-bI-lCG" id="9YY-up-qB2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -382,8 +382,8 @@
                                                     <constraint firstAttribute="height" constant="1" id="jFP-24-vXg"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약한 타입" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXg-bU-KPT">
-                                                <rect key="frame" x="152" y="632" width="71" height="20.5"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타입당 받는 데미지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXg-bU-KPT">
+                                                <rect key="frame" x="117" y="632" width="141.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1455,6 +1455,42 @@
                         <outlet property="specialStack1" destination="JLd-4y-jDb" id="IvL-qR-E0K"/>
                         <outlet property="specialStack2" destination="I6q-18-kf7" id="Ggp-0Y-Upl"/>
                         <outlet property="stamina" destination="El0-sM-sSc" id="Wg3-vc-y7D"/>
+                        <outlet property="t1" destination="b1M-Gp-AH2" id="Mc1-9B-2Fm"/>
+                        <outlet property="t10" destination="lou-o9-lpv" id="Q2y-Ik-Orm"/>
+                        <outlet property="t10t" destination="WKe-Qr-ngq" id="WYV-6f-c7P"/>
+                        <outlet property="t11" destination="0Pr-34-7UQ" id="j4z-5a-STm"/>
+                        <outlet property="t11t" destination="xHU-pY-iib" id="Xro-rc-f7B"/>
+                        <outlet property="t12" destination="9E9-fU-qQ8" id="xgk-2c-RmL"/>
+                        <outlet property="t12t" destination="728-bY-u2i" id="Drf-7u-z2U"/>
+                        <outlet property="t13" destination="jMn-vf-Sxa" id="zr5-Ud-KiC"/>
+                        <outlet property="t13t" destination="tGj-Yp-4Ce" id="knM-KS-Oci"/>
+                        <outlet property="t14" destination="QZ6-Fj-xXo" id="D05-HM-5Lm"/>
+                        <outlet property="t14t" destination="Qrv-If-VqM" id="ZvK-4z-U19"/>
+                        <outlet property="t15" destination="JWv-Bz-14I" id="VoN-Xp-Zwj"/>
+                        <outlet property="t15t" destination="ezj-2z-NfU" id="2E5-Pz-e3G"/>
+                        <outlet property="t16" destination="cmY-sw-M5S" id="EkF-sc-Mgu"/>
+                        <outlet property="t16t" destination="tFo-ky-jMt" id="ivC-WB-lPk"/>
+                        <outlet property="t17" destination="NsH-UU-YXS" id="hfB-gB-FM5"/>
+                        <outlet property="t17t" destination="dBt-Zz-Egt" id="pUC-vt-p4t"/>
+                        <outlet property="t18" destination="GOZ-Br-kcD" id="s9n-Ew-wKH"/>
+                        <outlet property="t18t" destination="3DM-E8-Rsm" id="uTb-Uc-5e2"/>
+                        <outlet property="t1t" destination="Y6h-hS-hbr" id="JvG-LI-e9C"/>
+                        <outlet property="t2" destination="2fa-Uo-NW1" id="LjR-MR-Niv"/>
+                        <outlet property="t2t" destination="aP8-ZX-1M9" id="Re4-Qd-fN6"/>
+                        <outlet property="t3" destination="Kk4-e5-WNr" id="Rmn-lZ-c28"/>
+                        <outlet property="t3t" destination="gPX-MM-viR" id="WzT-BL-tE8"/>
+                        <outlet property="t4" destination="TEa-am-ADA" id="gX7-lU-fBx"/>
+                        <outlet property="t4t" destination="9VG-kG-ieJ" id="ogo-0f-c0B"/>
+                        <outlet property="t5" destination="AKL-8p-d4N" id="iAy-Vt-7nc"/>
+                        <outlet property="t5t" destination="UFn-pP-5NN" id="Ugz-co-Exj"/>
+                        <outlet property="t6" destination="KyY-8K-jMW" id="17j-Ky-s5K"/>
+                        <outlet property="t6t" destination="4YH-Te-dXt" id="PCY-yl-baT"/>
+                        <outlet property="t7" destination="NhK-Lf-9vR" id="xXz-Mq-xKK"/>
+                        <outlet property="t7t" destination="4qn-eL-vdn" id="2ba-cK-i6A"/>
+                        <outlet property="t8" destination="1ho-cp-Nc0" id="MUJ-Y0-BaV"/>
+                        <outlet property="t8t" destination="D7J-R5-GzW" id="jQb-fM-8lm"/>
+                        <outlet property="t9" destination="AMB-GQ-Jvk" id="MJ4-GP-dZt"/>
+                        <outlet property="t9t" destination="ifF-FI-32c" id="JSF-fU-G0b"/>
                         <outlet property="type0" destination="qO0-ND-6Zb" id="TG0-du-lZ2"/>
                         <outlet property="type1" destination="nUA-1X-3i2" id="4Km-vO-U91"/>
                         <outlet property="weight" destination="3e1-DN-zfA" id="1cf-6a-WYF"/>
@@ -1471,7 +1507,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KOR-7f-GRQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="포켓몬도감" image="Profi_icons_30" id="Nn7-Gm-h5L"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="wQe-t6-adf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="wQe-t6-adf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1515,7 +1551,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cbf-Ez-89k" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="IV 계산기" image="Profi_icons_8" id="5FA-4z-D4e"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="bkm-pW-5Tq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="bkm-pW-5Tq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

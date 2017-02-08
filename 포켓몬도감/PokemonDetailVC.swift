@@ -91,6 +91,48 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     
     @IBOutlet weak var candy: UILabel!
     
+    //weakness chart labels
+    @IBOutlet weak var t1: UILabel!
+    @IBOutlet weak var t2: UILabel!
+    @IBOutlet weak var t3: UILabel!
+    @IBOutlet weak var t4: UILabel!
+    @IBOutlet weak var t5: UILabel!
+    @IBOutlet weak var t6: UILabel!
+    @IBOutlet weak var t7: UILabel!
+    @IBOutlet weak var t8: UILabel!
+    @IBOutlet weak var t9: UILabel!
+    @IBOutlet weak var t10: UILabel!
+    @IBOutlet weak var t11: UILabel!
+    @IBOutlet weak var t12: UILabel!
+    @IBOutlet weak var t13: UILabel!
+    @IBOutlet weak var t14: UILabel!
+    @IBOutlet weak var t15: UILabel!
+    @IBOutlet weak var t16: UILabel!
+    @IBOutlet weak var t17: UILabel!
+    @IBOutlet weak var t18: UILabel!
+    private var tLabels = [UILabel]()
+    
+    //weakness chart texts
+    @IBOutlet weak var t1t: UILabel!
+    @IBOutlet weak var t2t: UILabel!
+    @IBOutlet weak var t3t: UILabel!
+    @IBOutlet weak var t4t: UILabel!
+    @IBOutlet weak var t5t: UILabel!
+    @IBOutlet weak var t6t: UILabel!
+    @IBOutlet weak var t7t: UILabel!
+    @IBOutlet weak var t8t: UILabel!
+    @IBOutlet weak var t9t: UILabel!
+    @IBOutlet weak var t10t: UILabel!
+    @IBOutlet weak var t11t: UILabel!
+    @IBOutlet weak var t12t: UILabel!
+    @IBOutlet weak var t13t: UILabel!
+    @IBOutlet weak var t14t: UILabel!
+    @IBOutlet weak var t15t: UILabel!
+    @IBOutlet weak var t16t: UILabel!
+    @IBOutlet weak var t17t: UILabel!
+    @IBOutlet weak var t18t: UILabel!
+    private var textLabels = [UILabel]()
+    
     
     var pokemon: Pokemon!
     var typeRef: [Array<Double>]!
@@ -117,6 +159,79 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         for i in 0...typeArr1.count-1 {
             typeArr1[i] *= typeArr2[i]
         }
+        
+        //set type labels
+        tLabels.append(t1)
+        tLabels.append(t2)
+        tLabels.append(t3)
+        tLabels.append(t4)
+        tLabels.append(t5)
+        tLabels.append(t6)
+        tLabels.append(t7)
+        tLabels.append(t8)
+        tLabels.append(t9)
+        tLabels.append(t10)
+        tLabels.append(t11)
+        tLabels.append(t12)
+        tLabels.append(t13)
+        tLabels.append(t14)
+        tLabels.append(t15)
+        tLabels.append(t16)
+        tLabels.append(t17)
+        tLabels.append(t18)
+    
+        var i = 1
+        for tLabel in tLabels {
+            setTypeLabel(l: tLabel, n: i)
+            i+=1
+        }
+        
+        //set type weakness texts
+        textLabels.append(t1t)
+        textLabels.append(t2t)
+        textLabels.append(t3t)
+        textLabels.append(t4t)
+        textLabels.append(t5t)
+        textLabels.append(t6t)
+        textLabels.append(t7t)
+        textLabels.append(t8t)
+        textLabels.append(t9t)
+        textLabels.append(t10t)
+        textLabels.append(t11t)
+        textLabels.append(t12t)
+        textLabels.append(t13t)
+        textLabels.append(t14t)
+        textLabels.append(t15t)
+        textLabels.append(t16t)
+        textLabels.append(t17t)
+        textLabels.append(t18t)
+        
+        i=0
+        for textLabel in textLabels {
+            textLabel.text = String(format: "%.0f", typeArr1[i]*100) + "%"
+            
+            if(typeArr1[i] > 1.2) {
+                textLabel.textColor = hexStringToUIColor(hex: "FF913D")
+            }
+            if (typeArr1[i] > 1.4) {
+                textLabel.textColor = UIColor.red
+            }
+            if(typeArr1[i] < 1.0) {
+                textLabel.textColor = hexStringToUIColor(hex: "5358FF")
+            }
+            if(typeArr1[i] < 0.7) {
+                textLabel.textColor = hexStringToUIColor(hex: "82E45D")
+            }
+            
+            if(typeArr1[i]==1.0) {
+                textLabel.text = "-"
+            }
+            
+            
+            
+            i+=1
+        }
+        
         
         nameLbl.text = "#" + String(pokemon.pokedexId) + " " + pokemon.name
         mainImg.image = UIImage(named: "\(pokemon.pokedexId)")
