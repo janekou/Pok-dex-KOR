@@ -29,7 +29,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         parsePokemonCSV()
         
         
-        self.title = "PoKéDeX"
+//        self.title = "PoKéDeX"
 //        self.navigationController?.navigationBar.titleTextAttributes =   [NSFontAttributeName: UIFont(name: "Pokemon Solid", size: 23)!, NSForegroundColorAttributeName: UIColor.white]
 //        let navigationTitleFont = UIFont(name: "Pokemon Solid", size: 23)!
 //        self.navigationController?.navigationBar.titleTextAttributes =   [NSFontAttributeName: navigationTitleFont, NSForegroundColorAttributeName: UIColor.white]
