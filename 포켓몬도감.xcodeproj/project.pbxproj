@@ -22,6 +22,7 @@
 		3F404C891E39270100875A43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F404C871E39270100875A43 /* Main.storyboard */; };
 		3FA45C341E38520100CB5B23 /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F328CEE1E3844EB0002186C /* Pokemon Solid.ttf */; };
 		3FAA72451E4A67A600F939E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA72441E4A67A600F939E7 /* Assets.xcassets */; };
+		3FAA724E1E4ADD8E00F939E7 /* pokemon_KR9.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA724D1E4ADD8E00F939E7 /* pokemon_KR9.csv */; };
 		3FC094861E416DE700C316BA /* GodoM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC094851E416DE700C316BA /* GodoM.ttf */; };
 		3FC148AF1E39D2DC001542EE /* attacks.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3FC148A81E39D2DC001542EE /* attacks.csv */; };
 		3FC148B21E39D2DC001542EE /* lang_shapes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3FC148AB1E39D2DC001542EE /* lang_shapes.csv */; };
@@ -54,6 +55,7 @@
 		3F404C851E39215300875A43 /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 		3F404C881E39270100875A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FAA72441E4A67A600F939E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "포켓몬도감/Assets.xcassets"; sourceTree = "<group>"; };
+		3FAA724D1E4ADD8E00F939E7 /* pokemon_KR9.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon_KR9.csv; sourceTree = "<group>"; };
 		3FC094851E416DE700C316BA /* GodoM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GodoM.ttf; sourceTree = "<group>"; };
 		3FC148A81E39D2DC001542EE /* attacks.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = attacks.csv; sourceTree = "<group>"; };
 		3FC148AB1E39D2DC001542EE /* lang_shapes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lang_shapes.csv; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				3FE9223A1E41922A0001506F /* pokemon_KR6.csv */,
 				3F1B34DD1E41A73300766F2B /* pokemon_KR7.csv */,
 				B48702C81E46F562002D0FA6 /* pokemon_KR8.csv */,
+				3FAA724D1E4ADD8E00F939E7 /* pokemon_KR9.csv */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				3F1B34E01E41A79500766F2B /* GodoB.ttf in Resources */,
 				3F1B34DE1E41A73300766F2B /* pokemon_KR7.csv in Resources */,
 				3FAA72451E4A67A600F939E7 /* Assets.xcassets in Resources */,
+				3FAA724E1E4ADD8E00F939E7 /* pokemon_KR9.csv in Resources */,
 				3FA45C341E38520100CB5B23 /* Pokemon Solid.ttf in Resources */,
 				3FC148B51E39D2DC001542EE /* type_ref.csv in Resources */,
 				3FC148AF1E39D2DC001542EE /* attacks.csv in Resources */,

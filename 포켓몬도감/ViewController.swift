@@ -93,7 +93,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func parsePokemonCSV() {
-        let path = Bundle.main.path(forResource: "pokemon_KR8", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "pokemon_KR9", ofType: "csv")!
         do {
             //pokemon data
             let csv = try CSV(contentsOfURL: path)
