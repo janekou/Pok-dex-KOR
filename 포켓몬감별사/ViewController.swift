@@ -9,10 +9,13 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, UITabBarDelegate {
     
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+//    var searchController = UISearchController()
     
     var pokemon = [Pokemon]()
     var filteredPokemon = [Pokemon]()
@@ -30,6 +33,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         parseType()
         parseMoves()
         parsePokemonCSV()
+        
+        if (!UIAccessibilityIsReduceTransparencyEnabled()) {
+            collection.backgroundColor = UIColor.clear
+            let blurEffect = UIBlurEffect(style: .light)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            collection.backgroundView = blurEffectView
+        }
+        
+        searchBar.isTranslucent = true
+        searchBar.alpha = 0.7
+        searchBar.backgroundImage = UIImage()
+        searchBar.barTintColor = UIColor.clear
+        
+        
         
 //        self.title = "PoKéDeX"
 //        self.navigationController?.navigationBar.titleTextAttributes =   [NSFontAttributeName: UIFont(name: "Pokemon Solid", size: 23)!, NSForegroundColorAttributeName: UIColor.white]
@@ -221,8 +238,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: 105, height: 105)
+//        return CGSize(width: 105, height: 105)
+        let screenSize: CGRect = UIScreen.main.bounds; let screenWidth = screenSize.width
+        return CGSize(width: (screenWidth/3)-0.75, height: (screenWidth/3)-0.75)
     }
+
         
     func isStringAnInt(string: String) -> Bool {
         return Int(string) != nil
