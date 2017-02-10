@@ -34,6 +34,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         parseMoves()
         parsePokemonCSV()
         
+        
+//        if( traitCollection.forceTouchCapability == .available){
+//            registerForPreviewing(with: self as UIViewControllerPreviewingDelegate, sourceView: view)
+//        }
+//        
+        
         if (!UIAccessibilityIsReduceTransparencyEnabled()) {
             collection.backgroundColor = UIColor.clear
             let blurEffect = UIBlurEffect(style: .light)
@@ -273,18 +279,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "PokemonDetailVC" {
-//            if let detailsVC = segue.destination as? PokemonDetailVC {
-//                if let poke = sender as? Pokemon {
-//                    detailsVC.pokemon = poke
-//                    
-//                }
-//            }
-//        }
-//    }
-    
+
     
     //pass data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -296,24 +291,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
             }
     
-        }
+    }
 
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        let navVC = segue.destination as? UINavigationController
-//        
-//        let tableVC = navVC?.viewControllers.first as! YourTableViewControllerClass
-//        
-//        tableVC.yourTableViewArray = localArrayValue
-//    }
-//    
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-//        
-//        if (segue.identifier == "showItemSegue") {
-//            let navController = segue.destinationViewController as UINavigationController
-//            let detailController = navController.topViewController as ShowItemViewController
-//            detailController.currentId = nextId!
-//        }
-//    }
-//}

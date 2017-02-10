@@ -11,7 +11,7 @@ import UIKit
 
 class CalcViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
-    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var nameInput: AutoCompleteTextField!
     @IBOutlet weak var cpInput: UITextField!
     @IBOutlet weak var hpInput: UITextField!
 
@@ -30,8 +30,51 @@ class CalcViewController: UIViewController, UIPopoverPresentationControllerDeleg
         parseMoves()
         parsePokemonCSV()
         createNameArray()
+        configureTextField()
+//        handleTextFieldInterfaces()
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    fileprivate func configureTextField(){
+        nameInput.autoCompleteTextColor = UIColor(red: 128.0/255.0, green: 128.0/255.0, blue: 128.0/255.0, alpha: 1.0)
+        nameInput.autoCompleteTextFont = UIFont(name: "HelveticaNeue-Light", size: 12.0)!
+        nameInput.autoCompleteCellHeight = 35.0
+        nameInput.maximumAutoCompleteCount = 20
+        nameInput.hidesWhenSelected = true
+        nameInput.hidesWhenEmpty = true
+        nameInput.enableAttributedText = true
+        var attributes = [String:AnyObject]()
+        attributes[NSForegroundColorAttributeName] = UIColor.black
+        attributes[NSFontAttributeName] = UIFont(name: "HelveticaNeue-Bold", size: 12.0)
+        nameInput.autoCompleteAttributes = attributes
+    }
+    
+//    fileprivate func handleTextFieldInterfaces(){
+//        nameInput.onTextChange = {[weak self] text in
+//            if !text.isEmpty{
+//                if let dataTask = self?.dataTask {
+//                    dataTask.cancel()
+//                }
+//                self?.fetchAutocompletePlaces(text)
+//            }
+//        }
+    
+//        nameInput.onSelect = {[weak self] text, indexpath in
+//            Location.geocodeAddressString(text, completion: { (placemark, error) -> Void in
+//                if let coordinate = placemark?.location?.coordinate {
+//                    self?.addAnnotation(coordinate, address: text)
+//                    self?.mapView.setCenterCoordinate(coordinate, zoomLevel: 12, animated: true)
+//                }
+//            })
+//        }
+//    }
+
+    
     
     //cancel search by touching other part of the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

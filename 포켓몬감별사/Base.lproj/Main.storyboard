@@ -27,8 +27,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="lDZ-YP-Qqg">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="554"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="lDZ-YP-Qqg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="603"/>
                             </imageView>
                             <searchBar alpha="0.69999999999999996" contentMode="redraw" placeholder="포켓몬 이름 또는 번호" translatesAutoresizingMaskIntoConstraints="NO" id="JXk-MK-mIl">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -86,6 +86,7 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="uHx-Bl-6S8"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="EsN-Fr-RDa"/>
                                 </connections>
                             </collectionView>
@@ -141,14 +142,11 @@
                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="포켓몬 이름 또는 번호" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="D3e-eY-RGZ">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="포켓몬 이름 또는 번호" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="D3e-eY-RGZ" customClass="AutoCompleteTextField" customModule="포켓몬감별사" customModuleProvider="target">
                                         <rect key="frame" x="80" y="0.0" width="168" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="SAK-Nq-Kpf" id="khY-Wt-VNR"/>
-                                        </connections>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -239,7 +237,7 @@
                             </stackView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2s4-bt-i5Y">
                                 <rect key="frame" x="36" y="68" width="248" height="150"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="JoA-gb-TiV"/>
                                 </constraints>
