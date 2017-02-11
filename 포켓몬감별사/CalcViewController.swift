@@ -52,8 +52,6 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         nameList.layer.borderColor = UIColor.lightGray.cgColor
         nameList.layer.cornerRadius = 5
         
-        
-        
         parseType()
         parseMoves()
         parsePokemonCSV()
@@ -172,7 +170,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let calcDetailVC: CalcPokemonDetailVC = segue.destination as! CalcPokemonDetailVC
-//        calcDetailVC.name = !
+        calcDetailVC.name = nameInput.text!
         calcDetailVC.cp = cpInput.text!
         calcDetailVC.hp = hpInput.text!
         
