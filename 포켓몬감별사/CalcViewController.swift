@@ -146,9 +146,23 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         let pickedCell : UITableViewCell = tableView.cellForRow(at: indexPath)!
         nameInput.text = pickedCell.textLabel!.text
         nameList.isHidden = true
-//        autocompleteLabel.text = pickedCell.textLabel!.text
     }
 
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let cell  = tableView.cellForRow(at: indexPath as IndexPath)
+        cell!.contentView.backgroundColor = UIColor(red: 52/255.0, green: 152/255.0, blue: 219/255.0, alpha: 0.1)
+//        cell?.alpha = 0.3
+    }
+    
+    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        let cell  = tableView.cellForRow(at: indexPath as IndexPath)
+        cell!.contentView.backgroundColor = .clear
+//        cell?.alpha = 1
+
+    }
+    
+    
+    
     func addTextFiles(_ textFiles: [String]) {
         
         for textFile in textFiles {
