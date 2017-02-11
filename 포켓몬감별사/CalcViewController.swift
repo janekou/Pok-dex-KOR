@@ -9,11 +9,13 @@
 import UIKit
 
 
-class CalcViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, UIPopoverPresentationControllerDelegate {
     
-    @IBOutlet weak var nameInput: AutoCompleteTextField!
+    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var nameList: UITableView!
     @IBOutlet weak var cpInput: UITextField!
     @IBOutlet weak var hpInput: UITextField!
+    @IBOutlet weak var yesorno: UISegmentedControl!
 
     
     var pokemon = [Pokemon]()
@@ -22,16 +24,41 @@ class CalcViewController: UIViewController, UIPopoverPresentationControllerDeleg
     var typeRef = [Array<Double>]()
     var inSearchMode = false
     //array with pokemon names
+    
     var pokeNames = Array<String>()
+    var autocompleteWords = [String]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameInput.addTarget(self, action: #selector(CalcViewController.didChangeText(_:)), for: .editingChanged)
+        
+        nameInput.tag = 0
+        nameInput.delegate = self
+        nameList.delegate = self
+        nameList.dataSource = self
+        nameList.isHidden = true
+
+        
+        // hide empty tableview cells
+        let backgroundView = UIView(frame: CGRect.zero)
+        nameList.tableFooterView = backgroundView
+        nameList.separatorColor = UIColor.lightGray
+        nameList.backgroundColor = UIColor.white
+        nameList.separatorStyle = .singleLine
+        nameList.separatorInset = UIEdgeInsets.init(top: 5, left: 15, bottom: 15, right: 15)
+        nameList.layer.borderWidth = 0.5
+        nameList.layer.borderColor = UIColor.lightGray.cgColor
+        nameList.layer.cornerRadius = 5
+        
+        
+        
         parseType()
         parseMoves()
         parsePokemonCSV()
         createNameArray()
-        configureTextField()
-//        handleTextFieldInterfaces()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,42 +66,103 @@ class CalcViewController: UIViewController, UIPopoverPresentationControllerDeleg
         // Dispose of any resources that can be recreated.
     }
     
-    
-    fileprivate func configureTextField(){
-        nameInput.autoCompleteTextColor = UIColor(red: 128.0/255.0, green: 128.0/255.0, blue: 128.0/255.0, alpha: 1.0)
-        nameInput.autoCompleteTextFont = UIFont(name: "HelveticaNeue-Light", size: 12.0)!
-        nameInput.autoCompleteCellHeight = 35.0
-        nameInput.maximumAutoCompleteCount = 20
-        nameInput.hidesWhenSelected = true
-        nameInput.hidesWhenEmpty = true
-        nameInput.enableAttributedText = true
-        var attributes = [String:AnyObject]()
-        attributes[NSForegroundColorAttributeName] = UIColor.black
-        attributes[NSFontAttributeName] = UIFont(name: "HelveticaNeue-Bold", size: 12.0)
-        nameInput.autoCompleteAttributes = attributes
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+        }
+        // Do not add a line break
+        return false
     }
     
-//    fileprivate func handleTextFieldInterfaces(){
-//        nameInput.onTextChange = {[weak self] text in
-//            if !text.isEmpty{
-//                if let dataTask = self?.dataTask {
-//                    dataTask.cancel()
-//                }
-//                self?.fetchAutocompletePlaces(text)
-//            }
-//        }
     
-//        nameInput.onSelect = {[weak self] text, indexpath in
-//            Location.geocodeAddressString(text, completion: { (placemark, error) -> Void in
-//                if let coordinate = placemark?.location?.coordinate {
-//                    self?.addAnnotation(coordinate, address: text)
-//                    self?.mapView.setCenterCoordinate(coordinate, zoomLevel: 12, animated: true)
-//                }
-//            })
-//        }
-//    }
+    func didChangeText(_ textField:UITextField) {
+        
+        if textField == nameInput {
+            
+            let substring = (textField.text! as NSString).replacingCharacters(in: NSRange(location: 0, length: textField.text!.characters.count), with: textField.text!)
+            
+            searchAutocompleteWordsWithSubstring(substring as String)
+            
+            if (textField.text?.isEmpty)! {
+                nameList.isHidden = true
+            } else {
+            nameList.isHidden = false
+            nameList.reloadData()
+        }
+        }
+    }
+    
+    func searchAutocompleteWordsWithSubstring(_ substring: String) {
+        // clean up array
+        autocompleteWords.removeAll(keepingCapacity: false)
+        
+        for word in pokeNames
+        {
+            let myString: NSString! = word as NSString
+            
+            // do a case insensitive search for words in the .txt files
+            let substringRange:NSRange! = myString.range(of: substring, options: .caseInsensitive)
+            
+            if (substringRange.location == 0)
+            {
+                autocompleteWords.append(word)
+            }
+        }
+        
+        nameList!.reloadData()
+    }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return autocompleteWords.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell(style: UITableViewCellStyle.default , reuseIdentifier: "Cell")
+        
+        // make autocomplete cell text appear bold for the characters typed in
+        let item = autocompleteWords[indexPath.row]
+        let text = NSMutableAttributedString(string: item)
+        let font = UIFont.boldSystemFont(ofSize: cell.textLabel!.font.pointSize)
+        
+        text.addAttribute(NSFontAttributeName, value: font, range: NSRange(location: 0, length: nameInput.text!.characters.count))
+        
+        cell.textLabel!.attributedText = text
+        
+        cell.textLabel?.textColor = UIColor(red: 52/255.0, green: 152/255.0, blue: 219/255.0, alpha: 1.0)
+        
+        // no background color or selection style for cells
+        cell.backgroundColor = UIColor.clear
+        cell.selectionStyle = .none
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let pickedCell : UITableViewCell = tableView.cellForRow(at: indexPath)!
+        nameInput.text = pickedCell.textLabel!.text
+        nameList.isHidden = true
+//        autocompleteLabel.text = pickedCell.textLabel!.text
+    }
+
+    func addTextFiles(_ textFiles: [String]) {
+        
+        for textFile in textFiles {
+            
+            let path = Bundle.main.path(forResource: textFile, ofType: "txt")!
+            
+            let content = try! String(contentsOfFile: path, encoding: String.Encoding.utf8)
+            
+            pokeNames.append(contentsOf: content.components(separatedBy: "\n"))
+        }
+    }
+
     
     //cancel search by touching other part of the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

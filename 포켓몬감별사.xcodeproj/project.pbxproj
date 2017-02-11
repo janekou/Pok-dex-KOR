@@ -19,7 +19,6 @@
 		3F328CE61E381B2D0002186C /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F328CE51E381B2D0002186C /* Pokemon.swift */; };
 		3F328CE91E382F590002186C /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F328CE81E382F590002186C /* PokeCell.swift */; };
 		3F328CEB1E383C600002186C /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F328CEA1E383C600002186C /* csv.swift */; };
-		3F42E5B11E4DB21100BBDC04 /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F42E5B01E4DB21100BBDC04 /* AutoCompleteTextField.swift */; };
 		3F86135E1E4BFFFF000B23FF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F328CDC1E3812C10002186C /* Info.plist */; };
 		3FA45C341E38520100CB5B23 /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F328CEE1E3844EB0002186C /* Pokemon Solid.ttf */; };
 		3FAA72451E4A67A600F939E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA72441E4A67A600F939E7 /* Assets.xcassets */; };
@@ -57,7 +56,6 @@
 		3F328CEE1E3844EB0002186C /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
 		3F35DF391E39710E006B64E4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		3F404C851E39215300875A43 /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
-		3F42E5B01E4DB21100BBDC04 /* AutoCompleteTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextField.swift; sourceTree = "<group>"; };
 		3FAA72441E4A67A600F939E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FAA724D1E4ADD8E00F939E7 /* pokemon_KR9.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon_KR9.csv; sourceTree = "<group>"; };
 		3FC094851E416DE700C316BA /* GodoM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GodoM.ttf; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				3F328CEA1E383C600002186C /* csv.swift */,
-				3F42E5B01E4DB21100BBDC04 /* AutoCompleteTextField.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -271,7 +268,6 @@
 			files = (
 				3F0DCCA11E404E5F00345C60 /* Move.swift in Sources */,
 				3F328CE91E382F590002186C /* PokeCell.swift in Sources */,
-				3F42E5B11E4DB21100BBDC04 /* AutoCompleteTextField.swift in Sources */,
 				3F328CE61E381B2D0002186C /* Pokemon.swift in Sources */,
 				3F328CD31E3812C10002186C /* ViewController.swift in Sources */,
 				3FC148B81E3B4B42001542EE /* PokemonDetailVC.swift in Sources */,

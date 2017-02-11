@@ -33,7 +33,7 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         PokemonHp.text = hp
         
         
-        self.title = pokemonName.text;
+        self.title = name
     }
     
 
