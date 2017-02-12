@@ -43,14 +43,20 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         
         // hide empty tableview cells
         let backgroundView = UIView(frame: CGRect.zero)
+        let defaultBorderColor : UIColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0)
+        
+        
+        
         nameList.tableFooterView = backgroundView
         nameList.separatorColor = UIColor.lightGray
         nameList.backgroundColor = UIColor.white
         nameList.separatorStyle = .singleLine
         nameList.separatorInset = UIEdgeInsets.init(top: 5, left: 15, bottom: 15, right: 15)
         nameList.layer.borderWidth = 0.5
-        nameList.layer.borderColor = UIColor.lightGray.cgColor
+        nameList.layer.borderColor = defaultBorderColor.cgColor
         nameList.layer.cornerRadius = 5
+        
+        yesorno.layer.borderColor = defaultBorderColor.cgColor
         
         parseType()
         parseMoves()
@@ -133,7 +139,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         cell.textLabel!.attributedText = text
         
         cell.textLabel?.textColor = UIColor(red: 52/255.0, green: 152/255.0, blue: 219/255.0, alpha: 1.0)
-        
+
         // no background color or selection style for cells
         cell.backgroundColor = UIColor.clear
         cell.selectionStyle = .none
@@ -176,18 +182,20 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     }
 
     
+    
     //cancel search by touching other part of the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
     
+    //pass data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let calcDetailVC: CalcPokemonDetailVC = segue.destination as! CalcPokemonDetailVC
         calcDetailVC.name = nameInput.text!
         calcDetailVC.cp = cpInput.text!
-        calcDetailVC.hp = hpInput.text!
-        
+//        calcDetailVC.max_cp = pokemon.max_cp.text!
+//        calcDetailVC.hp = hpInput.text!
     }
     
     func createNameArray() {
