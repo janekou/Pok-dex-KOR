@@ -2544,15 +2544,16 @@
                                     <segment title="미스틱"/>
                                     <segment title="인스팅트"/>
                                 </segments>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <action selector="segementActionChangedWithSender:" destination="Xe8-Tz-n5D" eventType="touchUpInside" id="qYb-ij-IPA"/>
+                                    <action selector="segmentActionChanged:" destination="Xe8-Tz-n5D" eventType="valueChanged" id="Qzf-yn-cBI"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jFG-3c-IqX">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jFG-3c-IqX">
                                 <rect key="frame" x="0.0" y="49" width="319" height="275"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="658-ZT-tua" style="IBUITableViewCellStyleDefault" id="VTh-ml-Y0s">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="appraisalCell" textLabel="658-ZT-tua" style="IBUITableViewCellStyleDefault" id="VTh-ml-Y0s">
                                         <rect key="frame" x="0.0" y="28" width="319" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VTh-ml-Y0s" id="Ieu-Ct-wFm">
@@ -2567,30 +2568,6 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Hsz-hC-T40">
-                                        <rect key="frame" x="0.0" y="72" width="319" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hsz-hC-T40" id="qy7-FO-jGj">
-                                            <rect key="frame" x="0.0" y="0.0" width="319" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6Wi-TN-rEs">
-                                        <rect key="frame" x="0.0" y="116" width="319" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Wi-TN-rEs" id="AyE-pT-8ke">
-                                            <rect key="frame" x="0.0" y="0.0" width="319" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fAv-Wg-Efz">
-                                        <rect key="frame" x="0.0" y="160" width="319" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fAv-Wg-Efz" id="2FL-o7-dD0">
-                                            <rect key="frame" x="0.0" y="0.0" width="319" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -2614,7 +2591,7 @@
                     </view>
                     <connections>
                         <outlet property="appraisalList" destination="jFG-3c-IqX" id="24k-qt-PIg"/>
-                        <outlet property="teamSegements" destination="2pi-Br-YXf" id="rOv-d8-NJA"/>
+                        <outlet property="teamSegments" destination="2pi-Br-YXf" id="OoE-7z-oZO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zN-T4-K6a" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -52,8 +52,6 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         let backgroundView = UIView(frame: CGRect.zero)
         let defaultBorderColor : UIColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0)
         
-        
-        
         nameList.tableFooterView = backgroundView
         nameList.separatorColor = UIColor.lightGray
         nameList.backgroundColor = UIColor.white
@@ -65,6 +63,8 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         
         yesorno.layer.borderColor = defaultBorderColor.cgColor
         yesorno.layer.borderWidth = 0.5
+        nameList.layer.cornerRadius = 5
+
         
         parseType()
         parseMoves()
