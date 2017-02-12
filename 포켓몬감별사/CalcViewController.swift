@@ -16,9 +16,16 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     @IBOutlet weak var cpInput: UITextField!
     @IBOutlet weak var hpInput: UITextField!
     @IBOutlet weak var yesorno: UISegmentedControl!
+    
+    @IBOutlet weak var appraisalView: UIView!
+    
+    @IBAction func teamAppraisalBtn(_ sender: Any) {
+        appraisalView.isHidden = false
+}
 
     
     var pokemon = [Pokemon]()
+
     var filteredPokemon = [Pokemon]()
     var moves = [Move]()
     var typeRef = [Array<Double>]()
@@ -57,6 +64,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         nameList.layer.cornerRadius = 5
         
         yesorno.layer.borderColor = defaultBorderColor.cgColor
+        yesorno.layer.borderWidth = 0.5
         
         parseType()
         parseMoves()
@@ -64,6 +72,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         createNameArray()
 
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -190,13 +199,27 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     
     //pass data
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let calcDetailVC: CalcPokemonDetailVC = segue.destination as! CalcPokemonDetailVC
-        calcDetailVC.name = nameInput.text!
-        calcDetailVC.cp = cpInput.text!
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let calcDetailVC: CalcPokemonDetailVC = segue.destination as! CalcPokemonDetailVC
+//        calcDetailVC.name = nameInput.text!
+//        calcDetailVC.cp = cpInput.text!
 //        calcDetailVC.max_cp = pokemon.max_cp.text!
 //        calcDetailVC.hp = hpInput.text!
+        
+//        let calcAppraisalVC: CalcAppraisalVC = segue.destination as! CalcAppraisalVC
+//    }
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CalcPokemonDetailVC" {
+            let calcDetailVC = segue.destination as! CalcPokemonDetailVC
+            calcDetailVC.name = nameInput.text!
+            calcDetailVC.cp = cpInput.text!
+        } else {
+            let calcAppraisalVC = segue.destination as! CalcAppraisalVC
+        }
     }
+    
+
     
     func createNameArray() {
         for i in 0...pokemon.count-1 {
@@ -313,7 +336,9 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             print(err.debugDescription)
         }
     }
-    
+}
+
+
 //    @IBAction func showPopUp(_ sender: Any) {
 //        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID")
 //        self.addChildViewController(popOverVC)
@@ -337,5 +362,3 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
 //    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
 //        return UIModalPresentationStyle.none
 //    }
-
-}

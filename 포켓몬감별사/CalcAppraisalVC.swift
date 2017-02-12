@@ -81,7 +81,24 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     
+    func myMethod() {}
     
+class CalcViewController: UIViewController {
+    private var calcAppraisalVC: CalcAppraisalVC!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? CalcAppraisalVC, segue.identifier == "CalcAppraisalVC" {
+            
+            self.calcAppraisalVC = vc
+        }
+    }
+    
+    //  Now in other methods you can reference `embeddedViewController`.
+    //  For example:
+    override func viewDidAppear(_ animated: Bool) {
+        self.calcAppraisalVC.myMethod()
+    }
+}
 
     /*
     // MARK: - Navigation
