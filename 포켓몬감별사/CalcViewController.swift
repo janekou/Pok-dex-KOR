@@ -20,8 +20,14 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     @IBOutlet weak var appraisalView: UIView!
     
     @IBAction func teamAppraisalBtn(_ sender: Any) {
-        appraisalView.isHidden = false
-}
+        if appraisalView.isHidden == true {
+            (sender as AnyObject).setTitle("⁶팀 리더 포켓몬 조사 ▲", for: .normal)
+        } else {
+            (sender as AnyObject).setTitle("⁶팀 리더 포켓몬 조사 ▼", for: .normal)
+        }
+        
+        appraisalView.isHidden = !appraisalView.isHidden
+    }
 
     
     var pokemon = [Pokemon]()
@@ -38,6 +44,15 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //    @IBAction func showPopUp(_ sender: Any) {
+        //        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID")
+        //        self.addChildViewController(popOverVC)
+        //        self.view.addSubview(popOverVC.view)
+        //        popOverVC.didMove(toParentViewController: self)
+        //    
+        //    }
+        
         
         nameInput.addTarget(self, action: #selector(CalcViewController.didChangeText(_:)), for: .editingChanged)
         
@@ -166,13 +181,11 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         let cell  = tableView.cellForRow(at: indexPath as IndexPath)
         cell!.contentView.backgroundColor = UIColor(red: 52/255.0, green: 152/255.0, blue: 219/255.0, alpha: 0.1)
-//        cell?.alpha = 0.3
     }
     
     func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
         let cell  = tableView.cellForRow(at: indexPath as IndexPath)
         cell!.contentView.backgroundColor = .clear
-//        cell?.alpha = 1
 
     }
     
@@ -215,7 +228,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             calcDetailVC.name = nameInput.text!
             calcDetailVC.cp = cpInput.text!
         } else {
-            let calcAppraisalVC = segue.destination as! CalcAppraisalVC
+            _ = segue.destination as! CalcAppraisalVC
         }
     }
     

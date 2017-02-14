@@ -478,10 +478,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
             alpha: CGFloat(1.0)
         )
     }
-//    
-//    func screenEdgeSwiped(_ recognizer: UIScreenEdgePanGestureRecognizer) {
-//        dismiss(animated: true, completion: nil)
-//    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

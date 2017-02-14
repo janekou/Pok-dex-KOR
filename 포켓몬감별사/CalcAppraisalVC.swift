@@ -12,30 +12,32 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 
     @IBOutlet weak var teamSegments: UISegmentedControl!
     @IBOutlet weak var appraisalList: UITableView!
-    
+
 
     @IBAction func segmentActionChanged(_ sender: Any) {
         appraisalList.isHidden = false
+//        appraisalList.frame.height =
         
 //        appraisalList.reloadData()
 
     }
 
     
-    let redList = [["전체적으로...","말할 게 없어. 든든하겠어!","아주 강해, 자랑해도 되겠어!","보통의 강함이라고 생각해!", "배틀이 적성은 아니지만 난 좋아해"], [], []]
-    let blueList = [["highest stat","경이롭고 예술적이야.","시선을 끄는 뭔가가 있어.","보통이상이야", "좀처럼 활약이 어려워 보인다"], [], []]
-    let yellowList = [["highest iv","톱 레벨이야!","아주 강해!","보통이야.", "그저 그러네."], [], []]
+    var redList = [["전체적으로...","말할 게 없어. 든든하겠어!","아주 강해, 자랑해도 되겠어!","보통의 강함이라고 생각해!", "배틀이 적성은 아니지만 난 좋아해"], [], []]
+    var blueList = [["highest stat","경이롭고 예술적이야.","시선을 끄는 뭔가가 있어.","보통이상이야", "좀처럼 활약이 어려워 보인다"], [], []]
+    var yellowList = [["highest iv","톱 레벨이야!","아주 강해!","보통이야.", "그저 그러네."], [], []]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        appraisalList.dataSource = self
+        appraisalList.delegate = self
 
         let array = teamSegments.subviews
         array[2].tintColor = UIColor.red
         array[1].tintColor = UIColor.blue
         array[0].tintColor = UIColor(red: 254.0/255.0, green: 216.0/255.0, blue: 80.0/255.0, alpha: 1.0)
-        
-    
         
         // Do any additional setup after loading the view.
     }
@@ -47,7 +49,7 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     func numberOfSections(in tableView: UITableView) -> Int {
         if teamSegments.selectedSegmentIndex == 0 {
-            return redList.count
+             return redList.count
         }
         else if teamSegments.selectedSegmentIndex == 1 {
             return blueList.count
