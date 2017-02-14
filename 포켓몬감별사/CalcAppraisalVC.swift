@@ -15,25 +15,23 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 
 
     @IBAction func segmentActionChanged(_ sender: Any) {
-        appraisalList.isHidden = false
-//        appraisalList.frame.height =
-        
-//        appraisalList.reloadData()
+        appraisalList.isHidden = false        
+        appraisalList.reloadData()
 
     }
 
     
-    var redList = [["전체적으로...","말할 게 없어. 든든하겠어!","아주 강해, 자랑해도 되겠어!","보통의 강함이라고 생각해!", "배틀이 적성은 아니지만 난 좋아해"], [], []]
-    var blueList = [["highest stat","경이롭고 예술적이야.","시선을 끄는 뭔가가 있어.","보통이상이야", "좀처럼 활약이 어려워 보인다"], [], []]
-    var yellowList = [["highest iv","톱 레벨이야!","아주 강해!","보통이야.", "그저 그러네."], [], []]
+    let redList:[String] = ["전체적으로...","말할 게 없어. 든든하겠어!","아주 강해, 자랑해도 되겠어!","보통의 강함이라고 생각해!", "배틀이 적성은 아니지만 난 좋아해"]
+    let blueList:[String] = ["highest stat","경이롭고 예술적이야.","시선을 끄는 뭔가가 있어.","보통이상이야", "좀처럼 활약이 어려워 보인다"]
+    let yellowList:[String] = ["highest iv","톱 레벨이야!","아주 강해!","보통이야.", "그저 그러네."]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        appraisalList.dataSource = self
-        appraisalList.delegate = self
-
+//        appraisalList.dataSource = self
+//        appraisalList.delegate = self
+//
         let array = teamSegments.subviews
         array[2].tintColor = UIColor.red
         array[1].tintColor = UIColor.blue
@@ -47,30 +45,45 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        if teamSegments.selectedSegmentIndex == 0 {
-             return redList.count
-        }
-        else if teamSegments.selectedSegmentIndex == 1 {
-            return blueList.count
-        }
-        else if teamSegments.selectedSegmentIndex == 2 {
-            return yellowList.count
-        }
-        return 0
-    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        if teamSegments.selectedSegmentIndex == 0 {
+//             return redList.count
+//        }
+//        else if teamSegments.selectedSegmentIndex == 1 {
+//            return blueList.count
+//        }
+//        else if teamSegments.selectedSegmentIndex == 2 {
+//            return yellowList.count
+//        }
+//        return 0
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if teamSegments.selectedSegmentIndex == 0 {
-            return redList[section].count - 1
+//        if teamSegments.selectedSegmentIndex == 0 {
+//            return redList[section].count - 1
+//        }
+//        else if teamSegments.selectedSegmentIndex == 1 {
+//            return blueList[section].count - 1
+//        }
+//        else if teamSegments.selectedSegmentIndex == 2 {
+//            return yellowList[section].count - 1
+//        }
+        var returnValue = 0
+        switch (teamSegments.selectedSegmentIndex) {
+        case 0:
+            returnValue = redList.count
+            break
+        case 1:
+            returnValue = blueList.count
+            break
+        case 2:
+            returnValue = yellowList.count
+            break
+        default:
+            break
         }
-        else if teamSegments.selectedSegmentIndex == 1 {
-            return blueList[section].count - 1
-        }
-        else if teamSegments.selectedSegmentIndex == 2 {
-            return yellowList[section].count - 1
-        }
-        return 0
+        
+        return returnValue
     }
         
 //        var returnValue = 0
@@ -98,46 +111,42 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let appraisalCell = tableView.dequeueReusableCell(withIdentifier: "appraisalCell", for: indexPath)
         
-        if teamSegments.selectedSegmentIndex == 0 {
-            appraisalCell.textLabel?.text = redList[indexPath.section][indexPath.row + 1]
+        switch (teamSegments.selectedSegmentIndex) {
+        case 0:
+            appraisalCell.textLabel?.text = redList[indexPath.row]
+            break
+        case 1:
+            appraisalCell.textLabel?.text = blueList[indexPath.row]
+            break
+        case 2:
+            appraisalCell.textLabel?.text = yellowList[indexPath.row]
+            break
+        default:
+            break
         }
-        else if teamSegments.selectedSegmentIndex == 1 {
-            appraisalCell.textLabel?.text = blueList[indexPath.section][indexPath.row + 1]
-        }
-        else if teamSegments.selectedSegmentIndex == 2 {
-            appraisalCell.textLabel?.text = yellowList[indexPath.section][indexPath.row + 1]
-        }
+//        if teamSegments.selectedSegmentIndex == 0 {
+//            appraisalCell.textLabel?.text = redList[indexPath.section][indexPath.row + 1]
+//        }
+//        else if teamSegments.selectedSegmentIndex == 1 {
+//            appraisalCell.textLabel?.text = blueList[indexPath.section][indexPath.row + 1]
+//        }
+//        else if teamSegments.selectedSegmentIndex == 2 {
+//            appraisalCell.textLabel?.text = yellowList[indexPath.section][indexPath.row + 1]
+//        }
         return appraisalCell
     }
     
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if teamSegments.selectedSegmentIndex == 0 {
-            return redList[section][0]
-        }
-        else if teamSegments.selectedSegmentIndex == 1 {
-            return blueList[section][0]
-        }
-        else if teamSegments.selectedSegmentIndex == 2 {
-            return yellowList[section][0]
-        }
-        return "0"
-    }
-//        switch(teamSegements.selectedSegmentIndex) {
-//        case 0:
-//            appraisalCell.textLabel?.text = redList[indexPath.row]
-//            break
-//        case 1:
-//            appraisalCell.textLabel?.text = blueList[indexPath.row]
-//            
-//            break
-//        case 2:
-//            appraisalCell.textLabel?.text = yellowList[indexPath.row]
-//            
-//            break
-//        default:
-//            break
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        if teamSegments.selectedSegmentIndex == 0 {
+//            return redList[section][0]
 //        }
-//        
-//        return appraisalCell
+//        else if teamSegments.selectedSegmentIndex == 1 {
+//            return blueList[section][0]
+//        }
+//        else if teamSegments.selectedSegmentIndex == 2 {
+//            return yellowList[section][0]
+//        }
+//        return "0"
+//    }
 }
