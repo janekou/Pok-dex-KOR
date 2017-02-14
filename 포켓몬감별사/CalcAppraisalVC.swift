@@ -17,15 +17,12 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     @IBAction func segmentActionChanged(_ sender: Any) {
         appraisalList.isHidden = false        
         appraisalList.reloadData()
-
     }
 
-    
-    let redList = [["말할 게 없어. 든든하겠어!","아주 강해, 자랑해도 되겠어!","보통의 강함이라고 생각해!", "배틀이 적성은 아니지만 난 좋아해"], ["HP", "공격", "방어"], ["최고야! 가슴이 뜨거워져!", "훌륭해! 두근거려!", "꽤 강하네. 배틀에서 활약할 것 같아!", "그럭저럭 강한거네."]]
-    let blueList = [["경이롭고 예술적이야.","시선을 끄는 뭔가가 있어.","보통이상이야", "좀처럼 활약이 어려워 보인다"], ["HP", "공격", "방어"], ["  측정할 수 없을 정도로 높아! 최고야!", "훌륭해! 놀라워!", "꽤 강하다고 말할 수 있군.", "그럭저럭이라고 할 수 있군."]]
-    let yellowList = [["톱 레벨이야!","아주 강해!","보통이야.", "그저 그러네."], ["HP", "공격", "방어"], ["지금까지 본 것중에서도 최고의 부류야!", "훌륭해! 정말이야!", "꽤 강한데! 내가 보증하지!", "그럭저럭, 이야!"]]
-    
     let headerTitles = ["개체값 관련 대사", "스탯 관련 대사", "title3"]
+    let redList = [["말할 게 없어. 든든하겠어!","아주 강해, 자랑해도 되겠어!","보통의 강함이라고 생각해!", "배틀이 적성은 아니지만 난 좋아해"], ["HP", "공격", "방어"], ["최고야! 가슴이 뜨거워져!", "훌륭해! 두근거려!", "꽤 강하네. 배틀에서 활약할 것 같아!", "그럭저럭 강한거네."]]
+    let blueList = [["경이롭고 예술적이야.","시선을 끄는 뭔가가 있어.","보통이상이야", "좀처럼 활약이 어려워 보인다"], ["HP", "공격", "방어"], ["측정할 수 없을 정도로 높아! 최고야!", "훌륭해! 놀라워!", "꽤 강하다고 말할 수 있군.", "그럭저럭이라고 할 수 있군."]]
+    let yellowList = [["톱 레벨이야!","아주 강해!","보통이야.", "그저 그러네."], ["HP", "공격", "방어"], ["지금까지 본 것중에서도 최고의 부류야!", "훌륭해! 정말이야!", "꽤 강한데! 내가 보증하지!", "그럭저럭, 이야!"]]
     
     
     override func viewDidLoad() {
@@ -55,6 +52,14 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
             return yellowList.count
         }
         return 0
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section < headerTitles.count {
+            return headerTitles[section]
+        }
+        return nil
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -96,12 +101,20 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         return appraisalCell
     }
     
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section < headerTitles.count {
-            return headerTitles[section]
-        }
-        return nil
 
-    }
+    
+//    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+//        let selectedIndexPaths = indexPathsForSelectedRowsInSection(section: indexPath.section)
+//        
+//        if selectedIndexPaths?.count == 1 {
+//            tableView.deselectRow(at: selectedIndexPaths!.first! as IndexPath, animated: true)
+//        }
+//        return indexPath
+//    }
+//    
+//    func indexPathsForSelectedRowsInSection(section: Int) -> [NSIndexPath]? {
+//        return (tableView.indexPathsForSelectedRows() as? [NSIndexPath])?.filter({ (indexPath) -> Bool in
+//            indexPath.section == section
+//        })
+//    }
 }

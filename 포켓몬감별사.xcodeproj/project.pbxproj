@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F0DCC9F1E40489F00345C60 /* pokemon_KR5.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3F0DCC9E1E40489F00345C60 /* pokemon_KR5.csv */; };
 		3F0DCCA11E404E5F00345C60 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0DCCA01E404E5F00345C60 /* Move.swift */; };
+		3F152B451E53A7DD00D11E89 /* NextResponderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F152B441E53A7DD00D11E89 /* NextResponderTextField.swift */; };
 		3F175FCA1E3EFE030038D2E1 /* moves.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3F175FC91E3EFE030038D2E1 /* moves.csv */; };
 		3F1B34DE1E41A73300766F2B /* pokemon_KR7.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B34DD1E41A73300766F2B /* pokemon_KR7.csv */; };
 		3F1B34E01E41A79500766F2B /* GodoB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B34DF1E41A79000766F2B /* GodoB.ttf */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		3F0DCC9E1E40489F00345C60 /* pokemon_KR5.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon_KR5.csv; sourceTree = "<group>"; };
 		3F0DCCA01E404E5F00345C60 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		3F152B441E53A7DD00D11E89 /* NextResponderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextResponderTextField.swift; sourceTree = "<group>"; };
 		3F175FC91E3EFE030038D2E1 /* moves.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = moves.csv; sourceTree = "<group>"; };
 		3F1B34DD1E41A73300766F2B /* pokemon_KR7.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon_KR7.csv; sourceTree = "<group>"; };
 		3F1B34DF1E41A79000766F2B /* GodoB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GodoB.ttf; sourceTree = "<group>"; };
@@ -172,9 +174,10 @@
 				3F328CD21E3812C10002186C /* ViewController.swift */,
 				3F404C851E39215300875A43 /* PokemonDetailVC.swift */,
 				3FC19ACD1E4C11110061509D /* CalcViewController.swift */,
-				3FCFA5051E4CE4BA00C0253D /* CalcPokemonDetailVC.swift */,
 				3F42E5CC1E4FB1AE00BBDC04 /* CalcAppraisalVC.swift */,
+				3FCFA5051E4CE4BA00C0253D /* CalcPokemonDetailVC.swift */,
 				3FCFA5031E4CD2EC00C0253D /* PopUpViewController.swift */,
+				3F152B441E53A7DD00D11E89 /* NextResponderTextField.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				3F328CE61E381B2D0002186C /* Pokemon.swift in Sources */,
 				3F328CD31E3812C10002186C /* ViewController.swift in Sources */,
 				3FC148B81E3B4B42001542EE /* PokemonDetailVC.swift in Sources */,
+				3F152B451E53A7DD00D11E89 /* NextResponderTextField.swift in Sources */,
 				3FC19ACE1E4C11110061509D /* CalcViewController.swift in Sources */,
 				3F328CD11E3812C10002186C /* AppDelegate.swift in Sources */,
 				3F42E5CD1E4FB1AE00BBDC04 /* CalcAppraisalVC.swift in Sources */,

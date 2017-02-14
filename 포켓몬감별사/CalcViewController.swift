@@ -15,10 +15,12 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     @IBOutlet weak var nameList: UITableView!
     @IBOutlet weak var cpInput: UITextField!
     @IBOutlet weak var hpInput: UITextField!
+    @IBOutlet weak var sdInput: UITextField!
     @IBOutlet weak var yesorno: UISegmentedControl!
     
     @IBOutlet weak var appraisalView: UIView!
-    
+    @IBOutlet weak var nextBtn: UIButton!
+
     @IBAction func teamAppraisalBtn(_ sender: Any) {
         if appraisalView.isHidden == true {
             (sender as AnyObject).setTitle("⁶팀 리더 포켓몬 조사 ▲", for: .normal)
@@ -41,18 +43,13 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     var pokeNames = Array<String>()
     var autocompleteWords = [String]()
 
+    let numberToolbar: UIToolbar = UIToolbar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.hideKeyboard()
         
-        //    @IBAction func showPopUp(_ sender: Any) {
-        //        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID")
-        //        self.addChildViewController(popOverVC)
-        //        self.view.addSubview(popOverVC.view)
-        //        popOverVC.didMove(toParentViewController: self)
-        //    
-        //    }
-        
+//        nextBtn.isEnabled = false
         
         nameInput.addTarget(self, action: #selector(CalcViewController.didChangeText(_:)), for: .editingChanged)
         
@@ -76,9 +73,23 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         nameList.layer.borderColor = defaultBorderColor.cgColor
         nameList.layer.cornerRadius = 5
         
-        yesorno.layer.borderColor = defaultBorderColor.cgColor
-        yesorno.layer.borderWidth = 0.5
-        nameList.layer.cornerRadius = 5
+        let array = yesorno.subviews
+        array[0].tintColor = defaultBorderColor
+        array[1].tintColor = defaultBorderColor
+
+        
+        numberToolbar.barStyle = UIBarStyle.default
+        numberToolbar.items=[
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "다음", style: UIBarButtonItemStyle.plain, target: self, action: #selector(CalcViewController.boopla))
+        ]
+        
+        numberToolbar.sizeToFit()
+        
+        cpInput.inputAccessoryView = numberToolbar
+        hpInput.inputAccessoryView = numberToolbar
+        sdInput.inputAccessoryView = numberToolbar
 
         
         parseType()
@@ -93,6 +104,18 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func boopla () {
+        cpInput.resignFirstResponder()
+        hpInput.resignFirstResponder()
+        sdInput.resignFirstResponder()
+
+    }
+    
+//    func hoopla () {
+//        cpInput.text=""
+//        cpInput.resignFirstResponder()
+//    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
@@ -352,26 +375,19 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
 }
 
 
-//    @IBAction func showPopUp(_ sender: Any) {
-//        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID")
-//        self.addChildViewController(popOverVC)
-//        self.view.addSubview(popOverVC.view)
-//        popOverVC.didMove(toParentViewController: self)
-//    
+//extension UIViewController
+//{
+//    func hideKeyboard()
+//    {
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+//            target: self,
+//            action: #selector(UIViewController.dismissKeyboard))
+//        
+//        view.addGestureRecognizer(tap)
 //    }
 //    
-
-    
-//    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        print("prepare")
-//        if segue.identifier == "sbPopUpID" {
-//            print("popover check")
-//            let popOverVC = segue.destination as PopUpViewController
-//            popOverVC = UIModalPresentationStyle.popover
-//            popOverVC!.delegate = self
-//        }
+//    func dismissKeyboard()
+//    {
+//        view.endEditing(true)
 //    }
-//    
-//    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-//        return UIModalPresentationStyle.none
-//    }
+//}

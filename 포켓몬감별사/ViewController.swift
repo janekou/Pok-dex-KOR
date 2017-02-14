@@ -25,6 +25,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         collection.delegate = self
         collection.dataSource = self
         searchBar.delegate = self
@@ -246,7 +247,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
 //        return CGSize(width: 105, height: 105)
         let screenSize: CGRect = UIScreen.main.bounds; let screenWidth = screenSize.width
-        return CGSize(width: (screenWidth/3)-0.75, height: (screenWidth/3)-0.75)
+        return CGSize(width: (screenWidth/3)-0.5, height: (screenWidth/3)-0.5)
     }
 
         
@@ -288,9 +289,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let poke = sender as? Pokemon{
             detailVC.pokemon = poke
             detailVC.typeRef = typeRef
-            }
-            }
-    
+        }
     }
-
-
+    
+}
