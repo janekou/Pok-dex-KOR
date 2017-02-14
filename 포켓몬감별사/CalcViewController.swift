@@ -19,8 +19,16 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     @IBOutlet weak var yesorno: UISegmentedControl!
     
     @IBOutlet weak var appraisalView: UIView!
-    @IBOutlet weak var nextBtn: UIButton!
 
+    @IBAction func goButton(_ sender: Any) {
+        if nameInput.text!.isEmpty {
+            showAlert(title: "빈칸이 있습니다", message: "채워랏")
+        }
+        else{
+            
+        }
+    }
+    
     @IBAction func teamAppraisalBtn(_ sender: Any) {
         if appraisalView.isHidden == true {
             (sender as AnyObject).setTitle("⁶팀 리더 포켓몬 조사 ▲", for: .normal)
@@ -47,7 +55,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.hideKeyboard()
+        self.hideKeyboard()
         
 //        nextBtn.isEnabled = false
         
@@ -116,6 +124,14 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
 //        cpInput.text=""
 //        cpInput.resignFirstResponder()
 //    }
+    
+    func showAlert(title: String, message: String) {
+        let alert: UIAlertController = UIAlertController(title: "Alert", message: "lalala", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
@@ -375,19 +391,19 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
 }
 
 
-//extension UIViewController
-//{
-//    func hideKeyboard()
-//    {
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-//            target: self,
-//            action: #selector(UIViewController.dismissKeyboard))
-//        
-//        view.addGestureRecognizer(tap)
-//    }
-//    
-//    func dismissKeyboard()
-//    {
-//        view.endEditing(true)
-//    }
-//}
+extension UIViewController
+{
+    func hideKeyboard()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(UIViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
+}
