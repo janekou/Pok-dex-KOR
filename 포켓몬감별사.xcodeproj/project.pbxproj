@@ -174,8 +174,8 @@
 				3F328CD21E3812C10002186C /* ViewController.swift */,
 				3F404C851E39215300875A43 /* PokemonDetailVC.swift */,
 				3FC19ACD1E4C11110061509D /* CalcViewController.swift */,
-				3F42E5CC1E4FB1AE00BBDC04 /* CalcAppraisalVC.swift */,
 				3FCFA5051E4CE4BA00C0253D /* CalcPokemonDetailVC.swift */,
+				3F42E5CC1E4FB1AE00BBDC04 /* CalcAppraisalVC.swift */,
 				3FCFA5031E4CD2EC00C0253D /* PopUpViewController.swift */,
 				3F152B441E53A7DD00D11E89 /* NextResponderTextField.swift */,
 			);

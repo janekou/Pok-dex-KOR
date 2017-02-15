@@ -18,26 +18,24 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     @IBOutlet weak var sdInput: UITextField!
     @IBOutlet weak var yesorno: UISegmentedControl!
     
-    @IBOutlet weak var appraisalView: UIView!
-
     @IBAction func goButton(_ sender: Any) {
-        if nameInput.text!.isEmpty {
+        if (nameInput.text!.isEmpty || cpInput.text!.isEmpty || hpInput.text!.isEmpty || sdInput.text!.isEmpty || yesorno.selectedSegmentIndex == -1) {
             showAlert(title: "빈칸이 있습니다", message: "채워랏")
         }
         else{
-            
+            return
         }
     }
     
-    @IBAction func teamAppraisalBtn(_ sender: Any) {
-        if appraisalView.isHidden == true {
-            (sender as AnyObject).setTitle("⁶팀 리더 포켓몬 조사 ▲", for: .normal)
-        } else {
-            (sender as AnyObject).setTitle("⁶팀 리더 포켓몬 조사 ▼", for: .normal)
-        }
-        
-        appraisalView.isHidden = !appraisalView.isHidden
-    }
+//    @IBAction func teamAppraisalBtn(_ sender: Any) {
+//        if appraisalView.isHidden == true {
+//            (sender as AnyObject).setTitle("⁶팀 리더 포켓몬 조사 ▲", for: .normal)
+//        } else {
+//            (sender as AnyObject).setTitle("⁶팀 리더 포켓몬 조사 ▼", for: .normal)
+//        }
+//        
+//        appraisalView.isHidden = !appraisalView.isHidden
+//    }
 
     
     var pokemon = [Pokemon]()
@@ -55,9 +53,9 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboard()
+//        self.hideKeyboard()
         
-//        nextBtn.isEnabled = false
+//        self.nameList.allowsSelection = true
         
         nameInput.addTarget(self, action: #selector(CalcViewController.didChangeText(_:)), for: .editingChanged)
         
@@ -90,11 +88,9 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         numberToolbar.items=[
             UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
             UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
-            UIBarButtonItem(title: "다음", style: UIBarButtonItemStyle.plain, target: self, action: #selector(CalcViewController.boopla))
+            UIBarButtonItem(title: "다음", style: UIBarButtonItemStyle.plain, target: self, action: #selector(CalcViewController.returnBtn))
         ]
-        
         numberToolbar.sizeToFit()
-        
         cpInput.inputAccessoryView = numberToolbar
         hpInput.inputAccessoryView = numberToolbar
         sdInput.inputAccessoryView = numberToolbar
@@ -104,7 +100,6 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         parseMoves()
         parsePokemonCSV()
         createNameArray()
-
     }
 
 
@@ -113,38 +108,53 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         // Dispose of any resources that can be recreated.
     }
     
-    func boopla () {
+    func returnBtn () {
         cpInput.resignFirstResponder()
         hpInput.resignFirstResponder()
         sdInput.resignFirstResponder()
-
     }
-    
-//    func hoopla () {
-//        cpInput.text=""
-//        cpInput.resignFirstResponder()
-//    }
+
     
     func showAlert(title: String, message: String) {
-        let alert: UIAlertController = UIAlertController(title: "Alert", message: "lalala", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        let alert: UIAlertController = UIAlertController(title: "빈칸이 있습니다.", message: "정보를 모두 기입해 주세요.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
     
+//    func hideKeyboard() {
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+//            target: self,
+//            action: #selector(CalcViewController.dismissKeyboard))
+//        
+//        view.addGestureRecognizer(tap)
+//    }
+//    
+//    func dismissKeyboard() {
+//        view.endEditing(true)
+//    }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool
-    {
-        // Try to find next responder
-        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
-            nextField.becomeFirstResponder()
-        } else {
-            // Not found, so remove keyboard.
-            textField.resignFirstResponder()
-        }
-        // Do not add a line break
-        return false
-    }
+//    
+//    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+//        if gestureRecognizer is UITapGestureRecognizer {
+//            let location = touch.location(in: nameList)
+//            return (nameList.indexPathForRow(at: location) == nil)
+//        }
+//        return true
+//    }
+    
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+//    {
+//        // Try to find next responder
+//        if let nextField = nameInput.superview?.viewWithTag(nameInput.tag + 1) as? UITextField {
+//            nextField.becomeFirstResponder()
+//        } else {
+//            // Not found, so remove keyboard.
+//            nameInput.resignFirstResponder()
+//        }
+//        // Do not add a line break
+//        return false
+//    }
     
     
     func didChangeText(_ textField:UITextField) {
@@ -201,7 +211,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         
         cell.textLabel!.attributedText = text
         
-        cell.textLabel?.textColor = UIColor(red: 52/255.0, green: 152/255.0, blue: 219/255.0, alpha: 1.0)
+        cell.textLabel?.textColor = UIColor.darkGray
 
         // no background color or selection style for cells
         cell.backgroundColor = UIColor.clear
@@ -215,6 +225,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         let pickedCell : UITableViewCell = tableView.cellForRow(at: indexPath)!
         nameInput.text = pickedCell.textLabel!.text
         nameList.isHidden = true
+        
     }
 
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
@@ -249,29 +260,8 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         self.view.endEditing(true)
     }
     
-    
-    //pass data
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let calcDetailVC: CalcPokemonDetailVC = segue.destination as! CalcPokemonDetailVC
-//        calcDetailVC.name = nameInput.text!
-//        calcDetailVC.cp = cpInput.text!
-//        calcDetailVC.max_cp = pokemon.max_cp.text!
-//        calcDetailVC.hp = hpInput.text!
-        
-//        let calcAppraisalVC: CalcAppraisalVC = segue.destination as! CalcAppraisalVC
-//    }
-   
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "CalcPokemonDetailVC" {
-            let calcDetailVC = segue.destination as! CalcPokemonDetailVC
-            calcDetailVC.name = nameInput.text!
-            calcDetailVC.cp = cpInput.text!
-        } else {
-            _ = segue.destination as! CalcAppraisalVC
-        }
-    }
-    
 
+   
     
     func createNameArray() {
         for i in 0...pokemon.count-1 {
@@ -388,22 +378,34 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             print(err.debugDescription)
         }
     }
-}
-
-
-extension UIViewController
-{
-    func hideKeyboard()
-    {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-            target: self,
-            action: #selector(UIViewController.dismissKeyboard))
-        
-        view.addGestureRecognizer(tap)
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CalcPokemonDetailVC" {
+            let calcDetailVC = segue.destination as! CalcPokemonDetailVC
+//            let poke = sender as? Pokemon{
+//                calcDetailVC.pokemon = poke
+                calcDetailVC.typeRef = typeRef
+                
+                calcDetailVC.name = nameInput.text!
+                calcDetailVC.cp = cpInput.text!
+                calcDetailVC.hp = hpInput.text!
+//            }
+            
+        } else {
+            _ = segue.destination as! CalcAppraisalVC
+        }
     }
     
-    func dismissKeyboard()
-    {
-        view.endEditing(true)
-    }
+    
+    //pass data
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        let calcDetailVC: CalcPokemonDetailVC = segue.destination as! CalcPokemonDetailVC
+    //        calcDetailVC.name = nameInput.text!
+    //        calcDetailVC.cp = cpInput.text!
+    //        calcDetailVC.max_cp = pokemon.max_cp.text!
+    //        calcDetailVC.hp = hpInput.text!
+    
+    //        let calcAppraisalVC: CalcAppraisalVC = segue.destination as! CalcAppraisalVC
+    //    }
 }
+
