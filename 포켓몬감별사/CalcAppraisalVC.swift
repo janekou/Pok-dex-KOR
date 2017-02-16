@@ -101,37 +101,57 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         }
         return appraisalCell
     }
-
-    func addSelectedCellWithSection(indexPath:NSIndexPath) ->NSIndexPath? {
-        let existingIndexPath = selectedRows["\(indexPath.section)"];
-        if (existingIndexPath == nil) {
-            selectedRows["\(indexPath.section)"]=indexPath;
-        }else
-        {
-            selectedRows["\(indexPath.section)"]=indexPath;
-            return existingIndexPath
-        }
-        
-        return nil;
-    }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = self.appraisalList.cellForRow(at: indexPath)
-        
-        let previusSelectedCellIndexPath = self.addSelectedCellWithSection(indexPath: indexPath as NSIndexPath);
-        
-        if(previusSelectedCellIndexPath != nil) {
-            let previusSelectedCell = self.appraisalList.cellForRow(at: previusSelectedCellIndexPath! as IndexPath)
-            
-            previusSelectedCell?.accessoryType = .none
-            cell?.accessoryType = .checkmark
-            tableView.deselectRow(at: previusSelectedCellIndexPath! as IndexPath, animated: true);
-        } else {
-            cell?.accessoryType = .checkmark
-        }
-        
-    }
-
+    
+//---------------------------------------------------------------------------------------------------------------
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if indexPath.section == 1 {
+//            for i in 0...tableView.numberOfRows(inSection: indexPath.section) - 1 {
+//                let cell: UITableViewCell = tableView.cellForRowAtIndexPath(IndexPath(forRow: i, inSection: indexPath.section))!
+//                if (i == indexPath.row) {
+//                    cell.accessoryType = .checkmark
+//                    cell.isSelected = false
+//                }
+//                else {
+//                    cell.accessoryType = .none
+//                }
+//            }
+//        }
+//        else {
+//            //Do whatever for the first section
+//        }
+//    }
+//---------------------------------------------------------------------------------------------------------------
+//    func addSelectedCellWithSection(indexPath:NSIndexPath) ->NSIndexPath? {
+//        let existingIndexPath = selectedRows["\(indexPath.section)"];
+//        if (existingIndexPath == nil) {
+//            selectedRows["\(indexPath.section)"]=indexPath;
+//        }else
+//        {
+//            selectedRows["\(indexPath.section)"]=indexPath;
+//            return existingIndexPath
+//        }
+//        
+//        return nil;
+//    }
+//    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let cell = self.appraisalList.cellForRow(at: indexPath)
+//        
+//        let previusSelectedCellIndexPath = self.addSelectedCellWithSection(indexPath: indexPath as NSIndexPath);
+//        
+//        if(previusSelectedCellIndexPath != nil) {
+//            let previusSelectedCell = self.appraisalList.cellForRow(at: previusSelectedCellIndexPath! as IndexPath)
+//            
+//            previusSelectedCell?.accessoryType = .none
+//            cell?.accessoryType = .checkmark
+//            tableView.deselectRow(at: previusSelectedCellIndexPath! as IndexPath, animated: true);
+//        } else {
+//            cell?.accessoryType = .checkmark
+//        }
+//        
+//    }
+//---------------------------------------------------------------------------------------------------------------
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let appraisalCell = appraisalList.cellForRow(at: indexPath as IndexPath)
 //        
