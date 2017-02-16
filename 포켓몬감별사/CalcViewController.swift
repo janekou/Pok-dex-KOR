@@ -19,12 +19,12 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     @IBOutlet weak var yesorno: UISegmentedControl!
     
     @IBAction func goButton(_ sender: Any) {
-        if (nameInput.text!.isEmpty || cpInput.text!.isEmpty || hpInput.text!.isEmpty || sdInput.text!.isEmpty || yesorno.selectedSegmentIndex == -1) {
-            showAlert(title: "빈칸이 있습니다", message: "채워랏")
-        }
-        else{
-            return
-        }
+//        if (nameInput.text!.isEmpty || cpInput.text!.isEmpty || hpInput.text!.isEmpty || sdInput.text!.isEmpty || yesorno.selectedSegmentIndex == -1) {
+//            showAlert(title: "빈칸이 있습니다", message: "채워랏")
+//        }
+//        else{
+//            return
+//        }
     }
     
 //    @IBAction func teamAppraisalBtn(_ sender: Any) {
