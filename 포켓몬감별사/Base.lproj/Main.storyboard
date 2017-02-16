@@ -1226,11 +1226,17 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1600"/>
                     <connections>
+                        <outlet property="baseAttack" destination="Gt4-Yx-rUH" id="Tvp-bb-sRi"/>
+                        <outlet property="baseDefense" destination="ghK-bC-Hxa" id="P48-Pg-h1h"/>
+                        <outlet property="baseStamina" destination="lOD-lf-oMg" id="elh-Hg-PJp"/>
+                        <outlet property="max_cp" destination="X2G-gd-6YR" id="COM-OS-48y"/>
                         <outlet property="myPokeMoveSet" destination="pX5-az-zwU" id="C4B-lh-sxO"/>
-                        <outlet property="myPokemonCp" destination="wLX-sG-O75" id="kbc-2e-ytJ"/>
-                        <outlet property="myPokemonHp" destination="0uC-4P-TNF" id="AKP-0J-Vwz"/>
+                        <outlet property="myPokemonCp" destination="wLX-sG-O75" id="Ry1-4Y-J20"/>
+                        <outlet property="myPokemonHp" destination="0uC-4P-TNF" id="tUj-qI-uhK"/>
                         <outlet property="myPokemonImg" destination="cJg-iA-aN9" id="9Wo-Vb-SKz"/>
                         <outlet property="myPokemonName" destination="CQ3-Ue-y8M" id="AFY-dh-lYH"/>
+                        <outletCollection property="myCp" destination="wLX-sG-O75" collectionClass="NSMutableArray" id="RVV-hm-WOx"/>
+                        <outletCollection property="myCp" destination="xb9-FE-wHF" collectionClass="NSMutableArray" id="X1B-jA-sjx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IXt-j8-9KX" userLabel="First Responder" sceneMemberID="firstResponder"/>

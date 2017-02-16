@@ -350,7 +350,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     func setMoveLabelB0(m: Move) {
         bmove0.text = m.moveName
         bmove0_dmg.text = m.power
-        bmove0_cd.text = m.coolDown
+        bmove0_cd.text = m.coolDown + String("초")
         bmove0_dps.text = m.dps
         setTypeLabel(l: bmove0_type, n: m.moveType)
         
@@ -359,7 +359,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     func setMoveLabelB1(m: Move) {
         bmove1.text = m.moveName
         bmove1_dmg.text = m.power
-        bmove1_cd.text = m.coolDown
+        bmove1_cd.text = m.coolDown + String("초")
         bmove1_dps.text = m.dps
         setTypeLabel(l: bmove1_type, n: m.moveType)
     }
@@ -367,7 +367,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     func setMoveLabelS0(m: Move) {
         smove0.text = m.moveName
         smove0_dmg.text = m.power
-        smove0_cd.text = m.coolDown
+        smove0_cd.text = m.coolDown + String("초")
         smove0_dps.text = m.dps
         setTypeLabel(l: smove0_type, n: m.moveType)
     }
@@ -375,7 +375,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     func setMoveLabelS1(m: Move) {
         smove1.text = m.moveName
         smove1_dmg.text = m.power
-        smove1_cd.text = m.coolDown
+        smove1_cd.text = m.coolDown + String("초")
         smove1_dps.text = m.dps
         setTypeLabel(l: smove1_type, n: m.moveType)
     }
@@ -383,7 +383,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     func setMoveLabelS2(m: Move) {
         smove2.text = m.moveName
         smove2_dmg.text = m.power
-        smove2_cd.text = m.coolDown
+        smove2_cd.text = m.coolDown + String("초")
         smove2_dps.text = m.dps
         setTypeLabel(l: smove2_type, n: m.moveType)
     }

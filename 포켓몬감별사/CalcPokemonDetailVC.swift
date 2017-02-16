@@ -12,16 +12,20 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
 
     @IBOutlet weak var myPokemonName: UILabel!
     @IBOutlet weak var myPokemonImg: UIImageView!
+    @IBOutlet weak var myPokeMoveSet: UILabel!
     @IBOutlet weak var myPokemonCp: UILabel!
     @IBOutlet weak var myPokemonHp: UILabel!
-    @IBOutlet weak var myPokeMoveSet: UILabel!
+    @IBOutlet weak var baseAttack: UILabel!
+    @IBOutlet weak var baseDefense: UILabel!
+    @IBOutlet weak var baseStamina: UILabel!
+    @IBOutlet weak var max_cp: UILabel!
+
     
     
     var pokemon: Pokemon!
     var myPokeName = String()
     var myPokeCp = String()
     var myPokeHp = String()
-    var max_cp = String()
     var typeRef = [Array<Double>]()
     
     
@@ -30,11 +34,16 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         
         myPokemonName.text = myPokeName
         myPokemonImg.image = UIImage(named: "\(pokemon.pokedexId)")
+        myPokeMoveSet.text = "내 " + myPokeName + "의 스킬세트"
         myPokemonCp.text = myPokeCp
         myPokemonHp.text = myPokeHp
-        myPokeMoveSet.text = "내 " + myPokeName + "의 스킬세트"
-        
-        
+        baseAttack.text = String(pokemon.attack)
+        baseDefense.text = String(pokemon.defense)
+        baseStamina.text = String(pokemon.stamina)
+        max_cp.text = String(pokemon.max_cp)
+
+
+
 //        self.title = name
     }
     
