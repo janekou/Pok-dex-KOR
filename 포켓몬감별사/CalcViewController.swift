@@ -9,7 +9,7 @@
 import UIKit
 
 
-class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, UIPopoverPresentationControllerDelegate {
+class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var nameInput: UITextField!
     @IBOutlet weak var nameList: UITableView!
@@ -19,10 +19,11 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     @IBOutlet weak var yesorno: UISegmentedControl!
     
     @IBAction func goButton(_ sender: Any) {
-        if (nameInput.text!.isEmpty || cpInput.text!.isEmpty || hpInput.text!.isEmpty || sdInput.text!.isEmpty || yesorno.selectedSegmentIndex == -1) {
+        if ( nameInput.text!.isEmpty || cpInput.text!.isEmpty || hpInput.text!.isEmpty || sdInput.text!.isEmpty || yesorno.selectedSegmentIndex == -1) {
             showAlert(title: "빈칸이 있습니다", message: "채워랏")
         }
         else{
+            
             return
         }
     }
@@ -39,13 +40,13 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
 
     
     var pokemon = [Pokemon]()
-
     var filteredPokemon = [Pokemon]()
     var moves = [Move]()
     var typeRef = [Array<Double>]()
     var inSearchMode = false
-    //array with pokemon names
     
+    
+    //array with pokemon names
     var pokeNames = Array<String>()
     var autocompleteWords = [String]()
 
@@ -55,14 +56,11 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         super.viewDidLoad()
 //        self.hideKeyboard()
         
-//        self.nameList.allowsSelection = true
         
         nameInput.addTarget(self, action: #selector(CalcViewController.didChangeText(_:)), for: .editingChanged)
-        
-        nameInput.tag = 0
-        nameInput.delegate = self
-        nameList.delegate = self
-        nameList.dataSource = self
+//        nameInput.delegate = self
+//        nameList.delegate = self
+//        nameList.dataSource = self
         nameList.isHidden = true
 
         
@@ -70,6 +68,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         let backgroundView = UIView(frame: CGRect.zero)
         let defaultBorderColor : UIColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha: 1.0)
         
+        //nameList style
         nameList.tableFooterView = backgroundView
         nameList.separatorColor = UIColor.lightGray
         nameList.backgroundColor = UIColor.white
@@ -79,11 +78,12 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         nameList.layer.borderColor = defaultBorderColor.cgColor
         nameList.layer.cornerRadius = 5
         
+        // yesorno segmentcontrol tint color
         let array = yesorno.subviews
         array[0].tintColor = defaultBorderColor
         array[1].tintColor = defaultBorderColor
 
-        
+        //add next button to numberpad + style
         numberToolbar.barStyle = UIBarStyle.default
         numberToolbar.items=[
             UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
@@ -108,13 +108,14 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         // Dispose of any resources that can be recreated.
     }
     
+    // next button on numberpad
     func returnBtn () {
         cpInput.resignFirstResponder()
         hpInput.resignFirstResponder()
         sdInput.resignFirstResponder()
     }
 
-    
+    // alert message popup
     func showAlert(title: String, message: String) {
         let alert: UIAlertController = UIAlertController(title: "빈칸이 있습니다.", message: "정보를 모두 기입해 주세요.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
@@ -156,7 +157,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
 //        return false
 //    }
     
-    
+    // recognize input and unhide nameList
     func didChangeText(_ textField:UITextField) {
         
         if textField == nameInput {
@@ -170,9 +171,10 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             } else {
             nameList.isHidden = false
             nameList.reloadData()
-        }
+            }
         }
     }
+    
     
     func searchAutocompleteWordsWithSubstring(_ substring: String) {
         // clean up array
@@ -194,6 +196,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         nameList!.reloadData()
     }
 
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return autocompleteWords.count
     }
@@ -379,33 +382,23 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         }
     }
     
+    
+    // pass data to CalcPokemonDetailVC
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CalcPokemonDetailVC" {
             let calcDetailVC = segue.destination as! CalcPokemonDetailVC
-//            let poke = sender as? Pokemon{
-//                calcDetailVC.pokemon = poke
-                calcDetailVC.typeRef = typeRef
-                
-                calcDetailVC.name = nameInput.text!
-                calcDetailVC.cp = cpInput.text!
-                calcDetailVC.hp = hpInput.text!
-//            }
+//                calcDetailVC.typeRef = typeRef
+                calcDetailVC.myPokeName = nameInput.text!
+                calcDetailVC.myPokeCp = cpInput.text!
+                calcDetailVC.myPokeHp = hpInput.text!
+                filteredPokemon = pokemon.filter({$0.name.range(of: nameInput.text!) != nil})
+            if(filteredPokemon.count>0) {
+                calcDetailVC.pokemon = filteredPokemon[0]
+            }
             
         } else {
             _ = segue.destination as! CalcAppraisalVC
         }
     }
-    
-    
-    //pass data
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        let calcDetailVC: CalcPokemonDetailVC = segue.destination as! CalcPokemonDetailVC
-    //        calcDetailVC.name = nameInput.text!
-    //        calcDetailVC.cp = cpInput.text!
-    //        calcDetailVC.max_cp = pokemon.max_cp.text!
-    //        calcDetailVC.hp = hpInput.text!
-    
-    //        let calcAppraisalVC: CalcAppraisalVC = segue.destination as! CalcAppraisalVC
-    //    }
 }
 

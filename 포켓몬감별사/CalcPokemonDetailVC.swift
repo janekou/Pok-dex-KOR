@@ -10,35 +10,29 @@ import UIKit
 
 class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
 
-    @IBOutlet weak var pokemonName: UILabel!
-    @IBOutlet weak var pokemonImg: UIImageView!
-    @IBOutlet weak var pokemonLvl: UILabel!
-    @IBOutlet weak var pokemonCp: UILabel!
-    @IBOutlet weak var PokemonHp: UILabel!
+    @IBOutlet weak var myPokemonName: UILabel!
+    @IBOutlet weak var myPokemonImg: UIImageView!
+    @IBOutlet weak var myPokemonCp: UILabel!
+    @IBOutlet weak var myPokemonHp: UILabel!
     @IBOutlet weak var myPokeMoveSet: UILabel!
     
     
-
-    var name = String()
-//    var level = String()
-    var cp = String()
-    var hp = String()
+    var pokemon: Pokemon!
+    var myPokeName = String()
+    var myPokeCp = String()
+    var myPokeHp = String()
     var max_cp = String()
     var typeRef = [Array<Double>]()
-    var pokemon: Pokemon!
-
-//    var pokemon = [Pokemon]()
-
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pokemonName.text = name
-//        pokemonLvl.text = name
-        pokemonCp.text = cp
-        PokemonHp.text = hp
-        myPokeMoveSet.text = "내 " + name + "의 스킬세트"
+        myPokemonName.text = myPokeName
+        myPokemonImg.image = UIImage(named: "\(pokemon.pokedexId)")
+        myPokemonCp.text = myPokeCp
+        myPokemonHp.text = myPokeHp
+        myPokeMoveSet.text = "내 " + myPokeName + "의 스킬세트"
         
         
 //        self.title = name
