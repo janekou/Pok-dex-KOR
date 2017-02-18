@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import Firebase
+
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, UITabBarDelegate {
     
@@ -22,6 +24,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var moves = [Move]()
     var typeRef = [Array<Double>]()
     var inSearchMode = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -256,7 +256,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQK-Uj-Hkd">
-                                <rect key="frame" x="20" y="500" width="335" height="32"/>
+                                <rect key="frame" x="20" y="549" width="335" height="32"/>
                                 <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                 <state key="normal" title="포켓몬 감별하러 GO!">
                                     <color key="titleColor" red="1" green="0.28880403700000001" blue="0.24712686510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -873,11 +873,11 @@
                                                     <constraint firstAttribute="height" constant="1" id="I8n-dE-ETa"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r0Q-d8-60K">
-                                                <rect key="frame" x="30" y="1131" width="315" height="46.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r0Q-d8-60K">
+                                                <rect key="frame" x="30" y="1131" width="315" height="46"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZD-M3-hZi">
-                                                        <rect key="frame" x="88" y="0.0" width="139" height="32"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZD-M3-hZi">
+                                                        <rect key="frame" x="88" y="0.0" width="139" height="31.5"/>
                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                         <state key="normal" title="팀 리더 포켓몬 조사">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -886,22 +886,22 @@
                                                             <segue destination="uWc-ys-gq2" kind="show" identifier="CalcAppraisalVC" id="l5r-ZB-1w9"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="더 정확한 IV값을 위해 조사 결과를 넣어주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uD5-bX-uG9">
-                                                        <rect key="frame" x="46.5" y="32" width="222.5" height="14.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="더 정확한 IV값을 위해 조사 결과를 넣어주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uD5-bX-uG9">
+                                                        <rect key="frame" x="46.5" y="31.5" width="222.5" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-xi-3Hk" userLabel="Divider">
+                                            <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-xi-3Hk" userLabel="Divider">
                                                 <rect key="frame" x="30" y="1197" width="315" height="0.5"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HbL-RM-Kx4">
-                                                <rect key="frame" x="20" y="1227.5" width="335" height="232.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HbL-RM-Kx4">
+                                                <rect key="frame" x="20" y="1228" width="335" height="233"/>
                                                 <subviews>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타입당 받는 데미지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTo-eA-lcU">
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="타입당 받는 데미지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTo-eA-lcU">
                                                         <rect key="frame" x="97" y="0.0" width="141.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="18"/>
                                                         <nil key="textColor"/>
@@ -2661,7 +2661,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="KOR-7f-GRQ" kind="relationship" relationship="viewControllers" id="Wkl-Ss-GyA"/>
-                        <segue destination="cbf-Ez-89k" kind="relationship" relationship="viewControllers" id="ccG-G0-fB8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajU-1T-TSU" userLabel="First Responder" sceneMemberID="firstResponder"/>
