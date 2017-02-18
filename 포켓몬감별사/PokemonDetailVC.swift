@@ -133,7 +133,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var t18t: UILabel!
     private var textLabels = [UILabel]()
     
-    
+    var poke: [Pokemon]!
     var pokemon: Pokemon!
     var typeRef: [Array<Double>]!
     
@@ -300,6 +300,12 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     }
     
     func setEvo(e: Array<Int>) {
+        var evoNames = [String]()
+        for i in 0..<e.count {
+            var temp: Pokemon!
+            temp = poke[e[i]-1]
+            evoNames.append(temp.name)
+        }
         switch e.count {
         case 0:
             evoStack1.removeFromSuperview()
@@ -307,7 +313,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         case 1:
             //1 change 1, remove 3,4,5
             evoImg1.image = UIImage(named: String(e[0]))
-            evoLbl1.text = String(pokemon.name)
+            evoLbl1.text = String(evoNames[0])
             evoImg2.removeFromSuperview()
             evoLbl2.removeFromSuperview()
             evoImg3.removeFromSuperview()
@@ -316,31 +322,31 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         case 2:
             //2 remove 1,2,3
             evoImg4.image = UIImage(named: String(e[0]))
-            evoLbl4.text = String(pokemon.name)
+            evoLbl4.text = String(evoNames[0])
             evoImg5.image = UIImage(named: String(e[1]))
-            evoLbl5.text = String(pokemon.name)
+            evoLbl5.text = String(evoNames[1])
 
             evoStack1.removeFromSuperview()
         case 3:
             //3 remove 4,5
             evoImg1.image = UIImage(named: String(e[0]))
-            evoLbl1.text = String(pokemon.name)
+            evoLbl1.text = String(evoNames[0])
             evoImg2.image = UIImage(named: String(e[1]))
-            evoLbl2.text = String(pokemon.name)
+            evoLbl2.text = String(evoNames[1])
             evoImg3.image = UIImage(named: String(e[2]))
-            evoLbl3.text = String(pokemon.name)
+            evoLbl3.text = String(evoNames[2])
             evoStack1.removeFromSuperview()
         case 5:
             evoImg1.image = UIImage(named: String(e[0]))
-            evoLbl1.text = String(pokemon.name)
+            evoLbl1.text = String(evoNames[0])
             evoImg2.image = UIImage(named: String(e[1]))
-            evoLbl2.text = String(pokemon.name)
+            evoLbl2.text = String(evoNames[1])
             evoImg3.image = UIImage(named: String(e[2]))
-            evoLbl3.text = String(pokemon.name)
+            evoLbl3.text = String(evoNames[2])
             evoImg4.image = UIImage(named: String(e[3]))
-            evoLbl4.text = String(pokemon.name)
+            evoLbl4.text = String(evoNames[3])
             evoImg5.image = UIImage(named: String(e[4]))
-            evoLbl5.text = String(pokemon.name)
+            evoLbl5.text = String(evoNames[4])
         default:
             break
         }

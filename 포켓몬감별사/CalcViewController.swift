@@ -9,7 +9,8 @@
 import UIKit
 
 
-class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
+
     
     @IBOutlet weak var nameInput: UITextField!
     @IBOutlet weak var nameList: UITableView!
@@ -17,6 +18,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     @IBOutlet weak var hpInput: UITextField!
     @IBOutlet weak var sdInput: UITextField!
     @IBOutlet weak var yesorno: UISegmentedControl!
+    @IBOutlet weak var sdPickerView: UIPickerView!
     
     @IBAction func goButton(_ sender: Any) {
         if ( nameInput.text!.isEmpty || cpInput.text!.isEmpty || hpInput.text!.isEmpty || sdInput.text!.isEmpty || yesorno.selectedSegmentIndex == -1) {
@@ -44,7 +46,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     var moves = [Move]()
     var typeRef = [Array<Double>]()
     var inSearchMode = false
-    
+    var sdPickerOptions = ["200", "400", "600", "800", "1000", "1300", "1600", "1900", "2200", "2500", "3000", "3500", "4000", "4500", "5000", "6000", "7000", "8000", "9000", "10000"];
     
     //array with pokemon names
     var pokeNames = Array<String>()
@@ -61,6 +63,8 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
 //        nameInput.delegate = self
 //        nameList.delegate = self
 //        nameList.dataSource = self
+//        sdPickerView.delegate = self
+//        sdPickerView.dataSource = self
         nameList.isHidden = true
 
         
@@ -77,6 +81,11 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         nameList.layer.borderWidth = 0.5
         nameList.layer.borderColor = defaultBorderColor.cgColor
         nameList.layer.cornerRadius = 5
+        
+        sdPickerView.backgroundColor = UIColor.white
+        sdPickerView.layer.borderWidth = 0.5
+        sdPickerView.layer.borderColor = defaultBorderColor.cgColor
+        sdPickerView.layer.cornerRadius = 5
         
         // yesorno segmentcontrol tint color
         let array = yesorno.subviews
@@ -95,6 +104,8 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         hpInput.inputAccessoryView = numberToolbar
         sdInput.inputAccessoryView = numberToolbar
 
+//        //disable keyboard for sdInput
+//        sdInput.isUserInteractionEnabled = false
         
         parseType()
         parseMoves()
@@ -175,6 +186,16 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         }
     }
     
+    //do not show keyboard nor cursor
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField == sdInput {
+            self.view.endEditing(true)
+            sdPickerView.isHidden = false
+//            sdInput.resignFirstResponder()
+            return false
+        }
+        return true
+    }
     
     func searchAutocompleteWordsWithSubstring(_ substring: String) {
         // clean up array
@@ -243,7 +264,32 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     }
     
     
+    ////////////////////////picker view delegate methods
     
+    //number of columns in the picker element
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    //number of rows of data in the UIPickerView element
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        print(sdPickerOptions.count)
+        return sdPickerOptions.count;
+    }
+    
+    //data for a specific row and specific component
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return sdPickerOptions[row]
+    }
+    
+    //Update textfield text when row is selected
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        sdInput.text = sdPickerOptions[row]
+        sdPickerView.isHidden = true
+
+    }
+    
+    //
     func addTextFiles(_ textFiles: [String]) {
         
         for textFile in textFiles {
@@ -297,22 +343,23 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     }
     
     func parseMoves() {
-        let path = Bundle.main.path(forResource: "attacks", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "attacks_1", ofType: "csv")!
         do {
             //moveset data
             let csv = try CSV(contentsOfURL: path)
             let rows = csv.rows
-            moves.append(Move(power: 0,cooldown: 0,moveName: "none",moveType: 0,attackType: false))
+            moves.append(Move(power: 0, cooldown: 0, dps: 0, moveName: "none", moveType: 0, attackType: false))
             for row in rows {
-                let power = Int(row["_power"]!)!
-                let cooldown = Double(row["_damage_duration"]!)!
-                let moveName = row["move"]!
-                let moveType = Int(row["_typePokemon"]!)!
+                let power = Int(row["power"]!)!
+                let cooldown = Double(row["cooldown"]!)!
+                let dps = Double(row["dps"]!)!
+                let moveName = row["moveName"]!
+                let moveType = Int(row["moveType"]!)!
                 var attackType = false
-                if(row["_typeAttack"] == "basic") {
+                if(row["moveForm"] == "basic") {
                     attackType = true
                 }
-                let m = Move(power: power,cooldown: cooldown,moveName: moveName,moveType: moveType,attackType: attackType)
+                let m = Move(power: power, cooldown: cooldown, dps: dps, moveName: moveName, moveType: moveType, attackType: attackType)
                 moves.append(m)
             }
             
@@ -320,9 +367,10 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             print(err.debugDescription)
         }
     }
+
     
     func parsePokemonCSV() {
-        let path = Bundle.main.path(forResource: "pokemon_KR9", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "pokemon_KR10", ofType: "csv")!
         do {
             //pokemon data
             let csv = try CSV(contentsOfURL: path)

@@ -32,7 +32,7 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myPokemonName.text = myPokeName
+        myPokemonName.text = String(pokemon.pokedexId) + myPokeName
         myPokemonImg.image = UIImage(named: "\(pokemon.pokedexId)")
         myPokeMoveSet.text = "내 " + myPokeName + "의 스킬세트"
         myPokemonCp.text = myPokeCp

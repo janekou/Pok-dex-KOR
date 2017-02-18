@@ -93,22 +93,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func parseMoves() {
-        let path = Bundle.main.path(forResource: "attacks", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "attacks_1", ofType: "csv")!
         do {
             //moveset data
             let csv = try CSV(contentsOfURL: path)
             let rows = csv.rows
-            moves.append(Move(power: 0,cooldown: 0,moveName: "none",moveType: 0,attackType: false))
+            moves.append(Move(power: 0, cooldown: 0, dps: 0, moveName: "none", moveType: 0, attackType: false))
             for row in rows {
-                let power = Int(row["_power"]!)!
-                let cooldown = Double(row["_damage_duration"]!)!
-                let moveName = row["move"]!
-                let moveType = Int(row["_typePokemon"]!)!
+                let power = Int(row["power"]!)!
+                let cooldown = Double(row["cooldown"]!)!
+                let dps = Double(row["dps"]!)!
+                let moveName = row["moveName"]!
+                let moveType = Int(row["moveType"]!)!
                 var attackType = false
-                if(row["_typeAttack"] == "basic") {
+                if(row["moveForm"] == "basic") {
                     attackType = true
                 }
-                let m = Move(power: power,cooldown: cooldown,moveName: moveName,moveType: moveType,attackType: attackType)
+                let m = Move(power: power, cooldown: cooldown, dps: dps, moveName: moveName, moveType: moveType, attackType: attackType)
                 moves.append(m)
             }
             
@@ -118,7 +119,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func parsePokemonCSV() {
-        let path = Bundle.main.path(forResource: "pokemon_KR9", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "pokemon_KR10", ofType: "csv")!
         do {
             //pokemon data
             let csv = try CSV(contentsOfURL: path)
@@ -168,7 +169,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
                 
                 
-                let poke = Pokemon(name: name, pokedexId: pokeId, height: Double(height), weight: Double(weight), max_cp: max_cp, attack: attack, defense: Int(defense), stamina: Int(stamina), evolution: evo, type0: type0, type1: type1, quickMoves: quickMoves,chargeMoves: chargeMoves, desc: desc, candy: candy)
+                let poke = Pokemon(name: name, pokedexId: pokeId, height: Double(height), weight: Double(weight), max_cp: max_cp, attack: attack, defense: Int(defense), stamina: Int(stamina), evolution: evo,type0: type0, type1: type1, quickMoves: quickMoves,chargeMoves: chargeMoves, desc: desc, candy: candy)
                 pokemon.append(poke)
                 
             }
@@ -289,6 +290,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let poke = sender as? Pokemon{
             detailVC.pokemon = poke
             detailVC.typeRef = typeRef
+            detailVC.poke = pokemon
         }
     }
     

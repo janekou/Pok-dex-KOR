@@ -214,7 +214,7 @@
                                         <rect key="frame" x="80" y="0.0" width="239" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                         <connections>
                                             <outlet property="delegate" destination="SAK-Nq-Kpf" id="OPc-IY-er1"/>
                                         </connections>
@@ -266,6 +266,16 @@
                                     <segue destination="vnG-07-uOb" kind="show" identifier="CalcPokemonDetailVC" id="KmI-gd-jYB"/>
                                 </connections>
                             </button>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lR3-Cd-h6u">
+                                <rect key="frame" x="116" y="248" width="239" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="wI8-Lx-Er5"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="SAK-Nq-Kpf" id="tA9-jS-ccC"/>
+                                    <outlet property="delegate" destination="SAK-Nq-Kpf" id="R4r-LB-fct"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -273,6 +283,8 @@
                             <constraint firstItem="wIy-wN-gIT" firstAttribute="top" secondItem="ZtH-OH-V0P" secondAttribute="bottom" constant="30" id="5fP-1c-Pn0"/>
                             <constraint firstItem="1NQ-Xj-2yt" firstAttribute="top" secondItem="yQK-Uj-Hkd" secondAttribute="bottom" constant="22" id="5nO-xs-I8y"/>
                             <constraint firstItem="2s4-bt-i5Y" firstAttribute="trailing" secondItem="u6K-L2-Bsj" secondAttribute="trailing" id="8Tq-BR-OXM"/>
+                            <constraint firstItem="lR3-Cd-h6u" firstAttribute="trailing" secondItem="tR4-81-eTr" secondAttribute="trailing" id="BHS-LL-PNp"/>
+                            <constraint firstItem="lR3-Cd-h6u" firstAttribute="leading" secondItem="tR4-81-eTr" secondAttribute="leading" id="JLU-c7-Lw6"/>
                             <constraint firstItem="9GP-Vu-Ax5" firstAttribute="top" secondItem="wIy-wN-gIT" secondAttribute="bottom" constant="30" id="Jx9-Uk-IL7"/>
                             <constraint firstItem="hJp-xf-Dia" firstAttribute="trailing" secondItem="u6K-L2-Bsj" secondAttribute="trailing" id="LZl-v1-XtI"/>
                             <constraint firstItem="yQK-Uj-Hkd" firstAttribute="trailing" secondItem="hJp-xf-Dia" secondAttribute="trailing" id="MN6-A2-oMn"/>
@@ -280,6 +292,7 @@
                             <constraint firstItem="ZtH-OH-V0P" firstAttribute="leading" secondItem="wIy-wN-gIT" secondAttribute="leading" id="SPc-nX-pMh"/>
                             <constraint firstItem="9GP-Vu-Ax5" firstAttribute="trailing" secondItem="u6K-L2-Bsj" secondAttribute="trailing" id="SyF-Da-C9A"/>
                             <constraint firstAttribute="trailing" secondItem="u6K-L2-Bsj" secondAttribute="trailing" constant="20" id="VOp-Oc-7bC"/>
+                            <constraint firstItem="lR3-Cd-h6u" firstAttribute="top" secondItem="9GP-Vu-Ax5" secondAttribute="bottom" constant="8" id="XMy-6v-1Rz"/>
                             <constraint firstItem="u6K-L2-Bsj" firstAttribute="leading" secondItem="ZtH-OH-V0P" secondAttribute="leading" id="YGq-Af-aSg"/>
                             <constraint firstItem="hJp-xf-Dia" firstAttribute="top" secondItem="2s4-bt-i5Y" secondAttribute="bottom" constant="47" id="YX9-sK-D3U"/>
                             <constraint firstItem="ZtH-OH-V0P" firstAttribute="top" secondItem="u6K-L2-Bsj" secondAttribute="bottom" constant="30" id="bIM-mV-B3P"/>
@@ -302,6 +315,7 @@
                         <outlet property="nameInput" destination="D3e-eY-RGZ" id="3xM-lq-djp"/>
                         <outlet property="nameList" destination="2s4-bt-i5Y" id="onf-iP-o5R"/>
                         <outlet property="sdInput" destination="tR4-81-eTr" id="nmg-gh-sc0"/>
+                        <outlet property="sdPickerView" destination="lR3-Cd-h6u" id="E8b-Be-Xiy"/>
                         <outlet property="yesorno" destination="kQs-vr-Idm" id="Jro-Rk-gsQ"/>
                     </connections>
                 </viewController>
@@ -869,7 +883,6 @@
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="teamAppraisalBtn:" destination="SAK-Nq-Kpf" eventType="touchUpInside" id="5QJ-VR-IOf"/>
                                                             <segue destination="uWc-ys-gq2" kind="show" identifier="CalcAppraisalVC" id="l5r-ZB-1w9"/>
                                                         </connections>
                                                     </button>
@@ -882,7 +895,7 @@
                                                 </subviews>
                                             </stackView>
                                             <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-xi-3Hk" userLabel="Divider">
-                                                <rect key="frame" x="30" y="1197.5" width="315" height="0.5"/>
+                                                <rect key="frame" x="30" y="1197" width="315" height="0.5"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HbL-RM-Kx4">
@@ -1235,8 +1248,6 @@
                         <outlet property="myPokemonHp" destination="0uC-4P-TNF" id="tUj-qI-uhK"/>
                         <outlet property="myPokemonImg" destination="cJg-iA-aN9" id="9Wo-Vb-SKz"/>
                         <outlet property="myPokemonName" destination="CQ3-Ue-y8M" id="AFY-dh-lYH"/>
-                        <outletCollection property="myCp" destination="wLX-sG-O75" collectionClass="NSMutableArray" id="RVV-hm-WOx"/>
-                        <outletCollection property="myCp" destination="xb9-FE-wHF" collectionClass="NSMutableArray" id="X1B-jA-sjx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IXt-j8-9KX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1282,6 +1293,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="grass" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qO0-ND-6Zb">
                                                         <rect key="frame" x="0.0" y="0.0" width="68" height="20"/>
                                                         <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="68" id="7b9-Up-wvk"/>
                                                             <constraint firstAttribute="height" constant="20" id="CB8-2R-5se"/>
@@ -1289,10 +1301,14 @@
                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="i0G-Ls-alw" appends="YES" id="vlW-NQ-RmM"/>
+                                                        </connections>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="poison" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUA-1X-3i2">
                                                         <rect key="frame" x="76" y="0.0" width="68" height="20"/>
                                                         <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="68" id="2TR-o4-o0n"/>
                                                             <constraint firstAttribute="height" constant="20" id="z04-fT-tCt"/>
@@ -1300,6 +1316,9 @@
                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="gCw-Jb-iK5" appends="YES" id="h7b-Rh-wvv"/>
+                                                        </connections>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -2276,6 +2295,10 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <gestureRecognizers/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="3wj-KC-ahV" appends="YES" id="rjy-QB-rOn"/>
+                                                                </connections>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k5a-2e-V4a">
                                                                 <rect key="frame" x="100" y="0.0" width="100" height="116"/>
@@ -2294,6 +2317,10 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <gestureRecognizers/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="MVp-tC-bNe" appends="YES" id="JCw-a0-Mj5"/>
+                                                                </connections>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XPm-Lt-dGa">
                                                                 <rect key="frame" x="200" y="0.0" width="100" height="116"/>
@@ -2312,6 +2339,10 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <gestureRecognizers/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="bDn-YM-cib" appends="YES" id="Ad7-x2-KU8"/>
+                                                                </connections>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
@@ -2335,6 +2366,10 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <gestureRecognizers/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="npq-ba-6u3" appends="YES" id="4gE-zt-FUs"/>
+                                                                </connections>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jc3-QP-Bhb">
                                                                 <rect key="frame" x="108" y="0.0" width="100" height="116"/>
@@ -2353,6 +2388,10 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <gestureRecognizers/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="NJE-ze-evG" appends="YES" id="20S-z2-N7d"/>
+                                                                </connections>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
@@ -2574,6 +2613,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdJ-l2-KlB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="ttK-rQ-ndm"/>
+                <tapGestureRecognizer id="3wj-KC-ahV"/>
+                <tapGestureRecognizer id="MVp-tC-bNe"/>
+                <tapGestureRecognizer id="bDn-YM-cib"/>
+                <tapGestureRecognizer id="npq-ba-6u3"/>
+                <tapGestureRecognizer id="NJE-ze-evG"/>
+                <tapGestureRecognizer id="i0G-Ls-alw"/>
+                <tapGestureRecognizer id="gCw-Jb-iK5"/>
             </objects>
             <point key="canvasLocation" x="1664.8" y="523.53823088455772"/>
         </scene>

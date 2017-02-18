@@ -11,6 +11,7 @@ import Foundation
 class Move {
     fileprivate var _power: Int!
     fileprivate var _cooldown: Double!
+    fileprivate var _dps: Double!
     fileprivate var _moveName: String!
     fileprivate var _moveType: Int!
     fileprivate var _attackType: Bool!
@@ -22,7 +23,8 @@ class Move {
         return String(format: "%.1f", _cooldown/1000)
     }
     var dps: String {
-        return String(format: "%.1f", Double(_power)/(_cooldown/1000))
+//        return String(format: "%.1f", Double(_power)/(_cooldown/1000))
+        return String(format: "%.1f", _dps/100)
     }
     var moveName: String {
         return _moveName
@@ -33,9 +35,10 @@ class Move {
     var attackType: Bool {
         return _attackType
     }
-    init(power: Int, cooldown: Double, moveName: String, moveType: Int, attackType: Bool) {
+    init(power: Int, cooldown: Double, dps: Double, moveName: String, moveType: Int, attackType: Bool) {
         self._power = power
         self._cooldown = cooldown
+        self._dps = dps
         self._moveName = moveName
         self._moveType = moveType
         self._attackType = attackType
