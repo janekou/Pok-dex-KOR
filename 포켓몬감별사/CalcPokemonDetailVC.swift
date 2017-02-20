@@ -21,6 +21,15 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var baseStamina: UILabel!
     @IBOutlet weak var max_cp: UILabel!
 
+    @IBOutlet weak var ivStack0: UIStackView!
+    @IBOutlet weak var ivStack1: UIStackView!    
+    @IBOutlet weak var ivRange: UILabel!
+    @IBOutlet weak var ivAttack: UILabel!
+    @IBOutlet weak var ivDefense: UILabel!
+    @IBOutlet weak var ivStamina: UILabel!
+
+
+    
     @IBOutlet weak var bannerView: GADBannerView!
 
     
@@ -60,9 +69,6 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         
         
         
-        
-        
-        
         getIV(hp:Int(myPokeHp)!, cp:Int(myPokeCp)!, mySdCost:mySdCost)
         
         print (possIVs.count)
@@ -73,15 +79,26 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
             print ("def " + String(iv[1]))
             print ("sta " + String(iv[2]))
             perc.append(Double(iv[0]+iv[1]+iv[2])/45)
+            
         }
+        ivAttack.text = String(possIVs[0][0])
+        ivDefense.text = String(possIVs[0][1])
+        ivStamina.text = String(possIVs[0][2])
         
         perc = perc.sorted(by: <)
         for p in perc {
             print (String(p))
+        
+        if perc.count == 1 {
+            ivRange.text = String(format: "%0.1f", perc[0]*100) + "%"
+            ivStack1.removeFromSuperview()
+
+        }else {
+            ivRange.text = String(format: "%0.1f", perc[0]*100) + "~" + String(format: "%0.1f", perc[perc.count-1]*100) + "%"
+            ivStack0.removeFromSuperview()
         }
         
-        
-        
+        }
         
         
         

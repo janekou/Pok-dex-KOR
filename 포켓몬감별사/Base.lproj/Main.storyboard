@@ -153,7 +153,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="포켓몬 이름" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="D3e-eY-RGZ">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="잠만보" borderStyle="roundedRect" placeholder="포켓몬 이름" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="D3e-eY-RGZ">
                                         <rect key="frame" x="80" y="0.0" width="239" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -176,7 +176,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2JU-7n-OvY">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2390" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2JU-7n-OvY">
                                         <rect key="frame" x="80" y="0.0" width="239" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -199,7 +199,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jwi-Od-KY6">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="222" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jwi-Od-KY6">
                                         <rect key="frame" x="80" y="0.0" width="239" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -222,7 +222,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="강화시 필요한 별의모래" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tR4-81-eTr">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4000" borderStyle="roundedRect" placeholder="강화시 필요한 별의모래" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tR4-81-eTr">
                                         <rect key="frame" x="80" y="0.0" width="239" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -245,7 +245,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="kQs-vr-Idm">
+                                    <segmentedControl opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="kQs-vr-Idm">
                                         <rect key="frame" x="80" y="0.0" width="239" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="D2b-qu-hF4"/>
@@ -432,14 +432,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1480"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="cJg-iA-aN9">
-                                                <rect key="frame" x="30" y="70" width="150" height="150"/>
+                                                <rect key="frame" x="30" y="20" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="Vi1-YI-uBJ"/>
                                                     <constraint firstAttribute="height" constant="150" id="wda-w8-vGE"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C4n-tW-kj5">
-                                                <rect key="frame" x="200" y="104" width="145" height="82"/>
+                                                <rect key="frame" x="200" y="54" width="145" height="82"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="포켓몬 이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQ3-Ue-y8M">
                                                         <rect key="frame" x="0.0" y="0.0" width="145" height="36"/>
@@ -505,92 +505,121 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="b1p-65-5bE">
-                                                <rect key="frame" x="30" y="240" width="315" height="48.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b1p-65-5bE">
+                                                <rect key="frame" x="30" y="190" width="315" height="184"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UvZ-HD-MYC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="48.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xA7-Hh-XFU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="56"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IV등급" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYF-8y-8ME">
-                                                                <rect key="frame" x="2" y="0.0" width="81" height="21"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="21" id="oPN-Kh-TMM"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8l-pQ-h7n">
-                                                                <rect key="frame" x="8" y="29" width="69" height="19.5"/>
-                                                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IV등급" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acw-Hh-8Vk">
+                                                                <rect key="frame" x="140" y="0.0" width="35" height="14"/>
+                                                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="12"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOA-h4-N18">
+                                                                <rect key="frame" x="137.5" y="22" width="40" height="34"/>
+                                                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="30"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="WYF-8y-8ME" firstAttribute="leading" secondItem="UvZ-HD-MYC" secondAttribute="leading" constant="2" id="5LC-Q7-PMO"/>
-                                                            <constraint firstItem="p8l-pQ-h7n" firstAttribute="leading" secondItem="UvZ-HD-MYC" secondAttribute="leading" constant="8" id="npj-gl-xMl"/>
-                                                        </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l4o-FC-eel">
-                                                        <rect key="frame" x="115" y="0.0" width="85" height="48.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="70r-7U-k0s">
+                                                        <rect key="frame" x="0.0" y="64" width="315" height="56"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공격력" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="840-sc-4FP">
-                                                                <rect key="frame" x="1" y="0.0" width="83" height="21"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="21" id="CW7-0N-JUh"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAF-qr-hxh">
-                                                                <rect key="frame" x="6" y="29" width="73" height="19.5"/>
-                                                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
-                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UvZ-HD-MYC">
+                                                                <rect key="frame" x="0.0" y="0.0" width="105" height="56"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공격" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYF-8y-8ME">
+                                                                        <rect key="frame" x="42" y="0.0" width="21.5" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="12"/>
+                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8l-pQ-h7n">
+                                                                        <rect key="frame" x="48.5" y="28" width="8" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
+                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l4o-FC-eel">
+                                                                <rect key="frame" x="105" y="0.0" width="105" height="56"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방어" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="840-sc-4FP">
+                                                                        <rect key="frame" x="41.5" y="0.0" width="22" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="12"/>
+                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAF-qr-hxh">
+                                                                        <rect key="frame" x="48.5" y="28" width="8" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
+                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jFt-8o-Mnc">
+                                                                <rect key="frame" x="210" y="0.0" width="105" height="56"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스태미나" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A16-V6-Xjw">
+                                                                        <rect key="frame" x="31" y="0.0" width="43.5" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="12"/>
+                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sox-j2-Rq3">
+                                                                        <rect key="frame" x="48.5" y="28" width="8" height="28"/>
+                                                                        <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
+                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="840-sc-4FP" firstAttribute="leading" secondItem="l4o-FC-eel" secondAttribute="leading" constant="1" id="Ejs-E6-yEX"/>
-                                                            <constraint firstItem="AAF-qr-hxh" firstAttribute="leading" secondItem="l4o-FC-eel" secondAttribute="leading" constant="6" id="xrM-mG-QfX"/>
-                                                        </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jFt-8o-Mnc">
-                                                        <rect key="frame" x="230" y="0.0" width="85" height="48.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3QI-QC-vRi">
+                                                        <rect key="frame" x="0.0" y="128" width="315" height="56"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="방어력" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A16-V6-Xjw">
-                                                                <rect key="frame" x="0.0" y="0.0" width="85" height="21"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="21" id="DNz-7w-p6H"/>
-                                                                </constraints>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가능한 IV값" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flu-4N-t8h">
+                                                                <rect key="frame" x="115" y="0.0" width="85" height="56"/>
                                                                 <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sox-j2-Rq3">
-                                                                <rect key="frame" x="6" y="29" width="73" height="19.5"/>
-                                                                <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
-                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="Sox-j2-Rq3" firstAttribute="leading" secondItem="jFt-8o-Mnc" secondAttribute="leading" constant="6" id="Dcr-Hz-sg3"/>
-                                                            <constraint firstAttribute="trailing" secondItem="A16-V6-Xjw" secondAttribute="trailing" id="HkN-A3-LXh"/>
-                                                        </constraints>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r0Q-d8-60K">
+                                                <rect key="frame" x="30" y="474" width="315" height="70"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정확한 IV값을 위해 조사 결과를 넣어주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uD5-bX-uG9">
+                                                        <rect key="frame" x="53.5" y="0.0" width="208.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZD-M3-hZi">
+                                                        <rect key="frame" x="79" y="14.5" width="157" height="55.5"/>
+                                                        <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
+                                                        <state key="normal" title="팀 리더 조사 결과 넣기"/>
+                                                        <connections>
+                                                            <segue destination="uWc-ys-gq2" kind="show" identifier="CalcAppraisalVC" id="l5r-ZB-1w9"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                             <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcV-E4-XFE" userLabel="Divider">
-                                                <rect key="frame" x="30" y="308.5" width="315" height="1"/>
+                                                <rect key="frame" x="30" y="574" width="315" height="1"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="O04-fz-sfy"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="a8o-cO-08Q">
-                                                <rect key="frame" x="30" y="329.5" width="315" height="221.5"/>
+                                                <rect key="frame" x="30" y="595" width="315" height="221.5"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개체값" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77X-qq-pHf">
                                                         <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
@@ -802,7 +831,7 @@
                                                 </subviews>
                                             </stackView>
                                             <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pCC-e2-xGs" userLabel="Divider">
-                                                <rect key="frame" x="30" y="581" width="315" height="1"/>
+                                                <rect key="frame" x="30" y="846.5" width="315" height="1"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="19B-Y7-cha"/>
@@ -906,80 +935,62 @@
                                                     <constraint firstAttribute="height" constant="1" id="I8n-dE-ETa"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r0Q-d8-60K">
-                                                <rect key="frame" x="30" y="1131" width="315" height="46"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZD-M3-hZi">
-                                                        <rect key="frame" x="88" y="0.0" width="139" height="31.5"/>
-                                                        <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
-                                                        <state key="normal" title="팀 리더 포켓몬 조사">
-                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <segue destination="uWc-ys-gq2" kind="show" identifier="CalcAppraisalVC" id="l5r-ZB-1w9"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="더 정확한 IV값을 위해 조사 결과를 넣어주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uD5-bX-uG9">
-                                                        <rect key="frame" x="46.5" y="31.5" width="222.5" height="14.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-xi-3Hk" userLabel="Divider">
-                                                <rect key="frame" x="30" y="1197" width="315" height="0.5"/>
+                                            <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-xi-3Hk" userLabel="Divider">
+                                                <rect key="frame" x="30" y="1191" width="315" height="1"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="nfW-hA-UxV"/>
+                                                </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HbL-RM-Kx4">
-                                                <rect key="frame" x="20" y="1228" width="335" height="233"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HbL-RM-Kx4">
+                                                <rect key="frame" x="20" y="1222" width="335" height="238"/>
                                                 <subviews>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="타입당 받는 데미지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTo-eA-lcU">
-                                                        <rect key="frame" x="97" y="0.0" width="141.5" height="20.5"/>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타입당 받는 데미지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTo-eA-lcU">
+                                                        <rect key="frame" x="97" y="0.0" width="141.5" height="26"/>
                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xFY-8x-PwC">
-                                                        <rect key="frame" x="1.5" y="40.5" width="332" height="192"/>
+                                                        <rect key="frame" x="1.5" y="46" width="332" height="192"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aMz-IP-GAc">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aMz-IP-GAc">
                                                                 <rect key="frame" x="0.0" y="0.0" width="332" height="19.5"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mW-ei-NJG">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mW-ei-NJG">
                                                                         <rect key="frame" x="0.0" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKk-TF-zh5">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKk-TF-zh5">
                                                                         <rect key="frame" x="57" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liz-Ju-qiW">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liz-Ju-qiW">
                                                                         <rect key="frame" x="114" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mm6-u5-ZBT">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mm6-u5-ZBT">
                                                                         <rect key="frame" x="171" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwB-Pt-tYC">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwB-Pt-tYC">
                                                                         <rect key="frame" x="228" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiV-vr-LRC">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiV-vr-LRC">
                                                                         <rect key="frame" x="285" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -987,43 +998,43 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g3K-0h-XA2">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g3K-0h-XA2">
                                                                 <rect key="frame" x="0.0" y="34.5" width="332" height="19.5"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE5-By-Tcx">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE5-By-Tcx">
                                                                         <rect key="frame" x="0.0" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUe-oa-Tln">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUe-oa-Tln">
                                                                         <rect key="frame" x="57" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQL-Rv-WOZ">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQL-Rv-WOZ">
                                                                         <rect key="frame" x="114" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egG-aA-igk">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egG-aA-igk">
                                                                         <rect key="frame" x="171" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIh-hB-ETO">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIh-hB-ETO">
                                                                         <rect key="frame" x="228" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAt-bz-Ejm">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAt-bz-Ejm">
                                                                         <rect key="frame" x="285" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1031,43 +1042,43 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xgm-fx-bsi">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xgm-fx-bsi">
                                                                 <rect key="frame" x="0.0" y="69" width="332" height="19.5"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjk-Nk-53y">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjk-Nk-53y">
                                                                         <rect key="frame" x="0.0" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1O-SP-RHg">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1O-SP-RHg">
                                                                         <rect key="frame" x="57" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5v-qF-r2y">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5v-qF-r2y">
                                                                         <rect key="frame" x="114" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkA-7Q-tVQ">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkA-7Q-tVQ">
                                                                         <rect key="frame" x="171" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4z-qD-iqR">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4z-qD-iqR">
                                                                         <rect key="frame" x="228" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oG9-6q-RHJ">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oG9-6q-RHJ">
                                                                         <rect key="frame" x="285" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1075,43 +1086,43 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lyK-Uu-WGC">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lyK-Uu-WGC">
                                                                 <rect key="frame" x="0.0" y="103.5" width="332" height="19.5"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="925-sr-ReY">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="925-sr-ReY">
                                                                         <rect key="frame" x="0.0" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d9-cs-90A">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d9-cs-90A">
                                                                         <rect key="frame" x="57" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afd-DC-4db">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afd-DC-4db">
                                                                         <rect key="frame" x="114" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8z-LK-2uT">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8z-LK-2uT">
                                                                         <rect key="frame" x="171" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrC-mt-Kce">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrC-mt-Kce">
                                                                         <rect key="frame" x="228" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiG-vi-iiP">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiG-vi-iiP">
                                                                         <rect key="frame" x="285" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1119,43 +1130,43 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DcL-4V-tJY">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DcL-4V-tJY">
                                                                 <rect key="frame" x="0.0" y="138" width="332" height="19.5"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cct-va-O76">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cct-va-O76">
                                                                         <rect key="frame" x="0.0" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1e-99-rOW">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1e-99-rOW">
                                                                         <rect key="frame" x="57" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-41-EJN">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-41-EJN">
                                                                         <rect key="frame" x="114" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CT-sV-FLr">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CT-sV-FLr">
                                                                         <rect key="frame" x="171" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHo-a8-cbi">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHo-a8-cbi">
                                                                         <rect key="frame" x="228" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aea-xg-wST">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aea-xg-wST">
                                                                         <rect key="frame" x="285" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1163,43 +1174,43 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IaG-pR-M88">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IaG-pR-M88">
                                                                 <rect key="frame" x="0.0" y="172.5" width="332" height="19.5"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2v-6T-KD6">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2v-6T-KD6">
                                                                         <rect key="frame" x="0.0" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FU-Fe-JYR">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FU-Fe-JYR">
                                                                         <rect key="frame" x="57" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Da5-ck-r9k">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Da5-ck-r9k">
                                                                         <rect key="frame" x="114" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWy-hU-dTr">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWy-hU-dTr">
                                                                         <rect key="frame" x="171" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngN-ul-Wzt">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngN-ul-Wzt">
                                                                         <rect key="frame" x="228" y="0.0" width="47" height="19.5"/>
                                                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N39-Gd-BRw">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1.56배" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N39-Gd-BRw">
                                                                         <rect key="frame" x="285" y="0.0" width="47" height="19.5"/>
                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="17"/>
                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1218,36 +1229,37 @@
                                             <constraint firstItem="lBC-QD-TfM" firstAttribute="leading" secondItem="Iwp-Dc-kQc" secondAttribute="leading" constant="30" id="64c-OI-laW"/>
                                             <constraint firstAttribute="height" constant="1480" id="7aO-4y-UPy"/>
                                             <constraint firstAttribute="trailing" secondItem="HbL-RM-Kx4" secondAttribute="trailing" constant="20" id="8Rj-VS-DqX"/>
-                                            <constraint firstAttribute="trailing" secondItem="r0Q-d8-60K" secondAttribute="trailing" constant="30" id="8XN-m7-1T2"/>
                                             <constraint firstAttribute="trailing" secondItem="pCC-e2-xGs" secondAttribute="trailing" constant="30" id="BFh-ik-98j"/>
                                             <constraint firstItem="pcV-E4-XFE" firstAttribute="leading" secondItem="Iwp-Dc-kQc" secondAttribute="leading" constant="30" id="Cdl-22-hmt"/>
                                             <constraint firstItem="KXI-pX-eOg" firstAttribute="leading" secondItem="Iwp-Dc-kQc" secondAttribute="leading" constant="30" id="Djc-J6-IHj"/>
                                             <constraint firstAttribute="trailing" secondItem="b1p-65-5bE" secondAttribute="trailing" constant="30" id="Dpo-P2-nJP"/>
-                                            <constraint firstItem="wbc-xi-3Hk" firstAttribute="top" secondItem="r0Q-d8-60K" secondAttribute="bottom" constant="20" id="EdR-fL-2PR"/>
-                                            <constraint firstItem="r0Q-d8-60K" firstAttribute="top" secondItem="lBC-QD-TfM" secondAttribute="bottom" constant="20" id="GrA-ap-1sl"/>
                                             <constraint firstItem="HbL-RM-Kx4" firstAttribute="top" secondItem="wbc-xi-3Hk" secondAttribute="bottom" constant="30" id="HFd-4y-lj2"/>
                                             <constraint firstItem="pCC-e2-xGs" firstAttribute="top" secondItem="a8o-cO-08Q" secondAttribute="bottom" constant="30" id="Hqu-B2-FKK"/>
                                             <constraint firstItem="b1p-65-5bE" firstAttribute="leading" secondItem="Iwp-Dc-kQc" secondAttribute="leading" constant="30" id="JrX-ow-Qgx"/>
                                             <constraint firstAttribute="bottom" secondItem="KXI-pX-eOg" secondAttribute="bottom" constant="390" id="L6k-AY-Qlp"/>
                                             <constraint firstAttribute="trailing" secondItem="pcV-E4-XFE" secondAttribute="trailing" constant="30" id="LGO-P2-U3A"/>
                                             <constraint firstAttribute="trailing" secondItem="C4n-tW-kj5" secondAttribute="trailing" constant="30" id="LP0-0v-hK6"/>
+                                            <constraint firstItem="pcV-E4-XFE" firstAttribute="top" secondItem="r0Q-d8-60K" secondAttribute="bottom" constant="30" id="MqY-nv-Hgb"/>
                                             <constraint firstAttribute="trailing" secondItem="wbc-xi-3Hk" secondAttribute="trailing" constant="30" id="Ps8-N9-vx5"/>
-                                            <constraint firstItem="r0Q-d8-60K" firstAttribute="leading" secondItem="Iwp-Dc-kQc" secondAttribute="leading" constant="30" id="Q0o-6B-kJi"/>
                                             <constraint firstItem="pCC-e2-xGs" firstAttribute="leading" secondItem="Iwp-Dc-kQc" secondAttribute="leading" constant="30" id="SPl-gQ-cLb"/>
+                                            <constraint firstItem="r0Q-d8-60K" firstAttribute="top" secondItem="b1p-65-5bE" secondAttribute="bottom" constant="100" id="SQi-Us-YcV"/>
                                             <constraint firstItem="a8o-cO-08Q" firstAttribute="leading" secondItem="Iwp-Dc-kQc" secondAttribute="leading" constant="30" id="V6h-eC-UHl"/>
                                             <constraint firstItem="HbL-RM-Kx4" firstAttribute="leading" secondItem="Iwp-Dc-kQc" secondAttribute="leading" constant="20" id="Wsd-c8-qgq"/>
                                             <constraint firstItem="cJg-iA-aN9" firstAttribute="leading" secondItem="Iwp-Dc-kQc" secondAttribute="leading" constant="30" id="aEg-1V-aQA"/>
                                             <constraint firstItem="lBC-QD-TfM" firstAttribute="top" secondItem="KXI-pX-eOg" secondAttribute="bottom" constant="20" id="c7I-8S-4wC"/>
+                                            <constraint firstAttribute="trailing" secondItem="r0Q-d8-60K" secondAttribute="trailing" constant="30" id="e8o-Y4-Y6D"/>
                                             <constraint firstAttribute="bottom" secondItem="HbL-RM-Kx4" secondAttribute="bottom" constant="20" id="fMI-pe-mGm"/>
+                                            <constraint firstItem="r0Q-d8-60K" firstAttribute="leading" secondItem="Iwp-Dc-kQc" secondAttribute="leading" constant="30" id="gJ9-YP-kJd"/>
                                             <constraint firstItem="b1p-65-5bE" firstAttribute="top" secondItem="cJg-iA-aN9" secondAttribute="bottom" constant="20" id="ge1-Gy-3Ha"/>
                                             <constraint firstItem="C4n-tW-kj5" firstAttribute="centerY" secondItem="cJg-iA-aN9" secondAttribute="centerY" id="jlL-17-eSC"/>
                                             <constraint firstItem="wbc-xi-3Hk" firstAttribute="leading" secondItem="Iwp-Dc-kQc" secondAttribute="leading" constant="30" id="lFy-ZB-zrh"/>
+                                            <constraint firstItem="wbc-xi-3Hk" firstAttribute="top" secondItem="lBC-QD-TfM" secondAttribute="bottom" constant="80" id="nE8-NE-o0n"/>
                                             <constraint firstAttribute="trailing" secondItem="a8o-cO-08Q" secondAttribute="trailing" constant="30" id="o4N-Zb-BTa"/>
                                             <constraint firstAttribute="trailing" secondItem="KXI-pX-eOg" secondAttribute="trailing" constant="30" id="sSu-yM-wIk"/>
-                                            <constraint firstItem="cJg-iA-aN9" firstAttribute="top" secondItem="Iwp-Dc-kQc" secondAttribute="top" constant="70" id="u8a-cQ-igk"/>
+                                            <constraint firstItem="cJg-iA-aN9" firstAttribute="top" secondItem="Iwp-Dc-kQc" secondAttribute="top" constant="20" id="u8a-cQ-igk"/>
                                             <constraint firstItem="a8o-cO-08Q" firstAttribute="top" secondItem="pcV-E4-XFE" secondAttribute="bottom" constant="20" id="uTv-vk-xku"/>
                                             <constraint firstAttribute="trailing" secondItem="lBC-QD-TfM" secondAttribute="trailing" constant="30" id="xSK-Bq-H3H"/>
-                                            <constraint firstItem="pcV-E4-XFE" firstAttribute="top" secondItem="b1p-65-5bE" secondAttribute="bottom" constant="20" id="zC3-QW-xMO"/>
+                                            <constraint firstItem="pcV-E4-XFE" firstAttribute="top" secondItem="b1p-65-5bE" secondAttribute="bottom" constant="200" id="zC3-QW-xMO"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1279,6 +1291,12 @@
                         <outlet property="baseAttack" destination="Gt4-Yx-rUH" id="Tvp-bb-sRi"/>
                         <outlet property="baseDefense" destination="ghK-bC-Hxa" id="P48-Pg-h1h"/>
                         <outlet property="baseStamina" destination="lOD-lf-oMg" id="elh-Hg-PJp"/>
+                        <outlet property="ivAttack" destination="p8l-pQ-h7n" id="8ns-PI-gUC"/>
+                        <outlet property="ivDefense" destination="AAF-qr-hxh" id="xc2-sf-pN7"/>
+                        <outlet property="ivRange" destination="MOA-h4-N18" id="Uov-Gh-t8y"/>
+                        <outlet property="ivStack0" destination="70r-7U-k0s" id="xzK-dK-lgn"/>
+                        <outlet property="ivStack1" destination="3QI-QC-vRi" id="mks-R8-7Rd"/>
+                        <outlet property="ivStamina" destination="Sox-j2-Rq3" id="N3j-c4-ihp"/>
                         <outlet property="max_cp" destination="X2G-gd-6YR" id="COM-OS-48y"/>
                         <outlet property="myPokeMoveSet" destination="pX5-az-zwU" id="C4B-lh-sxO"/>
                         <outlet property="myPokemonCp" destination="wLX-sG-O75" id="Ry1-4Y-J20"/>
@@ -1888,16 +1906,16 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eXE-RJ-9if">
                                                                         <rect key="frame" x="0.0" y="27.5" width="205" height="15"/>
                                                                         <subviews>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="h6K-Yo-4Qx">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="h6K-Yo-4Qx">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="48.5" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhf-Un-hRP">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhf-Un-hRP">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="35" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZI-iC-Wrm">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZI-iC-Wrm">
                                                                                         <rect key="frame" x="41" y="0.0" width="7.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1905,16 +1923,16 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="9vh-N4-Jzi">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="9vh-N4-Jzi">
                                                                                 <rect key="frame" x="60.5" y="0.0" width="49" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쿨다운" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9R-Hi-45b">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="쿨다운" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9R-Hi-45b">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="35.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXo-bq-8eK">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXo-bq-8eK">
                                                                                         <rect key="frame" x="41.5" y="0.0" width="7.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1922,16 +1940,16 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Y8X-87-5jf">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Y8X-87-5jf">
                                                                                 <rect key="frame" x="121.5" y="0.0" width="83.5" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초당데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8C-w8-TcC">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="초당데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8C-w8-TcC">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="59" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gg-TQ-JLX">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gg-TQ-JLX">
                                                                                         <rect key="frame" x="65" y="0.0" width="18.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1971,16 +1989,16 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="njN-iu-3FE">
                                                                         <rect key="frame" x="0.0" y="27.5" width="205" height="15"/>
                                                                         <subviews>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Scn-se-vHz">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Scn-se-vHz">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="48.5" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJm-WA-Rrw">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJm-WA-Rrw">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="35" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nI-Ph-IsJ">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nI-Ph-IsJ">
                                                                                         <rect key="frame" x="41" y="0.0" width="7.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1988,16 +2006,16 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ReD-qe-3Oz">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ReD-qe-3Oz">
                                                                                 <rect key="frame" x="60.5" y="0.0" width="49" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쿨다운" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bo-Vg-hAP">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="쿨다운" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bo-Vg-hAP">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="35.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRn-cZ-vSc">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRn-cZ-vSc">
                                                                                         <rect key="frame" x="41.5" y="0.0" width="7.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2005,16 +2023,16 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="HT6-ZW-rf9">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="HT6-ZW-rf9">
                                                                                 <rect key="frame" x="121.5" y="0.0" width="83.5" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초당데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12c-h0-oRC">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="초당데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12c-h0-oRC">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="59" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1e-3a-oAW">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1e-3a-oAW">
                                                                                         <rect key="frame" x="65" y="0.0" width="18.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2072,16 +2090,16 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="XsC-YX-pDW">
                                                                         <rect key="frame" x="0.0" y="27.5" width="205" height="15"/>
                                                                         <subviews>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="VfY-G1-dIS">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="VfY-G1-dIS">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="48.5" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2h-4e-aQS">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2h-4e-aQS">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="35" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yea-qb-8dL">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yea-qb-8dL">
                                                                                         <rect key="frame" x="41" y="0.0" width="7.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2089,16 +2107,16 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="4Uv-gf-tIe">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="4Uv-gf-tIe">
                                                                                 <rect key="frame" x="60.5" y="0.0" width="49" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쿨다운" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qze-nP-3iW">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="쿨다운" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qze-nP-3iW">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="35.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hu-Jj-ayq">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hu-Jj-ayq">
                                                                                         <rect key="frame" x="41.5" y="0.0" width="7.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2106,16 +2124,16 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="k1n-8R-bcO">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="k1n-8R-bcO">
                                                                                 <rect key="frame" x="121.5" y="0.0" width="83.5" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초당데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9f-Dx-jsu">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="초당데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9f-Dx-jsu">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="59" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcS-g1-lOQ">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcS-g1-lOQ">
                                                                                         <rect key="frame" x="65" y="0.0" width="18.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2155,16 +2173,16 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Qd3-3n-u1R">
                                                                         <rect key="frame" x="0.0" y="27.5" width="205" height="15"/>
                                                                         <subviews>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="MC0-F6-51n">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="MC0-F6-51n">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="48.5" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5d-g8-Lce">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5d-g8-Lce">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="35" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox6-mx-9M6">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox6-mx-9M6">
                                                                                         <rect key="frame" x="41" y="0.0" width="7.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2172,16 +2190,16 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="JVs-50-BaW">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="JVs-50-BaW">
                                                                                 <rect key="frame" x="60.5" y="0.0" width="49" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쿨다운" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au7-gu-X1z">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="쿨다운" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au7-gu-X1z">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="35.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBa-oS-0hB">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBa-oS-0hB">
                                                                                         <rect key="frame" x="41.5" y="0.0" width="7.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2189,16 +2207,16 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="MEy-mH-7g2">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="MEy-mH-7g2">
                                                                                 <rect key="frame" x="121.5" y="0.0" width="83.5" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초당데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRY-eL-g78">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="초당데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRY-eL-g78">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="59" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jid-am-cRT">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jid-am-cRT">
                                                                                         <rect key="frame" x="65" y="0.0" width="18.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2238,16 +2256,16 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Rve-hr-c5E">
                                                                         <rect key="frame" x="0.0" y="27.5" width="205" height="15"/>
                                                                         <subviews>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="V5p-R5-L2a">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="V5p-R5-L2a">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="48.5" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxe-NK-UG1">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxe-NK-UG1">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="35" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCo-RE-Kwh">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCo-RE-Kwh">
                                                                                         <rect key="frame" x="41" y="0.0" width="7.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2255,16 +2273,16 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="5ro-Za-zTs">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="5ro-Za-zTs">
                                                                                 <rect key="frame" x="60.5" y="0.0" width="49" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쿨다운" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVE-g1-T5w">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="쿨다운" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVE-g1-T5w">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="35.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gI-Rj-AZA">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gI-Rj-AZA">
                                                                                         <rect key="frame" x="41.5" y="0.0" width="7.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2272,16 +2290,16 @@
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="etu-gb-yXd">
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="etu-gb-yXd">
                                                                                 <rect key="frame" x="121.5" y="0.0" width="83.5" height="15"/>
                                                                                 <subviews>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초당데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDQ-8e-4P3">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="초당데미지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDQ-8e-4P3">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="59" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIQ-9h-nJV">
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIQ-9h-nJV">
                                                                                         <rect key="frame" x="65" y="0.0" width="18.5" height="15"/>
                                                                                         <fontDescription key="fontDescription" name="GodoM" family="Godo M" pointSize="13"/>
                                                                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2766,7 +2784,7 @@
                                                     <constraint firstAttribute="height" constant="806" id="tCn-FN-S90"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="appraisalCell" id="r77-sg-jrM">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="appraisalCell" editingAccessoryType="checkmark" id="r77-sg-jrM">
                                                         <rect key="frame" x="0.0" y="56" width="343" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r77-sg-jrM" id="Haj-F4-fJa">
