@@ -8,11 +8,29 @@
 
 import UIKit
 import QuartzCore
+import GoogleMobileAds
+
 
 class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     
     @IBOutlet weak var edgeGestureRecognizer: UIScreenEdgePanGestureRecognizer!
+    @IBOutlet weak var bannerView: GADBannerView!
+    var interstitialAd : GADInterstitial!
+
+//    @IBAction func previousBtn(_ sender: Any) {
+//    }
     
+    @IBAction func nextBtn(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: false)
+    
+//        if(pokemon.pokedexId<251) {
+//            print("nex pokemon")
+//            pokemon = poke[pokemon.pokedexId]
+//            print(pokemon.name)
+////          tLabels = [UILabel]()
+//            super.viewDidLoad()
+//            self.viewDidLoad()
+    }
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
     @IBOutlet weak var desc: UILabel!
@@ -140,6 +158,13 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Google Mobile Ads SDK version: \(GADRequest.sdkVersion())")
+        bannerView.adUnitID = "ca-app-pub-1925911848721620/9930591193"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+//        self.navigationController?.navigationBar.addSubview(bannerView)
+        
+        
         let edgeGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(self.userSwipedFromEdge))
         edgeGestureRecognizer.edges = .left;
         edgeGestureRecognizer.delegate = self
@@ -151,7 +176,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         
         
         var typeArr1 = typeRef[pokemon.type0]
-        let typeArr2 = typeRef[pokemon.type1]
+        var typeArr2 = typeRef[pokemon.type1]
         
         for i in 0...typeArr1.count-1 {
             typeArr1[i] *= typeArr2[i]
@@ -491,7 +516,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
+
     
     /*
      // MARK: - Navigation
@@ -502,5 +527,14 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
      // Pass the selected object to the new view controller.
      }
      */
-    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+//        if segue.identifier == "nextCell" {
+//            let vc = segue.destination as! PokemonDetailVC
+//            let poke = sender as? Pokemon{
+//                vc.pokemon = poke
+//            }
+//        }
+//    }
 }
+
+

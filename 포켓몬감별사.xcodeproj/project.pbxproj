@@ -34,7 +34,7 @@
 		3F473EB41E58513B00DF9B66 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F473EB31E58513B00DF9B66 /* StoreKit.framework */; };
 		3F473EB61E58514200DF9B66 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F473EB51E58514200DF9B66 /* SystemConfiguration.framework */; };
 		3F473EB81E5853F800DF9B66 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F473EB71E5853F800DF9B66 /* MediaPlayer.framework */; };
-		3F473EBA1E5859C400DF9B66 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F473EB91E5859C400DF9B66 /* Info.plist */; };
+		3F519FA71E5A8D63002425B1 /* cpm.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3F519FA61E5A8D63002425B1 /* cpm.csv */; };
 		3F80DF431E58310200F230D5 /* attacks_1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3F80DF421E58310200F230D5 /* attacks_1.csv */; };
 		3FA45C341E38520100CB5B23 /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F328CEE1E3844EB0002186C /* Pokemon Solid.ttf */; };
 		3FAA72451E4A67A600F939E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA72441E4A67A600F939E7 /* Assets.xcassets */; };
@@ -51,6 +51,7 @@
 		3FCFA5041E4CD2EC00C0253D /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFA5031E4CD2EC00C0253D /* PopUpViewController.swift */; };
 		3FCFA5061E4CE4BA00C0253D /* CalcPokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFA5051E4CE4BA00C0253D /* CalcPokemonDetailVC.swift */; };
 		3FCFA5091E4D0A5F00C0253D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FCFA5071E4D0A5F00C0253D /* Main.storyboard */; };
+		3FDC5BE31E58F26700A6E1E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FDC5BE21E58F26700A6E1E3 /* GoogleService-Info.plist */; };
 		3FE9223B1E41922A0001506F /* pokemon_KR6.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3FE9223A1E41922A0001506F /* pokemon_KR6.csv */; };
 		B48702C91E46F562002D0FA6 /* pokemon_KR8.csv in Resources */ = {isa = PBXBuildFile; fileRef = B48702C81E46F562002D0FA6 /* pokemon_KR8.csv */; };
 		C17AFD5EFD45B21DD55D0C53 /* Pods______________.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E3AE08D0AABCFBB6B6D7DD /* Pods______________.framework */; };
@@ -89,6 +90,7 @@
 		3F473EB51E58514200DF9B66 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3F473EB71E5853F800DF9B66 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		3F473EB91E5859C400DF9B66 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F519FA61E5A8D63002425B1 /* cpm.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cpm.csv; sourceTree = "<group>"; };
 		3F80DF421E58310200F230D5 /* attacks_1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = attacks_1.csv; sourceTree = "<group>"; };
 		3FAA72441E4A67A600F939E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FAA724D1E4ADD8E00F939E7 /* pokemon_KR9.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon_KR9.csv; sourceTree = "<group>"; };
@@ -103,9 +105,10 @@
 		3FCFA5031E4CD2EC00C0253D /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		3FCFA5051E4CE4BA00C0253D /* CalcPokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalcPokemonDetailVC.swift; sourceTree = "<group>"; };
 		3FCFA5081E4D0A5F00C0253D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3FDC5BE21E58F26700A6E1E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FE9223A1E41922A0001506F /* pokemon_KR6.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon_KR6.csv; sourceTree = "<group>"; };
 		B48702C81E46F562002D0FA6 /* pokemon_KR8.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon_KR8.csv; sourceTree = "<group>"; };
-		D4E3AE08D0AABCFBB6B6D7DD /* Pods______________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods______________.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4E3AE08D0AABCFBB6B6D7DD /* Pods______________.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods______________.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C5CDFE9FF0123967021D49 /* Pods-포켓몬도감.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-포켓몬도감.debug.xcconfig"; path = "Pods/Target Support Files/Pods-포켓몬도감/Pods-포켓몬도감.debug.xcconfig"; sourceTree = "<group>"; };
 		F376D43EDA5B809055718CF3 /* Pods-포켓몬도감.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-포켓몬도감.release.xcconfig"; path = "Pods/Target Support Files/Pods-포켓몬도감/Pods-포켓몬도감.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,7 +141,7 @@
 		3F328CC41E3812C10002186C = {
 			isa = PBXGroup;
 			children = (
-				3F328CCF1E3812C10002186C /* 포켓몬감별사 */,
+				3F328CCF1E3812C10002186C /* 포켓몬감별사 */,
 				3F328CCE1E3812C10002186C /* Products */,
 				3F473E9E1E5850BF00DF9B66 /* Frameworks */,
 				559F63AA8DE8734D1CFB5B59 /* Pods */,
@@ -154,7 +157,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3F328CCF1E3812C10002186C /* 포켓몬감별사 */ = {
+		3F328CCF1E3812C10002186C /* 포켓몬감별사 */ = {
 			isa = PBXGroup;
 			children = (
 				3F328CE41E381B030002186C /* Model */,
@@ -167,6 +170,7 @@
 				3F328CD91E3812C10002186C /* LaunchScreen.storyboard */,
 				3FAA72441E4A67A600F939E7 /* Assets.xcassets */,
 				3F473EB91E5859C400DF9B66 /* Info.plist */,
+				3FDC5BE21E58F26700A6E1E3 /* GoogleService-Info.plist */,
 			);
 			name = "포켓몬감별사";
 			path = "포켓몬감별사";
@@ -202,6 +206,7 @@
 			children = (
 				3FC148A81E39D2DC001542EE /* attacks.csv */,
 				3F80DF421E58310200F230D5 /* attacks_1.csv */,
+				3F519FA61E5A8D63002425B1 /* cpm.csv */,
 				3FC148AB1E39D2DC001542EE /* lang_shapes.csv */,
 				3FC148AC1E39D2DC001542EE /* type_index.csv */,
 				3FC148AD1E39D2DC001542EE /* pokemon.csv */,
@@ -349,7 +354,8 @@
 				3FCFA5091E4D0A5F00C0253D /* Main.storyboard in Resources */,
 				3F473E9D1E584EC000DF9B66 /* pokemon_KR10.csv in Resources */,
 				B48702C91E46F562002D0FA6 /* pokemon_KR8.csv in Resources */,
-				3F473EBA1E5859C400DF9B66 /* Info.plist in Resources */,
+				3FDC5BE31E58F26700A6E1E3 /* GoogleService-Info.plist in Resources */,
+				3F519FA71E5A8D63002425B1 /* cpm.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,8 +565,8 @@
 				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jane.-------------";
 				PRODUCT_NAME = "포켓몬감별사";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
-				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 			};
 			name = Debug;
 		};
@@ -583,8 +589,8 @@
 				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jane.-------------";
 				PRODUCT_NAME = "포켓몬감별사";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
-				SWIFT_WHOLE_MODULE_OPTIMIZATION = YES;
 			};
 			name = Release;
 		};

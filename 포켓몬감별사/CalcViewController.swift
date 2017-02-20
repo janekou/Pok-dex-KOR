@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 
 class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var bannerView: GADBannerView!
     
     @IBOutlet weak var nameInput: UITextField!
     @IBOutlet weak var nameList: UITableView!
@@ -21,13 +23,13 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     @IBOutlet weak var sdPickerView: UIPickerView!
     
     @IBAction func goButton(_ sender: Any) {
-        if ( nameInput.text!.isEmpty || cpInput.text!.isEmpty || hpInput.text!.isEmpty || sdInput.text!.isEmpty || yesorno.selectedSegmentIndex == -1) {
-            showAlert(title: "빈칸이 있습니다", message: "채워랏")
-        }
-        else{
-            
-            return
-        }
+//        if ( nameInput.text!.isEmpty || cpInput.text!.isEmpty || hpInput.text!.isEmpty || sdInput.text!.isEmpty || yesorno.selectedSegmentIndex == -1) {
+//            showAlert(title: "빈칸이 있습니다", message: "채워랏")
+//        }
+//        else{
+//            
+//            return
+//        }
     }
     
 //    @IBAction func teamAppraisalBtn(_ sender: Any) {
@@ -54,8 +56,16 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
 
     let numberToolbar: UIToolbar = UIToolbar()
     
+    var interstitialAd : GADInterstitial!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        print("Google Mobile Ads SDK version: \(GADRequest.sdkVersion())")
+        bannerView.adUnitID = "ca-app-pub-1925911848721620/9930591193"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        
 //        self.hideKeyboard()
         
         
@@ -439,6 +449,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                 calcDetailVC.myPokeName = nameInput.text!
                 calcDetailVC.myPokeCp = cpInput.text!
                 calcDetailVC.myPokeHp = hpInput.text!
+                calcDetailVC.mySdCost = sdInput.text!
                 filteredPokemon = pokemon.filter({$0.name.range(of: nameInput.text!) != nil})
             if(filteredPokemon.count>0) {
                 calcDetailVC.pokemon = filteredPokemon[0]
