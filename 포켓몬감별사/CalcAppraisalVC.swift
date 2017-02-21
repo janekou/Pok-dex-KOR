@@ -23,9 +23,6 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     let blueList = [["경이롭고 예술적이야.","시선을 끄는 뭔가가 있어.","보통이상이야", "좀처럼 활약이 어려워 보인다"], ["HP", "공격", "방어"], ["측정할 수 없을 정도로 높아! 최고야!", "훌륭해! 놀라워!", "꽤 강하다고 말할 수 있군.", "그럭저럭이라고 할 수 있군."]]
     let yellowList = [["톱 레벨이야!","아주 강해!","보통이야.", "그저 그러네."], ["HP", "공격", "방어"], ["지금까지 본 것중에서도 최고의 부류야!", "훌륭해! 정말이야!", "꽤 강한데! 내가 보증하지!", "그럭저럭, 이야!"]]
     
-//    var selectedRows = [String:NSIndexPath]()
-    
-//    print (selectedRows.count)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +30,23 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         (teamSegments.subviews[2] as UIView).tintColor = UIColor.red
         (teamSegments.subviews[1] as UIView).tintColor = UIColor.blue
         (teamSegments.subviews[0] as UIView).tintColor = UIColor(red: 254.0/255.0, green: 216.0/255.0, blue: 80.0/255.0, alpha: 1.0)
-
-        // Do any additional setup after loading the view.
+       
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         if teamSegments.selectedSegmentIndex == 0 {
@@ -56,12 +62,13 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         return 0
         
     }
-    
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section < headerTitles.count {
-            return headerTitles[section]
-        }
-        return nil
+//        if section < headerTitles.count {
+//            return headerTitles[section]
+//        }
+//        return nil
+        return headerTitles[section]
 
     }
     
@@ -85,7 +92,6 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         return returnValue!
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let appraisalCell = appraisalList.dequeueReusableCell(withIdentifier: "appraisalCell", for: indexPath)
         
@@ -105,93 +111,59 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         return appraisalCell
     }
     
-
-    
-    
-    
-    
-    
-    
-    
-    
-//    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-//        if indexPath.section == 0 {
-//            let sr = tableView.indexPathsForSelectedRows
-//                if sr?.count == 2 {
-//                }
-//                return nil
-//        } else if indexPath.section == 1 {
-//            let sr = tableView.indexPathsForSelectedRows
-//                if sr?.count == 4 {
-//                    return nil
-//                }
-//        } else  {
-//            let sr = tableView.indexPathsForSelectedRows
-//                if sr?.count == 2 {
-//                    return nil
-//                }
-//            }
-//        return indexPath
-//    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let selectedCell = appraisalList.cellForRow(at: indexPath as IndexPath)
-////        tableView.deselectRow(at:indexPath, animated: true)
-//        switch indexPath.section {
-//        case 0:
-//            selectedCell?.accessoryType = .checkmark
-//            break
-//        case 1:
-//            selectedCell?.accessoryType = .checkmark
-//            break
-//        case 2:
-//            selectedCell?.accessoryType = .checkmark
-//            break
-//        default:
-//            break
-//
-//        }
+        let selectedCell = appraisalList.cellForRow(at: indexPath as IndexPath)
+        let sectionNumber = indexPath.section
         tableView.deselectRow(at:indexPath, animated: true)
+        switch indexPath.section {
+        case 0:
+            let sr = tableView.indexPathsForSelectedRows
+                if sr?.count == 0 {
+                    selectedCell?.accessoryType = .checkmark
+                } else {
+                    for i in 0 ..< appraisalList.numberOfRows(inSection: sectionNumber) {
+                        if let cell = appraisalList.cellForRow(at: IndexPath (row: i, section: sectionNumber)) {
+                        cell.accessoryType = .none
+                        }
+                    }
 
-        if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark {
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
-        } else {
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+                    if selectedCell?.accessoryType == .checkmark {
+                        selectedCell?.accessoryType = .none
+                    } else {
+                        selectedCell?.accessoryType = .checkmark
+                            }
+            }
+            break
+        case 1:
+            if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
+                tableView.cellForRow(at: indexPath)?.accessoryType = .none
+            } else {
+                tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+            }
+            break
+        case 2:
+            let sr = tableView.indexPathsForSelectedRows
+            if sr?.count == 0 {
+                selectedCell?.accessoryType = .checkmark
+            } else {
+                for i in 0 ..< appraisalList.numberOfRows(inSection: sectionNumber) {
+                    if let cell = appraisalList.cellForRow(at: IndexPath (row: i, section: sectionNumber)) {
+                        cell.accessoryType = .none
+                    }
+                }
+                
+                if selectedCell?.accessoryType == .checkmark {
+                    selectedCell?.accessoryType = .none
+                } else {
+                    selectedCell?.accessoryType = .checkmark
+                }
+            }
+            break
+        default:
+            break
+
         }
     }
-
-////    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-////        let deselectedCell = tableView.cellForRow(at: indexPath as IndexPath)
-////        
-////        switch indexPath.section {
-////        case 0:
-////            deselectedCell?.accessoryType = .none
-////            break
-////        case 1:
-////            deselectedCell?.accessoryType = .none
-////            break
-////        case 2:
-////            deselectedCell?.accessoryType = .none
-////            break
-////        default:
-////            break
-////        }
-////    }
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
 
 
 
