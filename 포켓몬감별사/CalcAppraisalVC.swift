@@ -26,7 +26,10 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        view.backgroundColor = UIColor.clear
+        view.isOpaque = false
+        
         (teamSegments.subviews[2] as UIView).tintColor = UIColor.red
         (teamSegments.subviews[1] as UIView).tintColor = UIColor.blue
         (teamSegments.subviews[0] as UIView).tintColor = UIColor(red: 254.0/255.0, green: 216.0/255.0, blue: 80.0/255.0, alpha: 1.0)

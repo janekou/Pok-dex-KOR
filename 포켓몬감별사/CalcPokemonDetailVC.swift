@@ -280,4 +280,12 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         self.present(alert, animated: true, completion: nil)
     }
 
+    
+    
+    func showModal() {
+        let modalViewController = CalcAppraisalVC()
+        modalViewController.modalPresentationStyle = .overCurrentContext
+        present(modalViewController, animated: true, completion: nil)
+    }
+    
 }
