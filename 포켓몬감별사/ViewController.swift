@@ -139,6 +139,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let name = row["identifier_KR"]!
                 let height = Int(row["height"]!)!
                 let weight = Int(row["weight"]!)!
+//                let min_cp = Int(row["min_cp"]!)!
                 let max_cp = Int(row["max_cp"]!)!
                 let attack = Int(row["attack"]!)!
                 let defense = Int(row["defense"]!)!

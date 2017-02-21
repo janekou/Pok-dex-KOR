@@ -283,7 +283,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     //number of rows of data in the UIPickerView element
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        print(sdPickerOptions.count)
+//        print(sdPickerOptions.count)
         return sdPickerOptions.count;
     }
     
@@ -390,6 +390,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                 let name = row["identifier_KR"]!
                 let height = Int(row["height"]!)!
                 let weight = Int(row["weight"]!)!
+//                let min_cp = Int(row["min_cp"]!)!
                 let max_cp = Int(row["max_cp"]!)!
                 let attack = Int(row["attack"]!)!
                 let defense = Int(row["defense"]!)!
@@ -450,6 +451,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                 calcDetailVC.myPokeCp = cpInput.text!
                 calcDetailVC.myPokeHp = hpInput.text!
                 calcDetailVC.mySdCost = sdInput.text!
+                calcDetailVC.powerUp = yesorno.selectedSegmentIndex
                 filteredPokemon = pokemon.filter({$0.name.range(of: nameInput.text!) != nil})
             if(filteredPokemon.count>0) {
                 calcDetailVC.pokemon = filteredPokemon[0]

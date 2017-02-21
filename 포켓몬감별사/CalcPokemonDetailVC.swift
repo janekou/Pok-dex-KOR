@@ -13,16 +13,19 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
 
     @IBOutlet weak var myPokemonName: UILabel!
     @IBOutlet weak var myPokemonImg: UIImageView!
+    @IBOutlet weak var myPokemonLvl: UILabel!
     @IBOutlet weak var myPokeMoveSet: UILabel!
     @IBOutlet weak var myPokemonCp: UILabel!
     @IBOutlet weak var myPokemonHp: UILabel!
-    @IBOutlet weak var baseAttack: UILabel!
-    @IBOutlet weak var baseDefense: UILabel!
-    @IBOutlet weak var baseStamina: UILabel!
-    @IBOutlet weak var max_cp: UILabel!
+//    @IBOutlet weak var baseAttack: UILabel!
+//    @IBOutlet weak var baseDefense: UILabel!
+//    @IBOutlet weak var baseStamina: UILabel!
+    
+//    @IBOutlet weak var min_cp: UILabel!
+//    @IBOutlet weak var max_cp: UILabel!
 
     @IBOutlet weak var ivStack0: UIStackView!
-    @IBOutlet weak var ivStack1: UIStackView!    
+//    @IBOutlet weak var ivStack1: UIStackView!    
     @IBOutlet weak var ivRange: UILabel!
     @IBOutlet weak var ivAttack: UILabel!
     @IBOutlet weak var ivDefense: UILabel!
@@ -38,9 +41,12 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     var myPokeCp = String()
     var myPokeHp = String()
     var mySdCost = String()
+    var powerUp = Int()
     var typeRef = [Array<Double>]()
     var sdToCpm = [String:[String]]()//600 = [0.2,0.3]
     var cpms = [String]()
+    var cpmToLvl = [String:String]()
+    var possIVs = [[Int]]()
     
     var interstitialAd : GADInterstitial!
 
@@ -54,16 +60,16 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         bannerView.load(GADRequest())
         
         parseCPMCSV()
-        myPokemonName.text = String(pokemon.pokedexId) + myPokeName
+        myPokemonName.text = "#" + String(pokemon.pokedexId) + " " + myPokeName
         myPokemonImg.image = UIImage(named: "\(pokemon.pokedexId)")
         myPokeMoveSet.text = "내 " + myPokeName + "의 스킬세트"
         myPokemonCp.text = myPokeCp
         myPokemonHp.text = myPokeHp
-        baseAttack.text = String(pokemon.attack)
-        baseDefense.text = String(pokemon.defense)
-        baseStamina.text = String(pokemon.stamina)
-        max_cp.text = String(pokemon.max_cp)
-        
+//        baseAttack.text = String(pokemon.attack)
+//        baseDefense.text = String(pokemon.defense)
+//        baseStamina.text = String(pokemon.stamina)
+//        min_cp.text = String(pokemon.min_cp)
+//        max_cp.text = String(pokemon.max_cp)
         
         
         
@@ -71,36 +77,46 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         
         getIV(hp:Int(myPokeHp)!, cp:Int(myPokeCp)!, mySdCost:mySdCost)
         
-        print (possIVs.count)
+        if possIVs.count == 0 {
+//            UIView.setAnimationsEnabled(false)
+            _ = navigationController?.popViewController(animated: true)
+            
+            showAlert(title: "wrong values", message: "try again")
+        } else {
+            UIView.setAnimationsEnabled(true)
+        }
+        
+        
+        
+//        print (possIVs.count)
         var perc = [Double]()
         for iv in possIVs {
-            print ("possible")
-            print ("att " + String(iv[0]))
-            print ("def " + String(iv[1]))
-            print ("sta " + String(iv[2]))
+//            print ("possible")
+//            print ("att " + String(iv[0]))
+//            print ("def " + String(iv[1]))
+//            print ("sta " + String(iv[2]))
             perc.append(Double(iv[0]+iv[1]+iv[2])/45)
             
         }
+        if(possIVs.count>0) {
         ivAttack.text = String(possIVs[0][0])
         ivDefense.text = String(possIVs[0][1])
         ivStamina.text = String(possIVs[0][2])
-        
+        }
         perc = perc.sorted(by: <)
-        for p in perc {
-            print (String(p))
+//        for p in perc {
+//            print (String(p))
         
         if perc.count == 1 {
             ivRange.text = String(format: "%0.1f", perc[0]*100) + "%"
-            ivStack1.removeFromSuperview()
+//            ivStack1.removeFromSuperview()
 
-        }else {
+        }else if perc.count>1 {
             ivRange.text = String(format: "%0.1f", perc[0]*100) + "~" + String(format: "%0.1f", perc[perc.count-1]*100) + "%"
             ivStack0.removeFromSuperview()
         }
         
-        }
-        
-        
+//        }
         
         
         
@@ -141,11 +157,9 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
         
         
         // cp =(BaseAtk + (cp / (BaseDef + IndDef)^0.5 * possVal) - BaseAtk) * (BaseDef + IndDef)^0.5 * possVal
-        
-        
 
     }
-    
+
     
     
     func compSta (sta: Int, cpm: Double) -> Double  {
@@ -171,15 +185,22 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     
     //        sdToCpm["4000"] = [0.667934,0.674577537,0.68116492,0.687680648]
     
-    var possIVs = [[Int]]()
     
     func getIV (hp:Int, cp:Int, mySdCost:String){
         
+        var possLvls = [String]()
+
+        var arr = [String]()
+        if(powerUp==1) {
+            arr.append((sdToCpm[mySdCost]?[0])!)
+            arr.append((sdToCpm[mySdCost]?[2])!)
+        } else {
+            arr = sdToCpm[mySdCost]!
+        }
         
-        for cpm in sdToCpm[mySdCost]! {
+        for cpm in arr {
             
             let m = Double(cpm)!
-            
             //possible staminas
             var pSta = [Int]()
             //get stamina based on hp
@@ -188,19 +209,34 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
                     pSta.append(i);
                 }
             }
-            
             for sta in pSta {
                 for def in 0...15 {
                     for att in 0...15{
                         let possCp = getCp(sta: sta, att:att, def: def, cpm: m)
                         if(cp==possCp) {
                             possIVs.append([att, def, sta])
+//                            print ("cpm: " + cpm)
+//                            print ("lvl: " + cpmToLvl[cpm]!)
+                            possLvls.append(cpmToLvl[cpm]!)
+                            
+                        
                         }
                         
                     }
                 }
             }
         }
+        
+        
+        
+        possLvls = Array(Set(possLvls))
+//        print (possLvls.count)
+        if possLvls.count == 1 {
+            myPokemonLvl.text = possLvls[0]
+        } else if possLvls.count > 1 {
+            myPokemonLvl.text = possLvls[0] + "~" + possLvls[possLvls.count-1]
+        }
+
     }
     
     
@@ -214,7 +250,7 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
             let rows = csv.rows
             for row in rows {
                 let cpm = row["cpm"]!
-//                let pokeLvl = Int(row["pokeLvl"]!)!
+                let pokeLvl = row["pokeLvl"]!
 //                let powerup_num = Int(row["powerup_num"]!)!
                 let sd_lvl = row["sd_lvl"]!
 //                let candy_lvl = Int(row["candy_lvl"]!)!
@@ -227,11 +263,21 @@ class CalcPokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
                 }
                 cpms.append(cpm)
                 sdToCpm[sd_lvl] = cpms
+                
+                cpmToLvl[cpm] = pokeLvl
+                
             }
         } catch let err as NSError {
             print(err.debugDescription)
         }
     }
     
+    // alert message popup
+    func showAlert(title: String, message: String) {
+        let alert: UIAlertController = UIAlertController(title: "기입된 정보가 옳지 않습니다.", message: "다시 기입해 주세요.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }

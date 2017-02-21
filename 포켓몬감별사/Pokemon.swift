@@ -14,6 +14,7 @@ class Pokemon {
     fileprivate var _desc: String!
     fileprivate var _height: Double!
     fileprivate var _weight: Double!
+//    fileprivate var _min_cp: Int!
     fileprivate var _max_cp: Int!
     fileprivate var _attack: Int!
     fileprivate var _defense: Int!
@@ -41,6 +42,10 @@ class Pokemon {
     var pokedexId: Int {
         return _pokedexId
     }
+    
+//    var min_cp: Int {
+//        return _min_cp
+//    }
     
     var max_cp: Int {
         return _max_cp
@@ -92,6 +97,7 @@ class Pokemon {
         self._pokedexId = pokedexId
         self._height = height
         self._weight = weight
+//        self._min_cp = min_cp
         self._max_cp = max_cp
         self._attack = attack
         self._defense = defense

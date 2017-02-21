@@ -305,7 +305,7 @@
 				TargetAttributes = {
 					3F328CCC1E3812C10002186C = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = TGNC9R7XTB;
+						DevelopmentTeam = 7A6SZZDF82;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -552,9 +552,9 @@
 			baseConfigurationReference = E3C5CDFE9FF0123967021D49 /* Pods-포켓몬도감.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = TGNC9R7XTB;
+				DEVELOPMENT_TEAM = 7A6SZZDF82;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -563,9 +563,9 @@
 				INFOPLIST_FILE = "포켓몬감별사/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jane.-------------";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zenzen.pokeidentifier;
 				PRODUCT_NAME = "포켓몬감별사";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -575,9 +575,9 @@
 			baseConfigurationReference = F376D43EDA5B809055718CF3 /* Pods-포켓몬도감.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = TGNC9R7XTB;
+				DEVELOPMENT_TEAM = 7A6SZZDF82;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -587,7 +587,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "";
 				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jane.-------------";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zenzen.pokeidentifier;
 				PRODUCT_NAME = "포켓몬감별사";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
