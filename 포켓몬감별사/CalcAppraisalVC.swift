@@ -107,7 +107,7 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        if indexPath.section == 1 {
 //            for i in 0...tableView.numberOfRows(inSection: indexPath.section) - 1 {
-//                let cell: UITableViewCell = tableView.cellForRowAtIndexPath(IndexPath(forRow: i, inSection: indexPath.section))!
+//                let cell: UITableViewCell = tableView.cellForRowAtIndexPath(forRow: i, inSection: indexPath.section)!
 //                if (i == indexPath.row) {
 //                    cell.accessoryType = .checkmark
 //                    cell.isSelected = false
