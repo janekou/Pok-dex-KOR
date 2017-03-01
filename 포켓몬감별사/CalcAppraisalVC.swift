@@ -18,6 +18,7 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     
+    @IBOutlet weak var closeView: UIButton!
     let headerTitles = ["IV 총합", "종족치", "가장 높은 IV"]
     let redList = [["말할 게 없어. 든든하겠어!","아주 강해, 자랑해도 되겠어!","보통의 강함이라고 생각해!", "배틀이 적성은 아니지만 난 좋아해"], ["HP", "공격", "방어"], ["최고야! 가슴이 뜨거워져!", "훌륭해! 두근거려!", "꽤 강하네. 배틀에서 활약할 것 같아!", "그럭저럭 강한거네."]]
     let blueList = [["경이롭고 예술적이야.","시선을 끄는 뭔가가 있어.","보통이상이야", "좀처럼 활약이 어려워 보인다"], ["HP", "공격", "방어"], ["측정할 수 없을 정도로 높아! 최고야!", "훌륭해! 놀라워!", "꽤 강하다고 말할 수 있군.", "그럭저럭이라고 할 수 있군."]]
