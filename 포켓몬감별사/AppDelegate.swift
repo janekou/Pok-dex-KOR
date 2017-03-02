@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         // Initialize Google Mobile Ads SDK
         GADMobileAds.configure(withApplicationID: "ca-app-pub-1925911848721620/9930591193")
+        
+        let attr = NSDictionary(object: UIFont(name: "Godo M", size: 12.0)!, forKey: NSFontAttributeName as NSCopying)
+        UISegmentedControl.appearance().setTitleTextAttributes(attr as [NSObject : AnyObject] , for: .normal)
+        
         return true
     }
     

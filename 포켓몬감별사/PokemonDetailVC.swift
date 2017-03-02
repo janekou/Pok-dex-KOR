@@ -23,14 +23,17 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBAction func nextBtn(_ sender: Any) {
         _ = navigationController?.popViewController(animated: false)
     
-//        if(pokemon.pokedexId<251) {
-//            print("nex pokemon")
-//            pokemon = poke[pokemon.pokedexId]
-//            print(pokemon.name)
-////          tLabels = [UILabel]()
+        if(pokemon.pokedexId<251) {
+            print("next pokemon")
+            pokemon = poke[pokemon.pokedexId]
+            print(pokemon.name)
+//          tLabels = [UILabel]()
 //            super.viewDidLoad()
 //            self.viewDidLoad()
+            
+        }
     }
+        
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
     @IBOutlet weak var desc: UILabel!

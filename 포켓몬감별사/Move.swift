@@ -14,7 +14,7 @@ class Move {
     fileprivate var _dps: Double!
     fileprivate var _moveName: String!
     fileprivate var _moveType: Int!
-    fileprivate var _attackType: Bool!
+    fileprivate var _moveForm: Bool!
     
     var power: String {
         return String(_power)
@@ -32,15 +32,15 @@ class Move {
     var moveType: Int {
         return _moveType
     }
-    var attackType: Bool {
-        return _attackType
+    var moveForm: Bool {
+        return _moveForm
     }
-    init(power: Int, cooldown: Double, dps: Double, moveName: String, moveType: Int, attackType: Bool) {
+    init(power: Int, cooldown: Double, dps: Double, moveName: String, moveType: Int, moveForm: Bool) {
         self._power = power
         self._cooldown = cooldown
         self._dps = dps
         self._moveName = moveName
         self._moveType = moveType
-        self._attackType = attackType
+        self._moveForm = moveForm
     }
 }

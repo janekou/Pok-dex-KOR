@@ -17,7 +17,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var bannerView: GADBannerView!
-    
+
     
 //    var searchController = UISearchController()
     var pokemon = [Pokemon]()
@@ -103,12 +103,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func parseMoves() {
-        let path = Bundle.main.path(forResource: "attacks_1", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "attacks_2", ofType: "csv")!
         do {
             //moveset data
             let csv = try CSV(contentsOfURL: path)
             let rows = csv.rows
-            moves.append(Move(power: 0, cooldown: 0, dps: 0, moveName: "none", moveType: 0, attackType: false))
+            moves.append(Move(power: 0, cooldown: 0, dps: 0, moveName: "none", moveType: 0, moveForm: false))
             for row in rows {
                 let power = Int(row["power"]!)!
                 let cooldown = Double(row["cooldown"]!)!
@@ -119,7 +119,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 if(row["moveForm"] == "basic") {
                     attackType = true
                 }
-                let m = Move(power: power, cooldown: cooldown, dps: dps, moveName: moveName, moveType: moveType, attackType: attackType)
+                let m = Move(power: power, cooldown: cooldown, dps: dps, moveName: moveName, moveType: moveType, moveForm: attackType)
                 moves.append(m)
             }
             
@@ -166,13 +166,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 var chargeMoves = Array<Move>()
                 
                 var moveset = Array<Int>()
-                for i in 0...4 {
+                for i in 0...7 {
                     if Int(row["attack"+String(i)]!) != nil {
                         moveset.append(Int(row["attack"+String(i)]!)!)
                     }
                 }
                 for i in moveset {
-                    if(moves[i].attackType) {
+                    if(moves[i].moveForm) {
                         quickMoves.append(moves[i])
                     } else {
                         chargeMoves.append(moves[i])
@@ -266,6 +266,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func isStringAnInt(string: String) -> Bool {
         return Int(string) != nil
     }
+    
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)

@@ -21,7 +21,10 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     @IBOutlet weak var sdInput: UITextField!
     @IBOutlet weak var yesorno: UISegmentedControl!
     @IBOutlet weak var sdPickerView: UIPickerView!
+    @IBOutlet weak var helperImg: UIImageView!
     
+    @IBAction func helperBtn(_ sender: Any) {
+    }
     @IBAction func goButton(_ sender: Any) {
 //        if ( nameInput.text!.isEmpty || cpInput.text!.isEmpty || hpInput.text!.isEmpty || sdInput.text!.isEmpty || yesorno.selectedSegmentIndex == -1) {
 //            showAlert(title: "빈칸이 있습니다", message: "채워랏")
@@ -57,6 +60,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     let numberToolbar: UIToolbar = UIToolbar()
     
     var interstitialAd : GADInterstitial!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,6 +121,13 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
 //        //disable keyboard for sdInput
 //        sdInput.isUserInteractionEnabled = false
         
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light) // Change .Dark into .Light if you'd like.
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        
+        blurView.frame = helperImg.bounds // 'theImage' is an image. I think you can apply this to the view too!
+        helperImg.addSubview(blurView)
+
         parseType()
         parseMoves()
         parsePokemonCSV()
@@ -353,12 +364,12 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     }
     
     func parseMoves() {
-        let path = Bundle.main.path(forResource: "attacks_1", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "attacks_2", ofType: "csv")!
         do {
             //moveset data
             let csv = try CSV(contentsOfURL: path)
             let rows = csv.rows
-            moves.append(Move(power: 0, cooldown: 0, dps: 0, moveName: "none", moveType: 0, attackType: false))
+            moves.append(Move(power: 0, cooldown: 0, dps: 0, moveName: "none", moveType: 0, moveForm: false))
             for row in rows {
                 let power = Int(row["power"]!)!
                 let cooldown = Double(row["cooldown"]!)!
@@ -369,7 +380,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                 if(row["moveForm"] == "basic") {
                     attackType = true
                 }
-                let m = Move(power: power, cooldown: cooldown, dps: dps, moveName: moveName, moveType: moveType, attackType: attackType)
+                let m = Move(power: power, cooldown: cooldown, dps: dps, moveName: moveName, moveType: moveType, moveForm: attackType)
                 moves.append(m)
             }
             
@@ -423,7 +434,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                     }
                 }
                 for i in moveset {
-                    if(moves[i].attackType) {
+                    if(moves[i].moveForm) {
                         quickMoves.append(moves[i])
                     } else {
                         chargeMoves.append(moves[i])
@@ -457,9 +468,10 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                 calcDetailVC.pokemon = filteredPokemon[0]
             }
             
-        } else {
-            _ = segue.destination as! CalcAppraisalVC
         }
+//        else {
+//            _ = segue.destination as! CalcAppraisalVC
+//        }
     }
 }
 

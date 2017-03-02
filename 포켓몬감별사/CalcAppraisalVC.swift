@@ -12,6 +12,10 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 
     @IBOutlet var teamSegments: UISegmentedControl!
     @IBOutlet var appraisalList: UITableView!
+    
+    @IBAction func closeBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 
     @IBAction func segmentChanged(_ sender: Any) {
         appraisalList.reloadData()
@@ -34,6 +38,7 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         (teamSegments.subviews[2] as UIView).tintColor = UIColor.red
         (teamSegments.subviews[1] as UIView).tintColor = UIColor.blue
         (teamSegments.subviews[0] as UIView).tintColor = UIColor(red: 254.0/255.0, green: 216.0/255.0, blue: 80.0/255.0, alpha: 1.0)
+        
        
     }
 
@@ -41,14 +46,6 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -67,14 +64,29 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         
     }
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        if section < headerTitles.count {
-//            return headerTitles[section]
-//        }
-//        return nil
-        return headerTitles[section]
-
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let headerView = view as? UITableViewHeaderFooterView {
+            headerView.textLabel?.textAlignment = .center
+            headerView.textLabel?.text = headerTitles[section]
+//            headerView.textLabel?.textColor = UIColor ( red: 0.0902, green: 0.2745, blue: 0.2745, alpha: 1.0 )
+            headerView.textLabel?.font = UIFont(name:"Godo M", size:12)
+//            headerView.contentView.backgroundColor = UIDecorator.sharedInstance.currentTheme.lightShadeColor
+        }
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return " "
+    }
+    
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+////        if section < headerTitles.count {
+////            return headerTitles[section]
+////        }
+////        return nil
+//        return headerTitles[section]
+//
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        var returnValue = 0
@@ -98,6 +110,9 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let appraisalCell = appraisalList.dequeueReusableCell(withIdentifier: "appraisalCell", for: indexPath)
+        appraisalCell.textLabel?.font = UIFont(name:"Godo M", size:14)
+//        appraisalCell.textLabel?.textAlignment = .center
+        appraisalList.rowHeight = 40
         
         switch (teamSegments.selectedSegmentIndex) {
         case 0:
