@@ -21,10 +21,11 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     @IBOutlet weak var sdInput: UITextField!
     @IBOutlet weak var yesorno: UISegmentedControl!
     @IBOutlet weak var sdPickerView: UIPickerView!
-    @IBOutlet weak var helperImg: UIImageView!
     
-    @IBAction func helperBtn(_ sender: Any) {
-    }
+//    @IBOutlet weak var helperImg: UIImageView!
+//    
+//    @IBAction func helperBtn(_ sender: Any) {
+//    }
     @IBAction func goButton(_ sender: Any) {
 //        if ( nameInput.text!.isEmpty || cpInput.text!.isEmpty || hpInput.text!.isEmpty || sdInput.text!.isEmpty || yesorno.selectedSegmentIndex == -1) {
 //            showAlert(title: "빈칸이 있습니다", message: "채워랏")
@@ -122,11 +123,11 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
 //        sdInput.isUserInteractionEnabled = false
         
         
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light) // Change .Dark into .Light if you'd like.
-        let blurView = UIVisualEffectView(effect: blurEffect)
-        
-        blurView.frame = helperImg.bounds // 'theImage' is an image. I think you can apply this to the view too!
-        helperImg.addSubview(blurView)
+//        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light) // Change .Dark into .Light if you'd like.
+//        let blurView = UIVisualEffectView(effect: blurEffect)
+//        
+//        blurView.frame = helperImg.bounds // 'theImage' is an image. I think you can apply this to the view too!
+//        helperImg.addSubview(blurView)
 
         parseType()
         parseMoves()

@@ -32,6 +32,7 @@ class CalcAppraisalVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.layer.cornerRadius = 10
         view.backgroundColor = UIColor.clear
         view.isOpaque = false
         

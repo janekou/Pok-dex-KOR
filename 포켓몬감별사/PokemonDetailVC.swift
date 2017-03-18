@@ -16,6 +16,7 @@ class PokemonDetailVC: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var edgeGestureRecognizer: UIScreenEdgePanGestureRecognizer!
     @IBOutlet weak var bannerView: GADBannerView!
     var interstitialAd : GADInterstitial!
+    
 
 //    @IBAction func previousBtn(_ sender: Any) {
 //    }
